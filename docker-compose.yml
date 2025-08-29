@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  citynet-fe-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: citynet-fe-dev
+    ports:
+      - "5173:5173"       # port vite
+    volumes:
+      - .:/app            # mount source code
+      - /app/node_modules # cegah node_modules host ikut di-mount
+    environment:
+      - NODE_ENV=development
+    command: npm run dev -- --host 0.0.0.0

@@ -1,0 +1,18 @@
+FROM node:18-alpine
+
+# Buat direktori kerja
+WORKDIR /app
+
+# Copy package.json dulu biar cache layer
+COPY package*.json ./
+
+# Install dependency
+RUN npm install
+
+# Copy seluruh source code
+COPY . .
+
+# Buka port vite
+EXPOSE 5173
+
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
