@@ -6,10 +6,10 @@ services:
       dockerfile: Dockerfile.dev
     container_name: citynet-fe-dev
     ports:
-      - "5173:5173"       # port vite
+      - "5173:5173"       
     volumes:
-      - .:/app            # mount source code
-      - /app/node_modules # cegah node_modules host ikut di-mount
+      - .:/app           
+      - /app/node_modules
     environment:
       - NODE_ENV=development
     command: npm run dev -- --host 0.0.0.0
