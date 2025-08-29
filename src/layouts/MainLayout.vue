@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="flex flex-col min-h-screen">
     <Navbar />
-    <main class="flex-grow p-6">
+    <main class="flex-grow">
       <slot />
     </main>
     <Footer />
@@ -9,6 +9,6 @@
 </template>
 
 <script setup>
-import Navbar from "@/components/Navbar.vue";
-import Footer from "@/components/Footer.vue";
+import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
 </script>
