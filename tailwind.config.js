@@ -1,19 +1,10 @@
-/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
-    "./layout/**/*.{html,js}",
-    "./src/**/*.{js,ts,jsx,tsx,html}"
-  ],
-  safelist: [
-    "max-h-[800px]"
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        city: ['"Montagu Slab"', 'sans-serif'],
-    },
+    extend: {},
   },
   plugins: [],
-},
 }
