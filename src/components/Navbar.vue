@@ -1,13 +1,13 @@
 <template>
   <header class="fixed top-0 left-0 w-full z-50 bg-white">
     <!-- ===== TOP BAR ===== -->
-    <section class="bg-gradient-to-r from-sky-200 to-blue-500 text-white py-4">
+    <section class="bg-gradient-to-r from-sky-200 to-blue-500 text-white py-2">
       <div class="max-w-[1400px] mx-auto flex flex-wrap items-center justify-end gap-3 px-6">
         
         <!-- Social Media -->
-        <nav aria-label="Social media" class="flex items-center gap-x-3">
+        <nav aria-label="Social media" class="flex items-center gap-x-2">
           <a v-for="icon in socialIcons" :key="icon.alt" :href="icon.href" :aria-label="icon.alt">
-            <img :src="icon.src" class="w-10 h-10" :alt="icon.alt" />
+            <img :src="icon.src" class="w-7" :alt="icon.alt" />
           </a>
         </nav>
 
@@ -19,7 +19,7 @@
             id="desktop-search"
             type="search"
             v-model="searchQuery"
-            class="w-full pl-10 pr-10 py-3 rounded-full text-black text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+            class="w-full px-3 py-1 rounded-full text-black text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <button type="button" aria-label="Voice search" @click="startVoiceSearch">
             <i class="fa fa-microphone absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
@@ -28,7 +28,7 @@
 
         <!-- Translate -->
         <button aria-label="Change language" @click="toggleLanguage">
-          <img src="/icons/icon-global.png" class="w-14 h-14 object-contain" alt="Language" />
+          <img src="/icons/icon-global.png" class="w-7 object-contain" alt="Language" />
         </button>
 
       </div>
@@ -36,7 +36,7 @@
 
     <!-- ===== MAIN NAVBAR ===== -->
     <nav aria-label="Main navigation" class="shadow border-t border-gray-200">
-      <div class="max-w-[1400px] mx-auto px-6 py-6 flex items-center justify-between">
+      <div class="max-w-[1400px] mx-auto px-6 py-3 flex items-center justify-between">
         
         <!-- Logo Section -->
         <a href="/" class="flex items-center gap-x-4 flex-shrink-0">
