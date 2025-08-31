@@ -1,4 +1,5 @@
-version: "3.8"
+version: "3.9"
+
 services:
   citynet-fe-dev:
     build:
@@ -6,10 +7,9 @@ services:
       dockerfile: Dockerfile.dev
     container_name: citynet-fe-dev
     ports:
-      - "5173:5173"       
+      - "5173:5173"   
     volumes:
-      - .:/app           
-      - /app/node_modules
+      - .:/app        # mount project lokal -> container (supaya hot reload jalan)
+      - /app/node_modules  # jangan overwrite node_modules
     environment:
       - NODE_ENV=development
-    command: npm run dev -- --host 0.0.0.0

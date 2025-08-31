@@ -1,18 +1,20 @@
-FROM node:18-alpine
+# Pakai image Node.js official
+FROM node:20-alpine
 
-# Buat direktori kerja
+# Set working directory di dalam container
 WORKDIR /app
 
-# Copy package.json dulu biar cache layer
+# Copy file package.json dan package-lock.json
 COPY package*.json ./
 
-# Install dependency
+# Install dependencies (gunakan npm ci supaya konsisten)
 RUN npm install
 
-# Copy seluruh source code
+# Copy semua source code ke dalam container
 COPY . .
 
-# Buka port vite
+# Expose port Vite (default 5173)
 EXPOSE 5173
 
+# Command default untuk dev
 CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
