@@ -1,212 +1,878 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Citynet - Pemerintah Kota Denpasar</title>
-    <link rel="stylesheet" href="/src/style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet"/>
-  </head>
-  <body class="bg-gray-50">
-    
-    <!-- Header / Navbar -->
-    <header id="navbar-index"></header>
 
-    <!-- Main Content -->
-    <main>
-      <section 
-        class="relative w-full h-screen flex items-center text-white overflow-hidden pt-20">
-        
-        <!-- Background -->
-        <img src="/images/bg1.png"
-          alt="Latar belakang Citynet"
-          class="absolute inset-0 w-full h-full object-cover object-top"
-        />
-        <div class="absolute inset-0 bg-black bg-opacity-0"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Citynet - Pemerintah Kota Denpasar</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
 
-        <!-- Fitur Accessibility-->
-        <aside class="fixed top-[225px] left-0 z-50">
-          <button
-            class="flex items-center justify-center w-24 h-16 rounded-r-full shadow-lg focus:outline-none"
-            style="background: linear-gradient(90deg, #1e3a8a, #2563eb);"
-            aria-label="Fitur Aksesibilitas"
-          >
-            <i class="fa fa-wheelchair text-4xl text-white"></i>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <header id="navbar-index"></header>
+
+  <!-- Fitur Accessibility-->
+  <aside class="fixed top-[225px] left-0 z-50">
+    <button class="flex items-center justify-center w-20 h-12 rounded-r-full shadow-lg focus:outline-none"
+      style="background: linear-gradient(90deg, #1e3a8a, #2563eb);" aria-label="Fitur Aksesibilitas">
+      <i class="fa fa-wheelchair text-4xl text-white"></i>
+    </button>
+  </aside>
+
+  <!-- Fitur Scroll -->
+  <div id="scrollButtons"
+    class="fixed right-6 bottom-24 flex flex-col space-y-4 z-50 opacity-0 pointer-events-none transition-opacity duration-500">
+
+    <!-- Scroll naik -->
+    <button id="scrollUp"
+      class="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 shadow-xl text-white hover:scale-110 transform transition-all duration-300 relative overflow-hidden">
+      <i class="fas fa-angle-double-up text-2xl transition-colors duration-300"></i>
+    </button>
+
+    <!-- Scroll turun -->
+    <button id="scrollDown"
+      class="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 shadow-xl text-white hover:scale-110 transform transition-all duration-300 relative overflow-hidden">
+      <i class="fas fa-angle-double-down text-2xl transition-colors duration-300"></i>
+    </button>
+  </div>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main>
+    <section class="relative w-full h-screen flex items-center text-white overflow-hidden pt-20">
+
+      <!-- Background -->
+      <img src="/images/bg1.png" alt="Latar belakang Citynet"
+        class="absolute inset-0 w-full h-full object-cover object-top" aria-hidden="true" />
+      <div class="absolute inset-0 bg-black bg-opacity-0" aria-hidden="true"></div>
+
+      <div class="relative z-10 max-w-6xl ml-24 pl-16 pr-6 w-full flex flex-col items-start pt-20">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-5">
+          <ol class="flex items-center gap-3 text-white text-[25px] drop-shadow-md font-bold">
+            <li>
+              <a href="#" class="flex items-center gap-2 hover:underline">
+                <i class="fa fa-home text-2xl"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li aria-hidden="true" class="text-3xl">›</li>
+            <li>
+              <a href="#" class="hover:underline">Get Involved</a>
+            </li>
+            <li aria-hidden="true" class="text-3xl">›</li>
+            <li>
+              <a href="#" class="hover:underline">Join Our Network</a>
+            </li>
+          </ol>
+        </nav>
+
+        <!-- Heading -->
+        <div>
+          <h1 class="text-[40px] font-bold leading-tight" style="text-shadow: 2px 2px 2px rgba(0,0,0,0.5);">LEGISLATIV
+          </h1>
+          <p class="text-[25px] font-bold leading-snug max-w-3xl">
+            Join Us. Shape the Future of Urban Development with CITYNET
+          </p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="flex items-center mt-6 gap-4" role="presentation">
+          <div class="w-[150px] h-[4px] bg-gradient-to-r from-cyan-400 to-blue-600"></div>
+          <div class="w-10 h-[4px] bg-black"></div>
+        </div>
+      </div>
+
+      <!-- Fitur Slider -->
+      <nav class="absolute inset-0 flex items-center justify-between px-8" aria-label="Slider controls">
+        <div class="absolute left-8 top-[60%] z-10">
+          <button type="button" aria-label="Previous slide" class="text-white hover:text-black  text-5xl">
+            <i class="fa fa-chevron-left"></i>
           </button>
-        </aside>
-
-        <!-- Content -->
-        <div class="relative z-10 max-w-6xl ml-24 pl-16 pr-6 w-full flex flex-col items-start pt-20">
-  
-          <nav aria-label="breadcrumb" class="mb-5">
-            <ol class="flex items-center gap-3 text-white text-[25px] drop-shadow-md font-bold">
-              <li>
-                <a href="#" class="flex items-center gap-2 hover:underline">
-                  <i class="fa fa-home text-2xl"></i>
-                  <span>Home</span>
-                </a>
-              </li>
-              <li aria-hidden="true" class="text-3xl">›</li>
-              <li>
-                <a href="#" class="hover:underline">Get Involved</a>
-              </li>
-              <li aria-hidden="true" class="text-3xl">›</li>
-              <li>
-                <a href="#" class="hover:underline">Join Our Network</a>
-              </li>
-            </ol>
-          </nav>
-
-          <header>
-            <h1 class="text-[40px] font-bold leading-tight">LEGISLATIV</h1>
-            <p class="text-[25px] font-bold leading-snug max-w-3xl">
-              Join Us. Shape the Future of Urban Development with CITYNET
-            </p>
-          </header>
-
-          <!-- Progress Bar -->
-          <div class="mt-8 w-48 h-1 bg-blue-400 relative">
-            <div class="absolute top-0 left-0 h-1 bg-black w-16"></div>
-          </div>
         </div>
-
-        <!-- Slider Controls -->
-        <div 
-          class="absolute inset-0 flex items-center justify-between px-8" 
-          role="group" 
-          aria-label="Slider controls"
-        >
-          <div class="absolute left-8 top-[60%] z-10">
-            <button 
-              type="button" 
-              aria-label="Previous slide" 
-              class="text-white text-5xl"
-            >
-              <i class="fa fa-chevron-left"></i>
-            </button>
-          </div>
-          <div class="absolute right-8 top-[60%] z-10">
-            <button 
-              type="button" 
-              aria-label="Next slide" 
-              class="text-white text-5xl"
-            >
-              <i class="fa fa-chevron-right"></i>
-            </button>
-          </div>
+        <div class="absolute right-8 top-[60%] z-10">
+          <button type="button" aria-label="Next slide" class="text-white hover:text-black text-5xl">
+            <i class="fa fa-chevron-right"></i>
+          </button>
         </div>
+      </nav>
+    </section>
+  </main>
+  <!-- ===================== END MAIN ===================== -->
 
+  <!-- ===================== SLIDE 2 ===================== -->
+  <section id="executive-committee"
+    class="relative w-full h-screen flex flex-col items-center justify-center text-center px-6"
+    aria-labelledby="executive-committee-heading">
+
+    <!-- Background -->
+    <figure class="absolute inset-0 w-full h-full z-0" aria-hidden="true">
+      <img src="/images/bg2.png" alt="Latar belakang Executive Committee" class="w-full h-full object-cover" />
+    </figure>
+    <div class="absolute inset-0 bg-black bg-opacity-5 z-0" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <article class="relative z-10 max-w-4xl text-white">
+
+      <!-- Header -->
+      <header class="max-w-4xl mx-auto text-center">
+        <h2 id="executive-committee-heading" class="text-4xl md:text-4xl font-extrabold tracking-wide mb-4 uppercase">
+          Executive Committee Meeting
+        </h2>
+
+        <!-- Progress Bar -->
+        <div class="flex items-center space-x-8 pb-8 ml-32" role="presentation" aria-hidden="true">
+          <div class="w-72 h-[4px] bg-gradient-to-r from-cyan-400 to-blue-600"></div>
+          <div class="w-10 h-[4px] bg-white"></div>
+        </div>
+        <!-- Tab Menu -->
+        <nav class="grid grid-cols-2 gap-6 max-w-2xl mx-auto mb-8 w-full" aria-label="Navigasi acara">
+          <button
+            class="px-3 py-1 rounded-lg font-bold text-base md:text-lg text-white shadow-md bg-gradient-to-r from-cyan-400 to-blue-600 w-full"
+            aria-current="true">
+            Executive Committee Meeting
+          </button>
+
+          <button class="px-3 py-1 rounded-lg font-bold text-base md:text-lg bg-white text-gray-900 shadow-md w-full">
+            Congress
+          </button>
+        </nav>
+
+      </header>
+
+      <!-- Description -->
+      <div class="max-w-4xl mx-auto text-center space-y-4">
+        <p class="text-base md:text-lg leading-relaxed font-semibold">
+          The Executive Committee (ExCom) holds a meeting once a year to make key decisions on CityNet’s programs and
+          initiatives.
+          These meetings serve as a platform for city leaders and representatives to come together, review the progress
+          of ongoing projects,
+          and set the strategic direction for the Network’s future.
+        </p>
+        <p class="text-base md:text-lg leading-relaxed font-semibold">
+          The ExCom consists of the President, President Emeritus, two Vice-Presidents, and nine members.
+        </p>
+      </div>
+
+      <!-- Countdown -->
+      <section class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center mt-8"
+        aria-label="Hitung mundur menuju acara">
+
+        <!-- Hari -->
+        <article class="relative bg-white text-gray-900 rounded-3xl shadow-md p-6 flex flex-col items-center">
+          <div class="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-cyan-500 rounded"></div>
+          <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-cyan-500 rounded"></div>
+          <time id="days" class="text-5xl font-extrabold text-cyan-500 drop-shadow-[2px_2px_0px_#000]"
+            datetime="P100D">100</time>
+          <span class="mt-2 font-bold text-lg">Hari</span>
+        </article>
+
+        <!-- Jam -->
+        <article class="relative bg-white text-gray-900 rounded-3xl shadow-md p-6 flex flex-col items-center">
+          <div class="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-cyan-500 rounded"></div>
+          <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-cyan-500 rounded"></div>
+          <time id="hours" class="text-5xl font-extrabold text-cyan-500 drop-shadow-[2px_2px_0px_#000]"
+            datetime="21H">21</time>
+          <span class="mt-2 font-bold text-lg">Jam</span>
+        </article>
+
+        <!-- Menit -->
+        <article class="relative bg-white text-gray-900 rounded-3xl shadow-md p-6 flex flex-col items-center">
+          <div class="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-cyan-500 rounded"></div>
+          <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-cyan-500 rounded"></div>
+          <time id="minutes" class="text-5xl font-extrabold text-cyan-500 drop-shadow-[2px_2px_0px_#000]"
+            datetime="40M">40</time>
+          <span class="mt-2 font-bold text-lg">Menit</span>
+        </article>
+
+        <!-- Detik -->
+        <article class="relative bg-white text-gray-900 rounded-3xl shadow-md p-6 flex flex-col items-center">
+          <div class="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-cyan-500 rounded"></div>
+          <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-cyan-500 rounded"></div>
+          <time id="seconds" class="text-5xl font-extrabold text-cyan-500 drop-shadow-[2px_2px_0px_#000]"
+            datetime="10S">10</time>
+          <span class="mt-2 font-bold text-lg">Detik</span>
+        </article>
       </section>
-    </main>
 
-   <section
-  class="relative w-full h-screen flex flex-col items-center justify-center text-center px-6">
-  <!-- Background -->
-  <img
-    src="/images/bg2.png"
-    alt="Background"
-    class="absolute inset-0 w-full h-full object-cover z-0"
-  />
-  <div class="absolute inset-0 bg-black bg-opacity-5 z-0"></div>
+    </article>
+  </section>
+  <!-- ===================== END SLIDE 2 ===================== -->
 
-  <!-- Content -->
-  <div class="relative z-10 max-w-4xl text-white">
+  <!-- ===================== SLIDE 3 ===================== -->
+  <section class="relative w-full min-h-screen flex flex-col items-center justify-center bg-white px-6 py-16">
 
-<!-- Container utama -->
-<div class="max-w-4xl mx-auto text-center">
-  <!-- Title -->
-  <h1 class="text-3xl md:text-5xl font-extrabold tracking-wide mb-4 uppercase">
-    Executive Committee Meeting
-  </h1>
-
-  <!-- Progres Bar -->
-  <div class="flex items-center space-x-12 pb-8 ml-4">
-    <div class="w-96 h-[4px] bg-gradient-to-r from-cyan-400 to-blue-600"></div>
-    <div class="w-10 h-[4px] bg-white"></div>
-  </div>
-
-  <!-- Tabs -->
-  <div class="grid grid-cols-2 gap-6 w-full mb-8">
-    <button
-      class="px-5 py-2 rounded-lg font-bold text-lg text-white shadow-md bg-gradient-to-r from-cyan-400 to-blue-600 w-full"
-    >
-      Executive Committee Meeting
-    </button>
-
-    <button
-      class="px-5 py-2 rounded-lg font-bold text-lg bg-white text-gray-900 shadow-md w-full"
-    >
-      Congress
-    </button>
-  </div>
-</div>
-
-  <!-- Description -->
-<div class="max-w-4xl mx-auto text-center space-y-4">
-  <p class="text-base md:text-lg leading-relaxed font-bold">
-    The Executive Committee (ExCom) holds a meeting once a year to make key decisions on CityNet’s programs and initiatives. 
-    These meetings serve as a platform for city leaders and representatives to come together, review the progress of ongoing projects, 
-    and set the strategic direction for the Network’s future.
-  </p>
-  <p class="text-base md:text-lg leading-relaxed font-bold">
-    The ExCom consists of the President, President Emeritus, two Vice-Presidents, and nine members.
-  </p>
-</div>
+    <!-- Background -->
+    <img src="/images/bg3.png" alt="Latar belakang Citynet"
+      class="absolute inset-0 w-full h-full object-cover object-top transform scale-105 z-0 pointer-events-none"
+      aria-hidden="true" />
+    <div class="absolute inset-0 bg-white/20 z-0"></div>
 
 
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-0 z-0 pointer-events-none" aria-hidden="true"></div>
 
-    <!-- Countdown -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center mt-8">
-      <div
-        class="bg-white text-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center"
-      >
-        <span
-          id="days"
-          class="text-4xl font-extrabold text-cyan-500"
-          >100</span
-        >
-        <span class="mt-2 font-semibold">Hari</span>
+    <!-- Header -->
+    <header class="relative z-10 self-start ml-28 mt-12">
+      <h2 class="text-3xl md:text-5xl font-extrabold uppercase tracking-wide text-gray-900"
+        style="text-shadow: 2px 2px 2px rgba(0,0,0,0.5);">
+        AYO JELAJAH KOTA DENPASAR
+      </h2>
+
+      <!-- Progres Bar -->
+      <div class="flex items-center space-x-6 pt-4 pb-8" aria-hidden="true">
+        <div class="w-[500px] h-[4px] bg-gradient-to-r from-cyan-400 to-blue-600"></div>
+        <div class="w-20 h-[4px] bg-black"></div>
       </div>
-      <div
-        class="bg-white text-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center"
-      >
-        <span
-          id="hours"
-          class="text-4xl font-extrabold text-cyan-500"
-          >21</span
-        >
-        <span class="mt-2 font-semibold">Jam</span>
+    </header>
+
+    <!-- Wrapper Slider -->
+    <div class="relative w-full max-w-6xl mx-auto overflow-hidden pt-10 pb-10 z-10">
+      <!-- Card Container -->
+      <div id="slider" class="flex gap-6 transition-transform duration-500 ease-in-out">
+
+        <!-- Card 1 -->
+        <article
+          class="carousel-card flex-shrink-0 w-64 md:w-72 bg-white rounded-3xl border border-gray-200 shadow-md p-6 flex flex-col items-center text-center cursor-pointer transition-transform duration-300 hover:scale-105">
+          <img src="/images/kantor-polisi.png" alt="Kantor Polisi" class="h-28 mb-4" />
+          <h3 class="font-bold text-lg md:text-xl">KANTOR POLISI</h3>
+          <a href="#"
+            class="mt-3 px-4 py-2 text-sm font-semibold rounded-full text-white bg-blue-600 hover:bg-blue-700  hover:scale-95 transition">
+            Read More
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article
+          class="carousel-card flex-shrink-0 w-64 md:w-72 bg-white rounded-3xl border border-gray-200 shadow-md p-6 flex flex-col items-center text-center cursor-pointer transition-transform duration-300 hover:scale-105">
+          <img src="/images/layanan-kesehatan.png" alt="Layanan Kesehatan" class="h-28 mb-4" />
+          <h3 class="font-bold text-lg md:text-xl">LAYANAN KESEHATAN</h3>
+          <a href="#"
+            class="mt-3 px-4 py-2 text-sm font-semibold rounded-full text-white bg-blue-600 hover:bg-blue-700 hover:scale-95 transition">
+            Read More
+          </a>
+        </article>
+
+        <!-- Card 3 -->
+        <article
+          class="carousel-card flex-shrink-0 w-72 md:w-80 bg-white rounded-3xl border border-gray-300 shadow-lg p-8 flex flex-col items-center text-center cursor-pointer transition-transform duration-300 scale-110">
+          <img src="/images/wisata.png" alt="Tempat Wisata" class="h-32 mb-4" />
+          <h3 class="font-bold text-xl md:text-2xl">TEMPAT WISATA</h3>
+          <a href="#"
+            class="mt-4 px-5 py-2 text-sm font-semibold rounded-full text-white bg-blue-600 hover:bg-blue-700 hover:scale-95 transition">
+            Read More
+          </a>
+        </article>
+
+        <!-- Card 4 -->
+        <article
+          class="carousel-card flex-shrink-0 w-64 md:w-72 bg-white rounded-3xl border border-gray-200 shadow-md p-6 flex flex-col items-center text-center cursor-pointer transition-transform duration-300 hover:scale-105">
+          <img src="/images/kuliner.png" alt="Kuliner Kota Denpasar" class="h-28 mb-4" />
+          <h3 class="font-bold text-lg md:text-xl">KULINER KOTA DENPASAR</h3>
+          <a href="#"
+            class="mt-3 px-4 py-2 text-sm font-semibold rounded-full text-white bg-blue-600 hover:bg-blue-700 hover:scale-95 transition">
+            Read More
+          </a>
+        </article>
+
+        <!-- Card 5 -->
+        <article
+          class="carousel-card flex-shrink-0 w-64 md:w-72 bg-white rounded-3xl border border-gray-200 shadow-md p-6 flex flex-col items-center text-center cursor-pointer transition-transform duration-300 hover:scale-105">
+          <img src="/images/tempat-belanja.png" alt="Tempat Belanja Kota Denpasar" class="h-28 mb-4" />
+          <h3 class="font-bold text-lg md:text-xl">TEMPAT BELANJA KOTA DENPASAR</h3>
+          <a href="#"
+            class="mt-3 px-4 py-2 text-sm font-semibold rounded-full text-white bg-blue-600 hover:bg-blue-700 hover:scale-95 transition">
+            Read More
+          </a>
+        </article>
+
       </div>
-      <div
-        class="bg-white text-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center"
-      >
-        <span
-          id="minutes"
-          class="text-4xl font-extrabold text-cyan-500"
-          >40</span
-        >
-        <span class="mt-2 font-semibold">Menit</span>
+
+      <!-- Fitur Slider -->
+      <button id="prevBtn" aria-label="Previous slide"
+        class="absolute left-0 top-1/2 -translate-y-1/2 bg-blue-700 border border-gray-300 rounded-full shadow-md p-2 hover:bg-gray-100 transition z-20">
+        <i class="fas fa-chevron-left text-2xl text-white hover:text-black transition z-20"></i>
+      </button>
+      <button id="nextBtn" aria-label="Next slide"
+        class="absolute right-0 top-1/2 -translate-y-1/2 bg-blue-700 border border-gray-300 rounded-full shadow-md p-2 hover:bg-gray-100 transition z-20">
+        <i class="fas fa-chevron-right text-2xl text-white hover:text-black transition z-20"></i>
+      </button>
+
+      <!-- Indicator -->
+      <nav id="indicators" aria-label="Slider indicators" class="flex justify-center space-x-2 mt-14 z-10 relative">
+        <button class="w-3 h-3 rounded-full bg-cyan-400" aria-label="Slide 1"></button>
+        <button class="w-3 h-3 rounded-full bg-gray-300" aria-label="Slide 2"></button>
+        <button class="w-3 h-3 rounded-full bg-gray-300" aria-label="Slide 3"></button>
+        <button class="w-3 h-3 rounded-full bg-gray-300" aria-label="Slide 4"></button>
+        <button class="w-3 h-3 rounded-full bg-gray-300" aria-label="Slide 5"></button>
+      </nav>
+    </div>
+
+    <!-- ICON -->
+    <aside class="absolute bottom-6 right-16 flex flex-row items-center space-x-4 z-10">
+      <button aria-label="Feedback"
+        class="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-blue-600   first-letter: hover:bg-cyan-600 shadow-lg transition transform hover:scale-110 z-10">
+        <i class="fas fa-comment-dots text-white text-2xl"></i>
+      </button>
+
+      <button aria-label="Call"
+        class="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-blue-600  hover:bg-cyan-600 shadow-lg transition transform hover:scale-110 z-10">
+        <i class="fas fa-phone text-white text-2xl"></i>
+      </button>
+    </aside>
+
+  </section>
+  <!-- ===================== END SLIDE 3 ===================== -->
+
+  <!-- ===================== SLIDE 4 ===================== -->
+  <section id="profil-denpasar"
+    class="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden"
+    aria-labelledby="profil-denpasar-heading">
+
+    <!-- Background -->
+    <figure class="absolute inset-0 w-full h-full z-0" aria-hidden="true">
+      <img src="/images/bg4.png" alt="Latar belakang Kota Denpasar" class="w-full h-full object-fill object-center" />
+    </figure>
+
+    <!-- Konten -->
+    <div class="relative z-10 flex flex-col md:flex-row items-center justify-between w-11/12 max-w-7xl mx-auto">
+
+      <article class="flex-1 ml-40 space-y-6 max-w-xl">
+        <header>
+          <h2 id="profil-denpasar-heading" class="text-5xl font-bold leading-tight uppercase drop-shadow-lg">
+            Profil <br /> Kota Denpasar
+          </h2>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="flex items-center" role="presentation" aria-hidden="true">
+          <div class="w-[150px] h-[4px] bg-gradient-to-r from-cyan-400 to-blue-600"></div>
+          <div class="w-10 h-[4px] bg-white"></div>
+        </div>
+
+        <p class="text-lg font-bold leading-relaxed text-gray-200">
+          The Highest Glory of the Citizen’s Revolution was this; it connected in one indissoluble bond
+          the principles of civil government with the principles of humanity.
+          Get Egovenz Local Government WordPress Theme today and launch your website.
+        </p>
+      </article>
+    </div>
+
+    <!-- Navigasi Slide -->
+    <nav class="absolute inset-x-0 top-1/2 flex justify-between px-28 -translate-y-1/2 z-20 pointer-events-none"
+      aria-label="Navigasi profil Kota Denpasar">
+      <button class="bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition pointer-events-auto"
+        aria-label="Slide sebelumnya">
+        <i class="fas fa-chevron-left text-2xl"></i>
+      </button>
+
+      <button class="bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition pointer-events-auto"
+        aria-label="Slide berikutnya">
+        <i class="fas fa-chevron-right text-2xl"></i>
+      </button>
+    </nav>
+
+    <!-- Indicators -->
+    <ol class="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-3" aria-label="Indikator slide">
+      <li>
+        <button class="w-3 h-3 rounded-full bg-cyan-400" aria-current="true" aria-label="Slide 1"></button>
+      </li>
+      <li>
+        <button class="w-3 h-3 rounded-full bg-gray-300" aria-label="Slide 2"></button>
+      </li>
+      <li>
+        <button class="w-3 h-3 rounded-full bg-gray-300" aria-label="Slide 3"></button>
+      </li>
+    </ol>
+  </section>
+  <!-- ===================== END SLIDE 4 ===================== -->
+
+  <!-- ===================== SLIDE 5 ===================== -->
+  <section id="galeri" class="relative w-full bg-white py-16 overflow-hidden" aria-labelledby="galeri-heading">
+
+    <!-- Background -->
+    <figure class="absolute inset-0 w-full h-full z-0 pointer-events-none" aria-hidden="true">
+      <img src="/images/bg3.png" alt="Latar belakang Citynet"
+        class="w-full h-full object-cover object-top transform scale-105" />
+    </figure>
+    <div class="absolute inset-0 bg-white/20 z-0" aria-hidden="true"></div>
+
+    <!-- Konten -->
+    <div class="relative z-10 max-w-7xl grid grid-cols-1 md:grid-cols-5 pb-6 gap-12 items-center">
+
+      <!-- Galeri Gambar -->
+      <div class="col-span-3 grid grid-cols-2 gap-4 w-full">
+        <!-- Kolom kiri -->
+        <div class="grid grid-rows-4">
+          <figure>
+            <img src="/images/bg1.png" alt="Pertunjukan seni" class="w-full h-32 object-cover shadow-md" />
+          </figure>
+          <figure>
+            <img src="/images/bg2.png" alt="Tari tradisional" class="w-full h-32 object-cover shadow-md" />
+          </figure>
+          <figure>
+            <img src="/images/bg3.png" alt="Budaya Bali" class="w-full h-32 object-cover shadow-md" />
+          </figure>
+          <figure>
+            <img src="/images/bg4.png" alt="Acara kebudayaan" class="w-full h-32 object-cover shadow-md" />
+          </figure>
+        </div>
+
+        <!-- Kolom kanan -->
+        <div class="grid grid-rows-2 gap-2 h-full">
+          <figure>
+            <img src="/images/bg2.png" alt="Kegiatan rapat" class="w-full h-full object-cover shadow-md" />
+          </figure>
+          <div class="grid grid-cols-2 gap-2 h-full">
+            <figure>
+              <img src="/images/bg4.png" alt="Diskusi 1" class="w-full h-full object-cover shadow-md" />
+            </figure>
+            <figure>
+              <img src="/images/bg4.png" alt="Diskusi 2" class="w-full h-full object-cover shadow-md" />
+            </figure>
+          </div>
+        </div>
       </div>
-      <div
-        class="bg-white text-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center"
-      >
-        <span
-          id="seconds"
-          class="text-4xl font-extrabold text-cyan-500"
-          >10</span
-        >
-        <span class="mt-2 font-semibold">Detik</span>
+
+      <!-- Teks Galeri -->
+      <article class="col-span-2 space-y-6 pl-6">
+        <header>
+          <h2 id="galeri-heading" class="text-5xl font-bold uppercase text-black tracking-wide"
+            style="text-shadow: 2px 2px 2px rgba(0,0,0,0.5);">
+            Galeri
+          </h2>
+
+          <!-- Progress bar -->
+          <div class="flex items-center mt-2 space-x-3" aria-hidden="true">
+            <div class="w-[140px] h-[4px] bg-gradient-to-r from-cyan-400 to-blue-600"></div>
+            <div class="w-8 h-[4px] bg-black"></div>
+          </div>
+        </header>
+        <p class="text-[22px] text-black font-bold leading-normal">
+          The Highest Glory of the Citizen’s <br> Revolution was this; it connected <br>
+          in one indissoluble bond the <br> principles of civil government <br>
+          with the principles of humanity. <br>
+          Get Egovenz Local Government <br>
+          WordPress Theme today and <br> launch your website.
+        </p>
+      </article>
+    </div>
+
+    <!-- Navigasi Slide -->
+    <nav class="absolute inset-x-0 top-1/2 flex justify-between px-28 -translate-y-1/2 z-20 pointer-events-none"
+      aria-label="Navigasi galeri">
+      <button
+        class="bg-white/50 text-black hover:bg-blue-600 hover:text-white p-2 rounded-full transition pointer-events-auto"
+        aria-label="Slide sebelumnya">
+        <i class="fas fa-chevron-left text-2xl"></i>
+      </button>
+
+      <button
+        class="bg-cyan-500 hover:bg-blue-600 hover:text-white text-white p-2 rounded-full transition pointer-events-auto"
+        aria-label="Slide berikutnya">
+        <i class="fas fa-chevron-right text-2xl"></i>
+      </button>
+    </nav>
+
+    <!-- Indicators -->
+    <ol class="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-3" aria-label="Indikator slide">
+      <li><button class="w-3 h-3 rounded-full bg-cyan-400" aria-current="true" aria-label="Slide 1"></button></li>
+      <li><button class="w-3 h-3 rounded-full bg-gray-300" aria-label="Slide 2"></button></li>
+      <li><button class="w-3 h-3 rounded-full bg-gray-300" aria-label="Slide 3"></button></li>
+    </ol>
+
+    <!-- Tombol Aksi -->
+    <aside class="absolute bottom-6 right-16 flex flex-row items-center space-x-4 z-10">
+      <button aria-label="Feedback"
+        class="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 hover:bg-cyan-600 shadow-lg transition transform hover:scale-110 z-10">
+        <i class="fas fa-comment-dots text-white text-2xl"></i>
+      </button>
+
+      <button aria-label="Call"
+        class="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 hover:bg-cyan-600 shadow-lg transition transform hover:scale-110 z-10">
+        <i class="fas fa-phone text-white text-2xl"></i>
+      </button>
+    </aside>
+
+  </section>
+  <!-- ===================== END SLIDE 5 ===================== -->
+
+
+  <!-- ===================== SLIDE 6 ===================== -->
+  <section class="relative w-full bg-white items-center py-16 overflow-hidden" aria-labelledby="berita-heading">
+
+    <!-- Background -->
+    <figure class="absolute inset-0 w-full h-full z-0" aria-hidden="true">
+      <img src="/images/bg6.png" alt="Latar Belakang Berita" class="w-full h-full object-cover object-center" />
+    </figure>
+
+    <!-- Konten utama -->
+    <div class="relative z-10 max-w-7xl w-full mx-auto flex flex-col items-center px-6 text-center">
+
+      <!-- Judul -->
+      <header class="max-w-4xl mx-auto text-center mb-28">
+        <h2 class="text-5xl text-white font-bold tracking-wide mb-4 uppercase">
+          BERITA TERBARU
+        </h2>
+
+        <!-- Progres Bar -->
+        <div class="flex space-x-4 pb-8" aria-hidden="true">
+          <div class="w-64 h-[4px] bg-gradient-to-r from-cyan-400 to-blue-600"></div>
+          <div class="w-10 h-[4px] bg-black"></div>
+        </div>
+      </header>
+
+      <!-- Slider Wrapper -->
+      <div class="relative w-full flex flex-col items-center">
+
+        <!-- Wrapper khusus -->
+        <div id="sliderWrapperBerita" class="overflow-visible w-full max-w-6xl mx-auto">
+          <div id="sliderBerita" class="flex gap-8 transition-transform duration-500 ease-in-out overflow-visible">
+
+            <!-- Card Item 1 -->
+            <article
+              class="relative bg-white rounded-3xl shadow-lg w-80 px-6 pb-8 pt-20 text-left cursor-pointer flex-shrink-0 overflow-visible">
+              <figure class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <img src="/images/logo.png" alt="Foto pejabat Denpasar"
+                  class="w-28 h-28 rounded-full object-cover ring-[15px] ring-white shadow-xl" />
+              </figure>
+              <header class="mt-4">
+                <p class="text-sm font-semibold text-cyan-600">Kamis, 03 April 2025</p>
+                <h3 class="mt-2 text-gray-800 font-bold leading-snug">
+                  Inovasi "Siap Selem" Dinas Perkimta Denpasar Libatkan Desa Adat
+                </h3>
+              </header>
+              <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                Cegah timbulnya kawasan kumuh baru dengan inovasi berbasis desa adat.
+              </p>
+              <footer>
+                <a href="#"
+                  class="inline-block mt-5 px-5 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-medium shadow hover:opacity-90 transition">
+                  Read More
+                </a>
+              </footer>
+            </article>
+
+            <!-- Card Item 2 -->
+            <article
+              class="relative bg-white rounded-3xl shadow-lg w-80 px-6 pb-8 pt-20 text-left cursor-pointer flex-shrink-0 overflow-visible">
+              <figure class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <img src="/images/logo_kominfo.png" alt="Sekda Alit Wiradana"
+                  class="w-28 h-28 rounded-full object-cover ring-[15px] ring-white shadow-xl" />
+              </figure>
+              <header class="mt-4">
+                <p class="text-sm font-semibold text-cyan-600">Jumat, 04 April 2025</p>
+                <h3 class="mt-2 text-gray-800 font-bold leading-snug">
+                  Sekda Alit Wiradana Hadiri Karya Melaspas Lan Padudusan Alit
+                </h3>
+              </header>
+              <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                Acara di Pura Mekah Desa Pekraman Pohgading, Denpasar.
+              </p>
+              <footer>
+                <a href="#"
+                  class="inline-block mt-5 px-5 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-medium shadow hover:opacity-90 transition">
+                  Read More
+                </a>
+              </footer>
+            </article>
+
+            <!-- Card Item 3 -->
+            <article
+              class="relative bg-white rounded-3xl shadow-lg w-80 px-6 pb-8 pt-20 text-left cursor-pointer flex-shrink-0 overflow-visible">
+              <figure class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <img src="/images/logo.png" alt="Walikota Jaya Negara"
+                  class="w-28 h-28 rounded-full object-cover ring-[15px] ring-white shadow-xl" />
+              </figure>
+              <header class="mt-4">
+                <p class="text-sm font-semibold text-cyan-600">Rabu, 02 April 2025</p>
+                <h3 class="mt-2 text-gray-800 font-bold leading-snug">
+                  Walikota Jaya Negara Hadiri Upacara Melaspas dan Pasupati
+                </h3>
+              </header>
+              <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                Pelawatan di Pura Dalem Penataran Sumerta, Denpasar.
+              </p>
+              <footer>
+                <a href="#"
+                  class="inline-block mt-5 px-5 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-medium shadow hover:opacity-90 transition">
+                  Read More
+                </a>
+              </footer>
+            </article>
+          </div>
+        </div>
+
+        <!-- Tombol Navigasi -->
+        <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-6 md:px-12 z-20">
+          <button id="prevBtnBerita" type="button"
+            class="bg-white/40 hover:bg-white text-black p-2 rounded-full shadow transition"
+            aria-label="Slide sebelumnya">
+            <i class="fas fa-chevron-left text-2xl"></i>
+          </button>
+          <button id="nextBtnBerita" type="button"
+            class="bg-white/40 hover:bg-white text-black p-2 rounded-full shadow transition"
+            aria-label="Slide berikutnya">
+            <i class="fas fa-chevron-right text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- INDOCATOR -->
+        <ul id="indicatorsBerita" class="mt-8 flex justify-center space-x-3" role="tablist"
+          aria-label="Slide indicators">
+          <li><button class="w-3 h-3 rounded-full bg-cyan-400" aria-label="Slide 1" aria-current="true"></button></li>
+          <li><button class="w-3 h-3 rounded-full bg-gray-300" aria-label="Slide 2"></button></li>
+          <li><button class="w-3 h-3 rounded-full bg-gray-300" aria-label="Slide 3"></button></li>
+        </ul>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  <!-- ===================== END SLIDE 6 ===================== -->
+
+  <!-- ===================== SLIDE 7 ==================== -->
+  <section id="video-terbaru" class="relative w-full py-16 bg-gray-100/80 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Header -->
+      <header class="max-w-4xl mx-auto text-center mb-12">
+        <h2 class="text-5xl text-black font-bold tracking-wide uppercase mb-4">
+          VIDEO TERBARU
+        </h2>
+
+        <!-- Progress Bar -->
+        <div class="flex ml-64 space-x-4" aria-hidden="true">
+          <div class="w-60 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded"></div>
+          <div class="w-10 h-1 bg-black rounded"></div>
+        </div>
+      </header>
+
+      <!-- Slider Wrapper -->
+      <div class="relative">
+
+        <!-- Slider Cards -->
+        <ul id="videoSlider" class="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory"
+          role="list">
+
+          <!-- Card Item 1 -->
+          <li class="video-card flex-shrink-0 w-64 snap-center" role="listitem">
+            <article>
+              <figure class="rounded-[40px] overflow-hidden">
+                <img src="/images/bg1.png" alt="Video 1" class="w-full h-80 object-cover">
+              </figure>
+              <figcaption class="mt-3 text-center">
+                <time class="text-sm font-bold text-blue-600">Senin, 16 September 2024</time>
+                <h3 class="font-semibold text-gray-900 mt-1 mb-4">
+                  Kodar Jalan-Jalan Eps Smart City Forum At The Meru Sanur
+                </h3>
+                <a href="#"
+                  class="inline-block mt-6 px-4 py-1 bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 hover:scale-95 transition">
+                  Read More
+                </a>
+              </figcaption>
+            </article>
+          </li>
+
+          <!-- Card Item2 -->
+          <li class="video-card flex-shrink-0 w-64 snap-center" role="listitem">
+            <article>
+              <figure class="rounded-[40px] overflow-hidden">
+                <img src="/images/bg2.png" alt="Video 2" class="w-full h-80 object-cover">
+              </figure>
+              <figcaption class="mt-3 text-center">
+                <time class="text-sm font-bold text-blue-600">Minggu, 15 September 2024</time>
+                <h3 class="font-semibold text-gray-900 mt-1 mb-4">
+                  Sekda Alit Wiradana Jadi Narasumber Rakor Tanggap Ancaman Narkoba
+                </h3>
+                <a href="#"
+                  class="inline-block px-4 py-1 bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 hover:scale-95 transition">
+                  Read More
+                </a>
+              </figcaption>
+            </article>
+          </li>
+
+          <!-- Card Item 3 -->
+          <li class="video-card flex-shrink-0 w-64 snap-center" role="listitem">
+            <article>
+              <figure class="rounded-[40px] overflow-hidden">
+                <img src="/images/bg4.png" alt="Video 3" class="w-full h-80 object-cover">
+              </figure>
+              <figcaption class="mt-3 text-center">
+                <time class="text-sm font-bold text-blue-600">Minggu, 15 September 2024</time>
+                <h3 class="font-semibold text-gray-900 mt-1 mb-4">
+                  Sukseskan Pilkada Tahun 2024 Sekda Alit Wiradana Hadiri Pelantikan
+                </h3>
+                <a href="#"
+                  class="inline-block px-4 py-1 bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 hover:scale-95 transition">
+                  Read More
+                </a>
+              </figcaption>
+            </article>
+          </li>
+
+          <!-- Card Item 4 -->
+          <li class="video-card flex-shrink-0 w-64 snap-center" role="listitem">
+            <article>
+              <figure class="rounded-[40px] overflow-hidden">
+                <img src="/images/bg4.png" alt="Video 4" class="w-full h-80 object-cover">
+              </figure>
+              <figcaption class="mt-3 text-center">
+                <time class="text-sm font-bold text-blue-600">Minggu, 15 September 2024</time>
+                <h3 class="font-semibold text-gray-900 mt-1 mb-4">
+                  Serangkaian Kegiatan Puncak HUT ke 44 Dekranasda dan Puncak HKG PKK ke 52
+                </h3>
+                <a href="#"
+                  class="inline-block px-4 py-1 bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 hover:scale-95 transition">
+                  Read More
+                </a>
+              </figcaption>
+            </article>
+          </li>
+
+          <!-- Card Item 5 -->
+          <li class="video-card flex-shrink-0 w-64 snap-center" role="listitem">
+            <article>
+              <figure class="rounded-[40px] overflow-hidden">
+                <img src="/images/bg4.png" alt="Video 5" class="w-full h-80 object-cover">
+              </figure>
+              <figcaption class="mt-3 text-center">
+                <time class="text-sm font-bold text-blue-600">Minggu, 15 September 2024</time>
+                <h3 class="font-semibold text-gray-900 mt-1 mb-4">
+                  Serangkaian Kegiatan Puncak HUT ke 44 Dekranasda dan Puncak HKG PKK ke 52
+                </h3>
+                <a href="#"
+                  class="inline-block px-4 py-1 bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 hover:scale-95 transition">
+                  Read More
+                </a>
+              </figcaption>
+            </article>
+          </li>
+        </ul>
+      </div>
+
+      <!-- FITUR Slide -->
+      <nav class="absolute inset-y-0 left-0 right-0 flex justify-between items-center px-2 pointer-events-none"
+        aria-label="Kontrol slider">
+        <button id="videoPrevBtn" type="button"
+          class="pointer-events-auto bg-blue-400 hover:bg-blue-600 text-white p-2 rounded-full shadow transition">
+          <i class="fas fa-chevron-left text-2xl"></i>
+        </button>
+        <button id="videoNextBtn" type="button"
+          class="pointer-events-auto bg-blue-400 hover:bg-blue-600 text-white p-2 rounded-full shadow transition">
+          <i class="fas fa-chevron-right text-2xl"></i>
+        </button>
+      </nav>
+
+      <!-- Indicators -->
+      <div id="videoIndicators" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3"
+        aria-label="Indikator slide">
+        <!-- Dihandle JS -->
+      </div>
+
+      <!-- Icon -->
+      <aside class="absolute bottom-2 right-6 flex flex-row items-center space-x-4 z-10">
+        <button aria-label="Feedback"
+          class="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 hover:bg-cyan-600 shadow-lg transition transform hover:scale-110">
+          <i class="fas fa-comment-dots text-white text-2xl"></i>
+        </button>
+        <button aria-label="Call"
+          class="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 hover:bg-cyan-600 shadow-lg transition transform hover:scale-110">
+          <i class="fas fa-phone text-white text-2xl"></i>
+        </button>
+      </aside>
+
+    </div>
+  </section>
+  <!-- ===================== END SLIDE 7 ==================== -->
 
 
-    <!-- Footer -->
-    <footer></footer>
 
-    <!-- Scripts -->
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <!-- ===================== FOOTER ==================== -->
+  <footer class="bg-white w-full">
+
+    <div class="flex flex-col md:flex-row">
+
+      <!-- Gambar kiri -->
+      <figure class="w-1/2 md:w-1/2">
+        <img src="/images/bg4.png" alt="Map Denpasar" class="w-full h-48 md:h-full object-cover">
+      </figure>
+
+      <!-- Konten kanan -->
+      <section class="w-full md:w-1/2 flex flex-col justify-center px-6 py-10 md:px-12">
+
+        <!-- Grid untuk konten dalam -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- Info Utama -->
+          <article class="flex flex-col space-y-6">
+            <!-- Judul -->
+            <h2 class="text-3xl md:text-3xl font-semibold text-black leading-snug">
+              PEMERINTAH<br>KOTA DENPASAR
+            </h2>
+
+            <!-- Info Kontak -->
+            <address class="not-italic space-y-3 text-black font-bold text-sm leading-relaxed">
+              <p class="flex items-start">
+                <span class="mr-3 text-cyan-600 text-2xl"><i class="fas fa-map-marker-alt"></i></span>
+                Graha Sewaka Dharma Lumintang Lt. III, Kota Denpasar, Bali - Indonesia
+              </p>
+              <p class="flex items-center">
+                <span class="mr-3 text-cyan-600 text-2xl"><i class="fas fa-phone-alt"></i></span>(0361) 431229
+              </p>
+              <p class="flex items-center">
+                <span class="mr-3 text-cyan-600 text-2xl"><i class="fas fa-envelope"></i></span>
+                <a href="mailto:kominfo@denpasarkota.go.id">kominfo@denpasarkota.go.id</a>
+              </p>
+              <p class="flex items-center">
+                <span class="mr-3 text-cyan-600 text-2xl"><i class="fas fa-globe"></i></span>
+                <a href="mailto:kominfo@denpasarkota.go.id">kominfo@denpasarkota.go.id</a>
+              </p>
+            </address>
+
+            <!-- Sosial Media -->
+            <div class="flex flex-col space-y-2">
+              <p class="font-semibold text-gray-900 text-2xl">F o l l o w us :</p>
+              <nav class="flex space-x-4 text-2xl text-cyan-600" aria-label="Social media">
+                <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-red-600"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-cyan-600"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#" class="hover:text-black"><i class="fab fa-tiktok"></i></a>
+              </nav>
+            </div>
+          </article>
+
+          <!-- Penilaian -->
+          <article class="flex mt-28 flex-col">
+            <p class="font-bold text-black mb-2">
+              Bagaimana Penilaian Anda Terhadap Kinerja Pelayanan Publik Pemkot Denpasar?
+            </p>
+            <ul class="list-disc list-inside space-y-1 text-gray-900 text-sm font-semibold">
+              <li><a href="https://balippid.kpu.go.id/" class="hover:text-cyan-600 hover:underline">Sangat Bagus</a></li>
+              <li><a href="https://balippid.kpu.go.id/" class="hover:text-cyan-600 hover:underline">Bagus</a></li>
+              <li><a href="https://balippid.kpu.go.id/" class="hover:text-cyan-600 hover:underline">Kurang Bagus</a></li>
+              <li><a href="https://balippid.kpu.go.id/" class="hover:text-cyan-600 hover:underline">Jelek</a></li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-sm text-gray-900 font-bold pt-6 text-center md:text-left">
+          © 2025 Pemerintah Kota Denpasar. All Right Reserved. Website by Bali Web Design
+        </p>
+      </section>
+    </div>
+  </footer>
+  <!-- ===================== END FOOTER ==================== -->
+
+
+  <!-- Scripts -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
