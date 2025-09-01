@@ -1,7 +1,7 @@
 <template>
   <div class="p-6">
     <h1 class="text-2xl font-bold mb-4">List Page</h1>
-    <p class="mb-4">Contoh fetch API menggunakan jsonplaceholder.</p>
+    <p class="mb-4">Contoh  fetch API menggunakan jsonplaceholder.</p>
 
     <div v-if="loading" class="text-gray-500">Loading data...</div>
     <ul v-else class="space-y-2">

@@ -94,14 +94,6 @@ const socialIcons = [
   { src: "/icons/tiktok.svg", alt: "TikTok", href: "#" },
 ]
 
-// const menuItems = [
-//   { label: "Who We Are", href: "#" },
-//   { label: "Our Network", href: "#" },
-//   { label: "What We Do", href: "#" },
-//   { label: "Newsroom", href: "#" },
-//   { label: "Get Involved", href: "#" },
-// ]
-
 const menus = [
   {
     title: "Who We Are",
@@ -125,20 +117,20 @@ const menus = [
       { title: "Events", link: "/events" },
     ],
   },
-  {
-    title: "Newsroom",
-    submenu: [
-      { title: "Press Releases", link: "/press" },
-      { title: "Media", link: "/media" },
-    ],
-  },
-  {
-    title: "Get Involved",
-    submenu: [
-      { title: "Volunteer", link: "/volunteer" },
-      { title: "Careers", link: "/careers" },
-    ],
-  },
+  // {
+  //   title: "Newsroom",
+  //   submenu: [
+  //     { title: "Press Releases", link: "/press" },
+  //     { title: "Media", link: "/media" },
+  //   ],
+  // },
+  // {
+  //   title: "Get Involved",
+  //   submenu: [
+  //     { title: "Volunteer", link: "/volunteer" },
+  //     { title: "Careers", link: "/careers" },
+  //   ],
+  // },
 ]
 
 const startVoiceSearch = () => {
