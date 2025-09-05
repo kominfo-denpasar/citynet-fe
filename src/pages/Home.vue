@@ -35,6 +35,7 @@
 	import Berita from "@/components/Berita.vue";
 	import Video from "@/components/Video.vue";
 
+	import { useRoute } from 'vue-router';
 </script>
 
 

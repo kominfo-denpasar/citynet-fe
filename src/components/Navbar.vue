@@ -39,13 +39,13 @@
       <div class="max-w-[1400px] mx-auto px-6 py-3 flex items-center justify-between">
         
         <!-- Logo Section -->
-        <a href="/" class="flex items-center gap-x-4 flex-shrink-0">
+        <router-link to="/" class="flex items-center gap-x-4 flex-shrink-0">
           <span class="text-[48px] text-blue-900 leading-none font-['Roboto_Slab']">CITYNET</span>
           <img src="/images/logo.png" alt="Logo Citynet" class="h-12 w-auto" />
           <span class="text-lg font-bold text-blue-900 leading-tight">
             PEMERINTAH <br> KOTA DENPASAR
           </span>
-        </a>
+        </router-link>
 
         <!-- Menu -->
         <!-- Menu -->
@@ -65,12 +65,11 @@
                 v-for="sub in menu.submenu"
                 :key="sub.title"
               >
-                <a
-                  :href="sub.link"
+                <router-link :to="sub.link"
                   class="block px-4 py-2 text-gray-700 hover:bg-cyan-100 hover:text-cyan-600"
                 >
                   {{ sub.title }}
-                </a>
+                </router-link>
               </li>
             </ul>
           </li>
@@ -83,6 +82,7 @@
 
 <script setup>
 import { ref } from "vue"
+import { useRoute } from 'vue-router';
 
 const searchQuery = ref("")
 
@@ -113,8 +113,8 @@ const menus = [
   {
     title: "What We Do",
     submenu: [
-      { title: "Programs", link: "/programs" },
-      { title: "Events", link: "/events" },
+      // { title: "Programs", link: "/programs" },
+      { title: "Events", link: "/list" },
     ],
   },
   // {
