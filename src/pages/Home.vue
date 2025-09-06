@@ -13,7 +13,6 @@
 		/> -->
 
 		<AccessibilityButton />
-		<ScrollButtons />
 		<HeroSectionTwo />
 		<ExecutiveCommittee />
 		<ExploreDenpasar />
