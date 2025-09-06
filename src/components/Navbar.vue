@@ -19,7 +19,7 @@
 				<div class="flex items-center gap-3">
 					<!-- Search (hidden on mobile) -->
 					<form role="search" class="relative hidden md:flex items-center w-60 bg-white dark:bg-gray-800 rounded-full shadow-sm">
-						<i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300"></i>
+						<font-awesome-icon icon="search" class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300" />
 						<input
 							id="desktop-search"
 							type="search"
@@ -27,7 +27,7 @@
 							class="w-full px-3 py-1 rounded-full text-black dark:text-white bg-transparent text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
 						/>
 						<button type="button" aria-label="Voice search" @click="startVoiceSearch">
-							<i class="fa fa-microphone absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300"></i>
+							<font-awesome-icon icon="microphone" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300" />
 						</button>
 					</form>
 
@@ -80,7 +80,7 @@
 
 				<!-- Mobile Hamburger -->
 				<button @click="mobileOpen = !mobileOpen" class="md:hidden text-gray-800 dark:text-gray-100">
-					<i :class="mobileOpen ? 'fa fa-times text-2xl' : 'fa fa-bars text-2xl'"></i>
+					<font-awesome-icon :icon="mobileOpen ? 'times' : 'bars'" class="text-2xl" />
 				</button>
 			</div>
 
