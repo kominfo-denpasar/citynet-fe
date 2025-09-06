@@ -1,76 +1,75 @@
 <template>
-	<header class="fixed top-0 left-0 w-full z-50 dark:border-gray-700 bg-white">
+	<header
+		:class="[
+			'fixed top-0 left-0 w-full z-50 transition-transform duration-300 bg-white dark:bg-gray-900 shadow',
+			isHidden ? '-translate-y-full' : 'translate-y-0'
+		]"
+	>
 		<!-- ===== TOP BAR ===== -->
 		<section class="bg-gradient-to-r from-sky-200 to-blue-500 text-white py-2">
-			<div class="max-w-[1400px] mx-auto flex flex-wrap items-center justify-end gap-3 px-6">
-				
-				<!-- Social Media -->
+			<div class="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-3 px-4 md:px-6">
+				<!-- Left: Social media -->
 				<nav aria-label="Social media" class="flex items-center gap-x-2">
 					<a v-for="icon in socialIcons" :key="icon.alt" :href="icon.href" :aria-label="icon.alt">
-						<img :src="icon.src" class="w-7" :alt="icon.alt" />
+						<img :src="icon.src" class="w-6 md:w-7" :alt="icon.alt" />
 					</a>
 				</nav>
 
-				<!-- Search -->
-				<form role="search" class="relative flex items-center w-60 bg-white rounded-full shadow-sm">
-					<label for="desktop-search" class="sr-only">Search</label>
-					<i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
-					<input
-						id="desktop-search"
-						type="search"
-						v-model="searchQuery"
-						class="w-full px-3 py-1 rounded-full text-black text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-					/>
-					<button type="button" aria-label="Voice search" @click="startVoiceSearch">
-						<i class="fa fa-microphone absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
+				<!-- Right: tools -->
+				<div class="flex items-center gap-3">
+					<!-- Search (hidden on mobile) -->
+					<form role="search" class="relative hidden md:flex items-center w-60 bg-white dark:bg-gray-800 rounded-full shadow-sm">
+						<i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300"></i>
+						<input
+							id="desktop-search"
+							type="search"
+							v-model="searchQuery"
+							class="w-full px-3 py-1 rounded-full text-black dark:text-white bg-transparent text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+						/>
+						<button type="button" aria-label="Voice search" @click="startVoiceSearch">
+							<i class="fa fa-microphone absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300"></i>
+						</button>
+					</form>
+
+					<!-- Translate -->
+					<button aria-label="Change language" @click="toggleLanguage">
+						<img src="/icons/icon-global.png" class="w-6 md:w-7 object-contain" alt="Language" />
 					</button>
-				</form>
 
-				<!-- Translate -->
-				<button aria-label="Change language" @click="toggleLanguage">
-					<img src="/icons/icon-global.png" class="w-7 object-contain" alt="Language" />
-				</button>
-
-				<button @click="toggleDark" class="px-3 py-1 rounded-lg bg-gray-700 dark:bg-gray-100 text-sm dark:text-gray-800">
-					{{ isDark ? 'Light Mode' : 'Dark Mode' }}
-				</button>
-
+					<!-- Dark toggle -->
+					<button @click="toggleDark" class="px-2 py-1 rounded-lg bg-gray-200 dark:bg-gray-700 text-xs md:text-sm text-gray-800 dark:text-gray-100">
+						{{ isDark ? 'Light' : 'Dark' }}
+					</button>
+				</div>
 			</div>
 		</section>
 
 		<!-- ===== MAIN NAVBAR ===== -->
-		<nav aria-label="Main navigation" class="shadow border-t border-gray-200">
-			<div class="max-w-[1400px] mx-auto px-6 py-3 flex items-center justify-between">
-				
-				<!-- Logo Section -->
-				<router-link to="/" class="flex items-center gap-x-4 flex-shrink-0">
-					<span class="text-[48px] text-blue-900 leading-none font-['Roboto_Slab']">CITYNET</span>
-					<img src="/images/logo.png" alt="Logo Citynet" class="h-12 w-auto" />
-					<span class="text-lg font-bold text-blue-900 leading-tight">
+		<nav aria-label="Main navigation">
+			<div class="max-w-[1400px] mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
+				<!-- Logo -->
+				<router-link to="/" class="flex items-center gap-x-2 md:gap-x-4 flex-shrink-0">
+					<span class="text-2xl md:text-[40px] text-blue-900 dark:text-sky-300 leading-none font-['Roboto_Slab']">CITYNET</span>
+					<img src="/images/logo.png" alt="Logo Citynet" class="h-10 md:h-12 w-auto" />
+					<span class="hidden sm:block text-sm md:text-lg font-bold text-blue-900 dark:text-sky-300 leading-tight">
 						PEMERINTAH <br> KOTA DENPASAR
 					</span>
 				</router-link>
 
-				<!-- Menu -->
-				<!-- Menu -->
-				<ul class="flex gap-x-8 text-xl text-gray-800 font-bold items-center">
+				<!-- Desktop Menu -->
+				<ul class="hidden md:flex gap-x-6 lg:gap-x-8 text-base md:text-lg text-gray-800 dark:text-gray-100 font-bold items-center">
 					<li v-for="menu in menus" :key="menu.title" class="relative group">
-						<a href="#" class="hover:text-cyan-600 transition flex items-center gap-1">
+						<a href="#" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition flex items-center gap-1">
 							{{ menu.title }}
-							<span v-if="menu.submenu" class="text-3xl">▾</span>
+							<span v-if="menu.submenu" class="text-lg md:text-xl">▾</span>
 						</a>
-
-						<!-- Submenu -->
 						<ul
 							v-if="menu.submenu"
-							class="absolute left-0 top-full mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform -translate-y-2 transition-all duration-200"
+							class="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform -translate-y-2 transition-all duration-200"
 						>
-							<li
-								v-for="sub in menu.submenu"
-								:key="sub.title"
-							>
+							<li v-for="sub in menu.submenu" :key="sub.title">
 								<router-link :to="sub.link"
-									class="block px-4 py-2 text-gray-700 hover:bg-cyan-100 hover:text-cyan-600"
+									class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-cyan-100 dark:hover:bg-gray-700 hover:text-cyan-600 dark:hover:text-cyan-400"
 								>
 									{{ sub.title }}
 								</router-link>
@@ -79,20 +78,61 @@
 					</li>
 				</ul>
 
+				<!-- Mobile Hamburger -->
+				<button @click="mobileOpen = !mobileOpen" class="md:hidden text-gray-800 dark:text-gray-100">
+					<i :class="mobileOpen ? 'fa fa-times text-2xl' : 'fa fa-bars text-2xl'"></i>
+				</button>
 			</div>
+
+			<!-- Mobile Menu -->
+			<transition name="slide-fade">
+				<div v-if="mobileOpen" class="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+					<ul class="flex flex-col p-4 space-y-2 text-gray-800 dark:text-gray-100 font-semibold">
+						<li v-for="menu in menus" :key="menu.title">
+							<details>
+								<summary class="cursor-pointer flex justify-between items-center py-2">
+									<span>{{ menu.title }}</span>
+									<span v-if="menu.submenu">▾</span>
+								</summary>
+								<ul v-if="menu.submenu" class="pl-4">
+									<li v-for="sub in menu.submenu" :key="sub.title">
+										<router-link :to="sub.link" class="block py-2 hover:text-cyan-600 dark:hover:text-cyan-400">
+											{{ sub.title }}
+										</router-link>
+									</li>
+								</ul>
+							</details>
+						</li>
+					</ul>
+				</div>
+			</transition>
 		</nav>
 	</header>
 </template>
 
 <script setup>
-import { ref } from "vue"
-import { useRoute } from 'vue-router';
-import { inject } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from "vue"
+import { inject } from "vue"
 
-const isDark = inject('isDark')
-const toggleDark = inject('toggleDark')
+const isDark = inject("isDark")
+const toggleDark = inject("toggleDark")
 
 const searchQuery = ref("")
+const mobileOpen = ref(false)
+const isHidden = ref(false)
+
+let lastScrollY = window.scrollY
+const handleScroll = () => {
+	const currentY = window.scrollY
+	if (currentY > lastScrollY && currentY > 80) {
+		isHidden.value = true
+	} else {
+		isHidden.value = false
+	}
+	lastScrollY = currentY
+}
+onMounted(() => window.addEventListener("scroll", handleScroll))
+onBeforeUnmount(() => window.removeEventListener("scroll", handleScroll))
 
 const socialIcons = [
 	{ src: "/icons/instagram.svg", alt: "Instagram", href: "#" },
@@ -120,43 +160,22 @@ const menus = [
 	},
 	{
 		title: "What We Do",
-		submenu: [
-			// { title: "Programs", link: "/programs" },
-			{ title: "Events", link: "/list" },
-		],
+		submenu: [{ title: "Events", link: "/list" }],
 	},
-	// {
-	//   title: "Newsroom",
-	//   submenu: [
-	//     { title: "Press Releases", link: "/press" },
-	//     { title: "Media", link: "/media" },
-	//   ],
-	// },
-	// {
-	//   title: "Get Involved",
-	//   submenu: [
-	//     { title: "Volunteer", link: "/volunteer" },
-	//     { title: "Careers", link: "/careers" },
-	//   ],
-	// },
 ]
 
-const startVoiceSearch = () => {
-	console.log("Voice search clicked")
-}
-
-const toggleLanguage = () => {
-	console.log("Change language clicked")
-}
+const startVoiceSearch = () => console.log("Voice search clicked")
+const toggleLanguage = () => console.log("Change language clicked")
 </script>
 
-
-<!-- <template>
-	<nav class="bg-blue-600 text-white px-6 py-3 flex justify-between items-center shadow-md">
-		<router-link to="/" class="font-bold text-lg">CityNet</router-link>
-		<div class="space-x-4">
-			<router-link to="/" class="hover:underline">Home</router-link>
-			<router-link to="/list" class="hover:underline">List</router-link>
-		</div>
-	</nav>
-</template> -->
+<style>
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+	transition: all 0.3s ease;
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+	opacity: 0;
+	transform: translateY(-10px);
+}
+</style>

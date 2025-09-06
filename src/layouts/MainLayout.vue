@@ -14,7 +14,7 @@
 		<Navbar />
 
 		<!-- Content -->
-		<main class="flex-grow mt-[7.35rem]">
+		<main class="flex-1 flex-grow mt-[7.35rem]">
 			<slot />
 		</main>
 		<Footer />
