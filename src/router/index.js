@@ -12,6 +12,15 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // kalau ada savedPosition (misalnya tombol back/forward), ikuti itu
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      // default: reset ke atas
+      return { top: 0 }
+    }
+  }
 });
 
 export default router;

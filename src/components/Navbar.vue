@@ -1,7 +1,7 @@
 <template>
 	<header
 		:class="[
-			'fixed top-0 left-0 w-full z-50 transition-transform duration-300 bg-white dark:bg-gray-900 shadow',
+			'fixed top-0 left-0 w-full max-w-screen z-50 transition-transform duration-300 bg-white dark:bg-gray-900 shadow',
 			isHidden ? '-translate-y-full' : 'translate-y-0'
 		]"
 	>
@@ -51,7 +51,7 @@
 				<router-link to="/" class="flex items-center gap-x-2 md:gap-x-4 flex-shrink-0">
 					<span class="text-2xl md:text-[40px] text-blue-900 dark:text-sky-300 leading-none font-['Roboto_Slab']">CITYNET</span>
 					<img src="/images/logo.png" alt="Logo Citynet" class="h-10 md:h-12 w-auto" />
-					<span class="hidden 900:block text-sm md:text-lg font-bold text-blue-900 dark:text-sky-300 leading-tight">
+					<span class="hidden 900:block text-sm md:text-lg font-bold text-blue-900 dark:text-sky-300 leading-tight break-words">
 						PEMERINTAH <br> KOTA DENPASAR
 					</span>
 				</router-link>
@@ -68,7 +68,7 @@
 							class="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform -translate-y-2 transition-all duration-200"
 						>
 							<li v-for="sub in menu.submenu" :key="sub.title">
-								<router-link :to="sub.link"
+								<router-link :to="sub.link" @click="closeMenu"
 									class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-cyan-100 dark:hover:bg-gray-700 hover:text-cyan-600 dark:hover:text-cyan-400"
 								>
 									{{ sub.title }}
@@ -86,25 +86,29 @@
 
 			<!-- Mobile Menu -->
 			<transition name="slide-fade">
-				<div v-if="mobileOpen" class="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
-					<ul class="flex flex-col p-4 space-y-2 text-gray-800 dark:text-gray-100 font-semibold">
-						<li v-for="menu in menus" :key="menu.title">
-							<details>
-								<summary class="cursor-pointer flex justify-between items-center py-2">
-									<span>{{ menu.title }}</span>
-									<span v-if="menu.submenu">▾</span>
-								</summary>
-								<ul v-if="menu.submenu" class="pl-4">
-									<li v-for="sub in menu.submenu" :key="sub.title">
-										<router-link :to="sub.link" class="block py-2 hover:text-cyan-600 dark:hover:text-cyan-400">
-											{{ sub.title }}
-										</router-link>
-									</li>
-								</ul>
-							</details>
+			<div v-if="mobileOpen" class="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+				<ul class="flex flex-col p-4 space-y-2 text-gray-800 dark:text-gray-100 font-semibold">
+				<li v-for="menu in menus" :key="menu.title">
+					<details>
+					<summary class="cursor-pointer flex justify-between items-center py-2">
+						<span>{{ menu.title }}</span>
+						<span v-if="menu.submenu"></span>
+					</summary>
+					<ul v-if="menu.submenu" class="pl-4">
+						<li v-for="sub in menu.submenu" :key="sub.title">
+						<router-link
+							:to="sub.link"
+							@click.native="closeMenu"
+							class="block py-2 hover:text-cyan-600 dark:hover:text-cyan-400"
+						>
+							{{ sub.title }}
+						</router-link>
 						</li>
 					</ul>
-				</div>
+					</details>
+				</li>
+				</ul>
+			</div>
 			</transition>
 		</nav>
 	</header>
@@ -121,6 +125,18 @@ const searchQuery = ref("")
 const mobileOpen = ref(false)
 const isHidden = ref(false)
 
+// ------------------
+
+const toggleMenu = () => {
+  mobileOpen.value = !mobileOpen.value
+}
+
+const closeMenu = () => {
+  mobileOpen.value = false
+}
+
+// ------------------ Hide on scroll down, show on scroll up -----
+
 let lastScrollY = window.scrollY
 const handleScroll = () => {
 	const currentY = window.scrollY
@@ -133,6 +149,8 @@ const handleScroll = () => {
 }
 onMounted(() => window.addEventListener("scroll", handleScroll))
 onBeforeUnmount(() => window.removeEventListener("scroll", handleScroll))
+
+// -------------------------------------------------------------
 
 const socialIcons = [
 	{ src: "/icons/instagram.svg", alt: "Instagram", href: "#" },
