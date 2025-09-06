@@ -7,7 +7,11 @@
 				<div class="max-w-full mx-auto space-y-8">
 
 					<!-- Breadcrumb -->
-					<Breadcrumb />
+					<Breadcrumb 
+						:current="post?.title" 
+						:category="'Events'" 
+						:categoryLink="'/list'"
+					/>
 
 					<!-- header agenda -->
 					<HeaderAgenda
