@@ -2,29 +2,17 @@
 	<!-- ========== FOOTER ========== -->
 <footer class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
   <!-- Grid -->
-  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10">
     <div class="col-span-full hidden lg:col-span-1 lg:block">
-      <a class="flex-none font-semibold text-xl text-black focus:outline-hidden focus:opacity-80 dark:text-white" href="#" aria-label="Brand">Brand</a>
+      <a class="flex-none font-semibold text-xl text-black focus:outline-hidden focus:opacity-80 dark:text-white" href="#" aria-label="Brand">CityNet</a>
       <p class="mt-3 text-xs sm:text-sm text-gray-600 dark:text-neutral-400">
-        © 2025 Preline Labs.
+        © 2025 Pemerintah Kota Denpasar.
       </p>
     </div>
     <!-- End Col -->
 
     <div>
-      <h4 class="text-xs font-semibold text-gray-900 uppercase dark:text-neutral-100">Product</h4>
-
-      <div class="mt-3 grid space-y-3 text-sm">
-        <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Pricing</a></p>
-        <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Changelog</a></p>
-        <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Docs</a></p>
-        <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Download</a></p>
-      </div>
-    </div>
-    <!-- End Col -->
-
-    <div>
-      <h4 class="text-xs font-semibold text-gray-900 uppercase dark:text-neutral-100">Company</h4>
+      <h4 class="text-xs font-semibold text-gray-900 uppercase dark:text-neutral-100">Who We Are</h4>
 
       <div class="mt-3 grid space-y-3 text-sm">
         <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">About us</a></p>
@@ -51,7 +39,7 @@
     <!-- End Col -->
 
     <div>
-      <h4 class="text-xs font-semibold text-gray-900 uppercase dark:text-neutral-100">Developers</h4>
+      <h4 class="text-xs font-semibold text-gray-900 uppercase dark:text-neutral-100">What We Do</h4>
 
       <div class="mt-3 grid space-y-3 text-sm">
         <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Api</a></p>
@@ -59,7 +47,7 @@
         <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">GitHub</a> <span class="inline text-blue-600 dark:text-blue-500">— New</span></p>
       </div>
 
-      <h4 class="mt-7 text-xs font-semibold text-gray-900 uppercase dark:text-neutral-100">Industries</h4>
+      <h4 class="mt-7 text-xs font-semibold text-gray-900 uppercase dark:text-neutral-100">Other</h4>
 
       <div class="mt-3 grid space-y-3 text-sm">
         <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Financial Services</a></p>

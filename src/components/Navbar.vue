@@ -59,7 +59,7 @@
 				<!-- Desktop Menu -->
 				<ul class="hidden md:flex gap-x-6 lg:gap-x-8 text-base md:text-lg text-gray-800 dark:text-gray-100 font-bold items-center">
 					<li v-for="menu in menus" :key="menu.title" class="relative group">
-						<a href="#" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition flex items-center gap-1">
+						<a href="#!" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition flex items-center gap-1">
 							{{ menu.title }}
 							<span v-if="menu.submenu" class="text-lg md:text-xl">▾</span>
 						</a>
@@ -170,7 +170,7 @@ const menus = [
 		],
 	},
 	{
-		title: "Our Network",
+		title: "Resources",
 		submenu: [
 			{ title: "Members", link: "/members" },
 			{ title: "Projects", link: "/projects" },
