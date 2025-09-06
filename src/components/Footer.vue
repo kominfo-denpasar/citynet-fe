@@ -1,6 +1,8 @@
 <template>
 	<!-- ========== FOOTER ========== -->
 <footer class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+	<!-- line -->
+	   <div class="border-t border-gray-200 dark:border-neutral-700 my-10"></div>
   <!-- Grid -->
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10">
     <div class="col-span-full hidden lg:col-span-1 lg:block">
@@ -139,15 +141,14 @@
         <div class="space-x-4 text-sm">
           <a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Terms</a>
           <a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Privacy</a>
-          <a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Status</a>
         </div>
       </div>
 
       <div class="flex flex-wrap justify-between items-center gap-3">
         <div class="mt-3 sm:hidden">
-          <a class="flex-none font-semibold text-xl text-black focus:outline-hidden focus:opacity-80 dark:text-white" href="#" aria-label="Brand">Brand</a>
+          <a class="flex-none font-semibold text-xl text-black focus:outline-hidden focus:opacity-80 dark:text-white" href="#" aria-label="Brand">CityNet</a>
           <p class="mt-1 text-xs sm:text-sm text-gray-600 dark:text-neutral-400">
-            © 2025 Preline Labs.
+            © 2025 Pemerintah Kota Denpasar.
           </p>
         </div>
 

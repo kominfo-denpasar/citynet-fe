@@ -19,13 +19,85 @@
 					<!-- Content -->
 					<div class="space-y-5 md:space-y-8">
 						<div class="space-y-3">
-							<h2 class="text-2xl font-bold md:text-3xl dark:text-white">Announcing a free plan for small teams</h2>
+							<h2 class="text-2xl font-bold md:text-3xl dark:text-white">Program Schedule</h2>
 
-							<p class="text-lg text-gray-800 dark:text-neutral-200">{{ post?.body }}</p>
-						</div>
+							<!-- accordion -->
+							<div class="space-y-2">
+								<!-- Item 1 -->
+								<div class="border rounded-lg">
+									<button @click="toggle(1)"
+										class="flex justify-between items-center w-full px-4 py-3 font-semibold text-left">
+										<span>Information Guide</span>
+										<font-awesome-icon :icon="openIndex === 1 ? 'minus' : 'plus'" />
+									</button>
+									<div v-show="openIndex === 1" class="px-4 pb-3 dark:text-gray-400">
+										{{ post?.body }}
+									</div>
+								</div>
 
-						<figure>
-							<img
+								<!-- Item 2 -->
+								<div class="border rounded-lg">
+									<button
+										@click="toggle(2)"
+										class="flex justify-between items-center w-full px-4 py-3 font-semibold text-left">
+										<span>Programme</span>
+										<font-awesome-icon :icon="openIndex === 2 ? 'minus' : 'plus'" />
+									</button>
+									<div
+										v-show="openIndex === 2"
+										class="px-4 pb-3 dark:text-gray-400">
+										<!-- Card Section -->
+										<div class="max-w-5xl px-4 py-10 sm:px-6 lg:px-2 lg:py-4 mx-auto">
+											<!-- Grid -->
+											<div class="grid gap-3 sm:gap-6">
+												<!-- Card -->
+												<a class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800" href="#!">
+													<div class="p-4 md:p-5">
+														<div class="flex gap-x-5">
+															<font-awesome-icon class="mt-1 shrink-0 size-5 text-gray-800 dark:text-neutral-200" :icon="['fas', 'file-alt']" />
+
+															<div class="grow">
+																<h3 class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200">
+																Brochure & FAQ
+																</h3>
+																<p class="text-sm text-gray-500 dark:text-neutral-500">
+																	Find all the information you need about our services and policies in our comprehensive brochure and FAQ section.
+																</p>
+															</div>
+														</div>
+													</div>
+												</a>
+												<!-- End Card -->
+
+												<!-- Card -->
+												<a class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800" href="#!">
+													<div class="p-4 md:p-5">
+														<div class="flex gap-x-5">
+														<font-awesome-icon class="mt-1 shrink-0 size-5 text-gray-800 dark:text-neutral-200" :icon="['fas', 'file-alt']" />
+
+															<div class="grow">
+																<h3 class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200">
+																Additional Documents
+																</h3>
+																<p class="text-sm text-gray-500 dark:text-neutral-500">
+																	Access supplementary materials and resources to enhance your understanding and support your needs.
+																</p>
+															</div>
+														</div>
+													</div>
+												</a>
+												<!-- End Card -->
+
+											</div>
+											<!-- End Grid -->
+										</div>
+										<!-- End Card Section -->
+									</div>
+								</div>
+							</div>
+
+							<figure>
+								<img
 								class="w-full object-cover rounded-xl"
 								src="https://images.unsplash.com/photo-1670272505340-d906d8d77d03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
 								alt="Blog Image">
@@ -68,65 +140,67 @@
 										class="mt-3 text-sm text-center text-gray-500 dark:text-neutral-500">
 										A man and a woman looking at a cell phone.
 									</figcaption>
-								</figure>
+							</figure>
 
-								<div class="space-y-3">
-									<h3 class="text-2xl font-semibold dark:text-white">Bringing the culture of sharing to everyone</h3>
+							<div class="space-y-3">
+								<h3 class="text-2xl font-semibold dark:text-white">Bringing the culture of sharing to everyone</h3>
 
-									<p class="text-lg text-gray-800 dark:text-neutral-200">We know the power of
-										sharing is real, and we want to create an opportunity for everyone to try
-										Preline and explore how transformative open communication can be. Now you can
-										have a team of one or two designers and unlimited spectators (think PMs,
-										management, marketing, etc.) share work and explore the design process earlier.</p>
-								</div>
+								<p class="text-lg text-gray-800 dark:text-neutral-200">We know the power of
+									sharing is real, and we want to create an opportunity for everyone to try
+									Preline and explore how transformative open communication can be. Now you can
+									have a team of one or two designers and unlimited spectators (think PMs,
+									management, marketing, etc.) share work and explore the design process earlier.</p>
+							</div>
 
-								<ul
-									class="list-disc list-outside space-y-5 ps-5 text-lg text-gray-800 dark:text-neutral-200">
-									<li class="ps-2">Preline allows us to collaborate in real time and is a really
-										great way for leadership on the team to stay up-to-date with what everybody is
-										working on,"
-										<a
-											class="text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500"
-											href="#">said</a>
-										Stewart Scott-Curran, Intercom's Director of Brand Design.</li>
-									<li class="ps-2">Preline opened a new way of sharing. It's a persistent way for
-										everyone to see and absorb each other's work," said David Scott, Creative
-										Director at
-										<a
-											class="text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500"
-											href="#">Eventbrite</a>.</li>
-								</ul>
-
-								<p class="text-lg text-gray-800 dark:text-neutral-200">Small teams and
-									individual designers need a space where they can watch the design process
-									unfold, both for themselves and for the people they work with – no matter if
-									it's a fellow designer, product manager, developer or client. Preline allows you
-									to invite more people into the process, creating a central place for
-									conversation around design. As those teams grow, transparency and collaboration
-									becomes integrated in how they communicate and work together.</p>
-
-								<div>
+							<ul
+								class="list-disc list-outside space-y-5 ps-5 text-lg text-gray-800 dark:text-neutral-200">
+								<li class="ps-2">Preline allows us to collaborate in real time and is a really
+									great way for leadership on the team to stay up-to-date with what everybody is
+									working on,"
 									<a
-										class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-										href="#">
-										Plan
-									</a>
+										class="text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500"
+										href="#">said</a>
+									Stewart Scott-Curran, Intercom's Director of Brand Design.</li>
+								<li class="ps-2">Preline opened a new way of sharing. It's a persistent way for
+									everyone to see and absorb each other's work," said David Scott, Creative
+									Director at
 									<a
-										class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-										href="#">
-										Web development
-									</a>
-									<a
-										class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-										href="#">
-										Free
-									</a>
-									<a
-										class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-										href="#">
-										Team
-									</a>
-								</div>
+										class="text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500"
+										href="#">Eventbrite</a>.</li>
+							</ul>
+
+							<p class="text-lg text-gray-800 dark:text-neutral-200">Small teams and
+								individual designers need a space where they can watch the design process
+								unfold, both for themselves and for the people they work with – no matter if
+								it's a fellow designer, product manager, developer or client. Preline allows you
+								to invite more people into the process, creating a central place for
+								conversation around design. As those teams grow, transparency and collaboration
+								becomes integrated in how they communicate and work together.</p>
+
+							<div>
+								<a
+									class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+									href="#">
+									Plan
+								</a>
+								<a
+									class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+									href="#">
+									Web development
+								</a>
+								<a
+									class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+									href="#">
+									Free
+								</a>
+								<a
+									class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+									href="#">
+									Team
+								</a>
+							</div>
+						</div>
+							
 					</div>
 					<!-- End Content -->
 				</div>
@@ -142,6 +216,16 @@
 
 	import Breadcrumb from "@/components/Breadcrumb.vue";
 	import HeaderAgenda from "@/components/HeaderAgenda.vue";
+
+	// --------------------
+
+	const openIndex = ref(1) // index accordion yang terbuka
+
+	function toggle(index) {
+		openIndex.value = openIndex.value === index ? null : index
+	}
+
+	// --------------------
 
 	const route = useRoute()
 	const post = ref(null)
