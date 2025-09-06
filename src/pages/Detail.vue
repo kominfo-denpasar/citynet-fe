@@ -6,24 +6,23 @@
 			<div class="max-w-4xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
 				<div class="max-w-full mx-auto space-y-8">
 
+					<!-- Breadcrumb -->
+					<Breadcrumb />
+
 					<!-- header agenda -->
-					<HeaderAgenda title="Detail Agenda" />
+					<HeaderAgenda
+						:title="post?.title" 
+						:subtitle="post?.title" 
+						:total="post?.id"  
+					/>
 
 					<!-- Content -->
 					<div class="space-y-5 md:space-y-8">
 						<div class="space-y-3">
 							<h2 class="text-2xl font-bold md:text-3xl dark:text-white">Announcing a free plan for small teams</h2>
 
-							<p class="text-lg text-gray-800 dark:text-neutral-200">At preline, our mission
-								has always been focused on bringing openness and transparency to the design
-								process. We've always believed that by providing a space where designers can
-								share ongoing work not only empowers them to make better products, it also helps
-								them grow.</p>
+							<p class="text-lg text-gray-800 dark:text-neutral-200">{{ post?.body }}</p>
 						</div>
-
-						<p class="text-lg text-gray-800 dark:text-neutral-200">We're proud to be a part
-							of creating a more open culture and to continue building a product that supports
-							this vision.</p>
 
 						<figure>
 							<img
@@ -140,6 +139,8 @@
 <script setup="setup">
 	import {ref, onMounted} from 'vue'
 	import {useRoute} from 'vue-router'
+
+	import Breadcrumb from "@/components/Breadcrumb.vue";
 	import HeaderAgenda from "@/components/HeaderAgenda.vue";
 
 	const route = useRoute()
