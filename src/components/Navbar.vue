@@ -65,8 +65,10 @@
 						</a>
 						<ul
 							v-if="menu.submenu"
-							class="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform -translate-y-2 transition-all duration-200"
-						>
+							class="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-lg 
+									opacity-0 invisible pointer-events-none 
+									group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto 
+									group-hover:translate-y-0 transform -translate-y-2 transition-all duration-200">
 							<li v-for="sub in menu.submenu" :key="sub.title">
 								<router-link :to="sub.link" @click="closeMenu"
 									class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-cyan-100 dark:hover:bg-gray-700 hover:text-cyan-600 dark:hover:text-cyan-400"
