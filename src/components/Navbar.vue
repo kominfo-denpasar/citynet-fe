@@ -51,7 +51,7 @@
 				<router-link to="/" class="flex items-center gap-x-2 md:gap-x-4 flex-shrink-0">
 					<span class="text-2xl md:text-[40px] text-blue-900 dark:text-sky-300 leading-none font-['Roboto_Slab']">CITYNET</span>
 					<img src="/images/logo.png" alt="Logo Citynet" class="h-10 md:h-12 w-auto" />
-					<span class="hidden sm:block text-sm md:text-lg font-bold text-blue-900 dark:text-sky-300 leading-tight">
+					<span class="hidden 900:block text-sm md:text-lg font-bold text-blue-900 dark:text-sky-300 leading-tight">
 						PEMERINTAH <br> KOTA DENPASAR
 					</span>
 				</router-link>

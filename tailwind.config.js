@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        '900': '900px', // custom breakpoint
+      },
+    },
   },
   plugins: [],
 }
