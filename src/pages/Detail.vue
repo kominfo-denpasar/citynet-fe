@@ -26,7 +26,7 @@
 
 							<!-- accordion -->
 							<div class="space-y-2">
-								<h2 class="text-1xl font-bold md:text-2xl dark:text-white">Program Schedule</h2>
+								<h2 class="text-1xl font-bold md:text-2xl dark:text-white py-4">Program Schedule</h2>
 								<!-- Item 1 -->
 								<div class="border rounded-lg">
 									<button @click="toggle(1)"
@@ -113,10 +113,88 @@
 							</div>
 							<!-- end participant -->
 
+							<!-- event snap -->
+							<div class="space-y-2 py-8">
+								<h2 class="text-1xl font-bold md:text-2xl dark:text-white">Event Snapshots</h2>
+
+								<p class="text-lg text-gray-800 dark:text-neutral-200 py-4">That's why we are excited to share that we now have a
+									<a
+										class="text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500"
+										href="#">free version of Preline</a>,
+									which will allow individual designers, startups and other small teams a chance
+									to create a culture of openness early on.</p>
+
+
+								<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+									
+									<a class="group block relative overflow-hidden rounded-lg" href="#">
+										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
+											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+											<span class="text-xs">View</span>
+										</div>
+										</div>
+									</a>
+
+									<a class="group block relative overflow-hidden rounded-lg" href="#">
+										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
+											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+											<span class="text-xs">View</span>
+										</div>
+										</div>
+									</a>
+
+									<a class="group block relative overflow-hidden rounded-lg" href="#">
+										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1516131206008-dd041a9764fd?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
+											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+											<span class="text-xs">View</span>
+										</div>
+										</div>
+									</a>
+
+									<a class="group block relative overflow-hidden rounded-lg" href="#">
+										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1707760696486-2a2cd7e0b6a6?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
+											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+											<span class="text-xs">View</span>
+										</div>
+										</div>
+									</a>
+
+									<a class="group block relative overflow-hidden rounded-lg" href="#">
+										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1585159812596-fac104f2f069?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
+											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+											<span class="text-xs">View</span>
+										</div>
+										</div>
+									</a>
+
+									<a class="group block relative overflow-hidden rounded-lg" href="#">
+										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1654131300276-db70adf4f85d?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
+											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+											<span class="text-xs">View</span>
+										</div>
+										</div>
+									</a>
+								</div>
+								<!-- End Image Grid -->
+							</div>
+							<!-- end event snapshots -->
+
 							<div class="space-y-2 py-8">
 								<h2 class="text-1xl font-bold md:text-2xl dark:text-white">Section</h2>
 
-								<p class="text-lg text-gray-800 dark:text-neutral-200">That's why we are excited to share that we now have a
+								<p class="text-lg text-gray-800 dark:text-neutral-200 py-4">That's why we are excited to share that we now have a
 									<a
 										class="text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500"
 										href="#">free version of Preline</a>,
