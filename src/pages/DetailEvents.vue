@@ -36,25 +36,25 @@
     </header>
 
     <Archive />
-		<ProgramScedule />
-		<Participants />
-		<ExpandList />
-		<Booth />
-		<EventSnapshots />
-		<Document />
-		<RelatedNews />
+    <ProgramScedule />
+    <Participants />
+    <ExpandList />
+    <Booth />
+    <EventSnapshots />
+    <Document />
+    <RelatedNews />
   </div>
 </template>
 
-<script setup lang="ts">
-import Archive from '../components/list/Archive.vue';
-import Booth from '../components/list/Booth.vue';
-import Document from '../components/list/Document.vue';
-import EventSnapshots from '../components/list/EventSnapshots.vue';
-import ExpandList from '../components/list/ExpandList.vue';
-import Participants from '../components/list/Participants.vue';
-import ProgramScedule from '../components/list/ProgramScedule.vue';
-import RelatedNews from '../components/list/RelatedNews .vue';
+<script setup>
+import Archive from '../components/Detail-Events/Archive.vue';
+import Booth from '../components/Detail-Events/Booth.vue';
+import Document from '../components/Detail-Events/Document.vue';
+import EventSnapshots from '../components/Detail-Events/EventSnapshots.vue';
+import ExpandList from '../components/Detail-Events/ExpandList.vue';
+import Participants from '../components/Detail-Events/Participants.vue';
+import ProgramScedule from '../components/Detail-Events/ProgramScedule.vue';
+import RelatedNews from '../components/Detail-Events/RelatedNews.vue';
 </script>
 
 <style>

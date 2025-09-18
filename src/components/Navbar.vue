@@ -180,7 +180,7 @@ const menus = [
 	},
 	{
 		title: "What We Do",
-		submenu: [{ title: "Events", link: "/list" }],
+		submenu: [{ title: "Events", link: "/events" }],
 	},
 ]
 
