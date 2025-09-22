@@ -6,6 +6,7 @@ import Detail from "@/pages/Detail.vue";
 import DetailEvents from "@/pages/DetailEvents.vue"; 
 import CityNetOverview from "@/pages/static/About/CityNetOverview.vue";
 import AboutDenpasar from "@/pages/static/About/AboutDenpasar.vue";
+import ExecutiveCommittee from "@/pages/static/About/ExecutiveCommittee.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
@@ -16,6 +17,7 @@ const routes = [
   // Static Pages
   { path: "/citynet-overview", name: "CityNetOverview", component: CityNetOverview },
   { path: "/about-denpasar", name: "AboutDenpasar", component: AboutDenpasar },
+  { path: "/executive-committee", name: "ExecutiveCommittee", component: ExecutiveCommittee },
 ];
 
 const router = createRouter({

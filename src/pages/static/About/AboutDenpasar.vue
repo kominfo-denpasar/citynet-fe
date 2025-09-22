@@ -6,24 +6,28 @@
 				{ label: 'Denpasar as Host City' }
 		]"
 		title="Denpasar as Host City"
-		subtitle="A vibrant city embracing innovation, culture, and sustainability."
+		subtitle="Denpasar, the capital city of Bali, is a vibrant hub of culture, innovation, and sustainability."
 		background="/images/bg4.png"
 	>
 		<p class="mb-4 text-gray-700 leading-relaxed">
-			CityNet is a regional network of cities and local governments committed to sustainable urban development. 
-			This platform serves as a hub to connect participants, share insights, and promote collaborative innovation.
+			Denpasar, the capital city of Bali, is a vibrant hub of culture, innovation, and sustainability.
+      As the host city of the 45th CityNet Executive Committee Meeting and the 4th SDG City Awards,
+      Denpasar proudly showcases its commitment to inclusive and forward-thinking urban development.
 		</p>
 
-		<h2 class="text-2xl font-semibold mt-8 mb-4">Our Mission</h2>
+		<h2 class="text-2xl font-semibold mt-8 mb-4">A City of Culture and Innovation</h2>
 		<p class="text-gray-700 leading-relaxed">
-			To strengthen the capacity of cities to achieve sustainable development through city-to-city cooperation, 
-			knowledge sharing, and partnerships with stakeholders.
+			Known for its rich cultural heritage, Denpasar embraces tradition while advancing smart city
+      initiatives that enhance the quality of life for its residents. From historic temples and
+      bustling markets to digital governance and green initiatives, Denpasar exemplifies a modern,
+      sustainable city.
 		</p>
 
-		<h2 class="text-2xl font-semibold mt-8 mb-4">Why Denpasar?</h2>
+		<h2 class="text-2xl font-semibold mt-8 mb-4">Denpasar as Host City</h2>
 		<p class="text-gray-700 leading-relaxed">
-			Denpasar plays a central role in CityNet events, acting as the host city and an innovator in inclusive 
-			urban solutions for Southeast Asia.
+			Hosting this year’s CityNet events reflects Denpasar’s role as a leader in sustainable urban
+      transformation. The city continues to demonstrate its dedication to fostering collaboration
+      among local governments and building stronger communities.
 		</p>
 	</StaticPage>
 </template>
@@ -33,7 +37,7 @@
 	import { useHead } from '@vueuse/head'
 
 	useHead({
-		title: "About Denpasar | CityNet 2025",
+		title: "About Denpasar | Denpasar - CityNet 2025",
 		meta: [
 			{
 				name: "description",
@@ -49,7 +53,7 @@
 			},
 			{
 				property: "og:image",
-				content: "https://citynet-ap.org/images/denpasar-host.jpg"
+				content: "https://citynet-ap.org/data/event/1FDkRfb11VhvsceQ3KK0U6j84IUOvNezDrbc4zN8eUN9kKAfp.uvk6v5ycayih.png"
 			}
 		]
 	})
