@@ -129,6 +129,15 @@
 import { ref, onMounted, onBeforeUnmount } from "vue"
 import { inject } from "vue"
 
+import menuLinks from "@/data/menuLinks.json" 
+const menus = menuLinks.sections.map(section => ({
+	title: section.title,
+	submenu: section.links.map(link => ({
+		title: link.label,
+		link: link.url
+	}))
+}));
+
 const isDark = inject("isDark")
 const toggleDark = inject("toggleDark")
 
@@ -171,34 +180,6 @@ const socialIcons = [
 	{ src: "/icons/tiktok.svg", alt: "TikTok", href: "#" },
 ]
 
-const menus = [
-	{
-		title: "About",
-		submenu: [
-			{ title: "Citynet Overview", link: "/citynet-overview" },
-			{ title: "Denpasar as Host City", link: "/about-denpasar" },
-			{ title: "Leadership & Members", link: "/leadership-members" },
-			{ title: "News & Media", link: "/news-media" },
-		],
-	},
-	{
-		title: "Explore",
-		submenu: [
-			{ title: "Events & Programs", link: "/events" },
-			{ title: "Tourism & Culture", link: "/tourism" },
-			{ title: "Travel & Venue Info", link: "/travel-venue" },
-		],
-	},
-	{
-		title: "Connect",
-		submenu: [
-			{ title: "Blog & Updates", link: "/blog" },
-			{ title: "Publications", link: "/publications" },
-			{ title: "Community & Partners", link: "/community" },
-			{ title: "Contact & Supports", link: "/contact" },
-		],
-	},
-]
 
 const startVoiceSearch = () => console.log("Voice search clicked")
 

@@ -1,0 +1,46 @@
+{
+  "brand": {
+    "name": "CityNet - Denpasar 2025",
+    "copyright": "© 2025 Pemerintah Kota Denpasar."
+  },
+  "sections": [
+    {
+		"title": "About",
+		"links": [
+			{ "label": "Citynet Overview", "url": "/citynet-overview" },
+			{ "label": "Denpasar as Host City", "url": "/about-denpasar" },
+			{ "label": "Leadership & Members", "url": "/leadership-members" },
+			{ "label": "News & Media", "url": "/news-media" }
+		]
+	},
+	{
+		"title": "Explore",
+		"links": [
+			{ "label": "Events & Programs", "url": "/events", "badge": "— New" },
+			{ "label": "Tourism & Culture", "url": "/tourism" },
+			{ "label": "Travel & Venue Info", "url": "/travel-venue" }
+		]
+	},
+	{
+		"title": "Connect",
+		"links": [
+			{ "label": "Blog & Updates", "url": "/blog" },
+			{ "label": "Publications", "url": "/publications" },
+			{ "label": "Community & Partners", "url": "/community" },
+			{ "label": "Contact & Supports", "url": "/contact" }
+		]
+	}
+  ],
+  "policies": [
+    { "label": "Terms", "url": "/terms" },
+    { "label": "Privacy", "url": "/privacy" }
+  ],
+  "socials": [
+    { "name": "Twitter", "url": "https://twitter.com" },
+    { "name": "GitHub", "url": "https://github.com" },
+    { "name": "LinkedIn", "url" : "https://linkedin.com" },
+    { "name": "Facebook", "url": "https://facebook.com" },
+    { "name": "YouTube", "url": "https://youtube.com" },
+    { "name": "Instagram", "url": "https://instagram.com" }
+    ]
+}
