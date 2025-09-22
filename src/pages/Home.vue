@@ -29,9 +29,9 @@
 	import AccessibilityButton from "@/components/AccessibilityButton.vue";
 	import ExecutiveCommittee from "@/components/ExecutiveCommittee.vue";
 	import ExploreDenpasar from "@/components/ExploreDenpasar.vue";
-	import ProfilDenpasar from "@/components/ProfilDenpasar.vue";
-	import Galeri from "@/components/Galeri.vue";
-	import Berita from "@/components/Berita.vue";
+	// import ProfilDenpasar from "@/components/ProfilDenpasar.vue";
+	// import Galeri from "@/components/Galeri.vue";
+	// import Berita from "@/components/Berita.vue";
 	import Video from "@/components/Video.vue";
 
 	import { useRoute } from 'vue-router';
