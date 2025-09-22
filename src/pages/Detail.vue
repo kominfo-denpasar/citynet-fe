@@ -101,7 +101,6 @@
 							</div>
 							<!-- end accordion -->
 
-<<<<<<< HEAD
 							<!-- participants -->
 							<div class="space-y-2 py-8">
 								<h2 class="text-1xl font-bold md:text-2xl dark:text-white">Participant List</h2>
@@ -113,152 +112,9 @@
 									{ id: 3, label: 'Participants', icon: 'user', component: TabThreeContent }
 									]"
 								/>
-=======
-							<figure>
-								<img class="w-full object-cover rounded-xl"
-									src="https://images.unsplash.com/photo-1670272505340-d906d8d77d03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
-									alt="Blog Image">
-								<figcaption class="mt-3 text-sm text-center text-gray-500 dark:text-neutral-500">
-									A woman sitting at a table.
-								</figcaption>
-							</figure>
-
-							<p class="text-lg text-gray-800 dark:text-neutral-200">As we've grown, we've
-								seen how Preline has helped companies such as Spotify, Microsoft, Airbnb,
-								Facebook, and Intercom bring their designers closer together to create amazing
-								things. We've also learned that when the culture of sharing is brought in
-								earlier, the better teams adapt and communicate with one another.</p>
-
-							<p class="text-lg text-gray-800 dark:text-neutral-200">That's why we are excited to share
-								that we now have a
-								<a class="text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500"
-									href="#">free version of Preline</a>,
-								which will allow individual designers, startups and other small teams a chance
-								to create a culture of openness early on.
-							</p>
-
-							<blockquote class="text-center p-4 sm:px-7">
-								<p
-									class="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal dark:text-neutral-200">
-									To say that switching to Preline has been life-changing is an understatement. My
-									business has tripled and I got my life back.
-								</p>
-								<p class="mt-5 text-gray-800 dark:text-neutral-200">
-									Nicole Grazioso
-								</p>
-							</blockquote>
-
-							<figure>
-								<img class="w-full object-cover rounded-xl"
-									src="https://images.unsplash.com/photo-1670272498380-eb330b61f3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
-									alt="Blog Image">
-								<figcaption class="mt-3 text-sm text-center text-gray-500 dark:text-neutral-500">
-									A man and a woman looking at a cell phone.
-								</figcaption>
-							</figure>
-
-							<div class="space-y-3">
-								<h3 class="text-2xl font-semibold dark:text-white">Bringing the culture of sharing to
-									everyone</h3>
-
-								<p class="text-lg text-gray-800 dark:text-neutral-200">We know the power of
-									sharing is real, and we want to create an opportunity for everyone to try
-									Preline and explore how transformative open communication can be. Now you can
-									have a team of one or two designers and unlimited spectators (think PMs,
-									management, marketing, etc.) share work and explore the design process earlier.</p>
->>>>>>> 44b7eaeddd2be8882e4756e48c2327f2d2c1b2b0
 							</div>
 							<!-- end participant -->
 
-<<<<<<< HEAD
-							<!-- event snap -->
-							<div class="space-y-2 py-8">
-								<h2 class="text-1xl font-bold md:text-2xl dark:text-white">Event Snapshots</h2>
-
-								<p class="text-lg text-gray-800 dark:text-neutral-200 py-4">That's why we are excited to share that we now have a
-									<a
-										class="text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500"
-										href="#">free version of Preline</a>,
-									which will allow individual designers, startups and other small teams a chance
-									to create a culture of openness early on.</p>
-
-
-								<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-									
-									<a class="group block relative overflow-hidden rounded-lg" href="#">
-										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
-										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-											<span class="text-xs">View</span>
-										</div>
-										</div>
-									</a>
-
-									<a class="group block relative overflow-hidden rounded-lg" href="#">
-										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
-										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-											<span class="text-xs">View</span>
-										</div>
-										</div>
-									</a>
-
-									<a class="group block relative overflow-hidden rounded-lg" href="#">
-										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1516131206008-dd041a9764fd?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
-										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-											<span class="text-xs">View</span>
-										</div>
-										</div>
-									</a>
-
-									<a class="group block relative overflow-hidden rounded-lg" href="#">
-										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1707760696486-2a2cd7e0b6a6?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
-										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-											<span class="text-xs">View</span>
-										</div>
-										</div>
-									</a>
-
-									<a class="group block relative overflow-hidden rounded-lg" href="#">
-										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1585159812596-fac104f2f069?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
-										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-											<span class="text-xs">View</span>
-										</div>
-										</div>
-									</a>
-
-									<a class="group block relative overflow-hidden rounded-lg" href="#">
-										<img class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800" src="https://images.unsplash.com/photo-1654131300276-db70adf4f85d?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
-										<div class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
-										<div class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-											<svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-											<span class="text-xs">View</span>
-										</div>
-										</div>
-									</a>
-								</div>
-								<!-- End Image Grid -->
-							</div>
-							<!-- end event snapshots -->
-
-							<div class="space-y-2 py-8">
-								<h2 class="text-1xl font-bold md:text-2xl dark:text-white">Section</h2>
-
-								<p class="text-lg text-gray-800 dark:text-neutral-200 py-4">That's why we are excited to share that we now have a
-									<a
-										class="text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500"
-										href="#">free version of Preline</a>,
-									which will allow individual designers, startups and other small teams a chance
-									to create a culture of openness early on.</p>
-=======
 							<ul
 								class="list-disc list-outside space-y-5 ps-5 text-lg text-gray-800 dark:text-neutral-200">
 								<li class="ps-2">Preline allows us to collaborate in real time and is a really
@@ -275,7 +131,6 @@
 										href="#">Eventbrite</a>.
 								</li>
 							</ul>
->>>>>>> 44b7eaeddd2be8882e4756e48c2327f2d2c1b2b0
 
 								<blockquote class="text-center p-4 sm:px-7">
 									<p
@@ -357,8 +212,6 @@
 									</a>
 								</div>
 
-<<<<<<< HEAD
-=======
 							<div>
 								<a class="m-1 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
 									href="#">
@@ -376,7 +229,6 @@
 									href="#">
 									Team
 								</a>
->>>>>>> 44b7eaeddd2be8882e4756e48c2327f2d2c1b2b0
 							</div>
 						</div>
 
@@ -385,23 +237,27 @@
 				</div>
 			</div>
 			<!-- End Blog Article -->
+		
 		</div>
 	</section>
 </template>
 
-<script setup="setup">
+<script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
 import Breadcrumb from "@/components/Breadcrumb.vue";
 import HeaderAgenda from "@/components/HeaderAgenda.vue";
+import Tabs from '@/components/Tabs.vue'
+import TabOneContent from '@/components/TabOneContent.vue'
+import TabTwoContent from '@/components/TabTwoContent.vue'
+import TabThreeContent from '@/components/TabThreeContent.vue'
 
 // --------------------
 
 const openIndex = ref(1) // index accordion yang terbuka
-
 function toggle(index) {
-	openIndex.value = openIndex.value === index ? null : index
+  openIndex.value = openIndex.value === index ? null : index
 }
 
 // --------------------
@@ -411,45 +267,15 @@ const post = ref(null)
 const loading = ref(true)
 
 onMounted(async () => {
-	try {
-		const res = await fetch(
-			`https://jsonplaceholder.typicode.com/posts/${route.params.id}`
-		)
-		post.value = await res.json()
-	} catch (e) {
-		console.error(e)
-	} finally {
-		loading.value = false
-	}
-<<<<<<< HEAD
-
-	// --------------------
-
-	const route = useRoute()
-	const post = ref(null)
-	const loading = ref(true)
-
-	onMounted(async () => {
-		try {
-			const res = await fetch(
-				`https://jsonplaceholder.typicode.com/posts/${route.params.id}`
-			)
-			post.value = await res.json()
-		} catch (e) {
-			console.error(e)
-		} finally {
-			loading.value = false
-		}
-	})
-
-	// -----------------
-	import Tabs from '@/components/Tabs.vue'
-	import TabOneContent from '@/components/TabOneContent.vue'
-	import TabTwoContent from '@/components/TabTwoContent.vue'
-	import TabThreeContent from '@/components/TabThreeContent.vue'
-
-
-=======
+  try {
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/posts/${route.params.id}`
+    )
+    post.value = await res.json()
+  } catch (e) {
+    console.error(e)
+  } finally {
+    loading.value = false
+  }
 })
->>>>>>> 44b7eaeddd2be8882e4756e48c2327f2d2c1b2b0
 </script>
