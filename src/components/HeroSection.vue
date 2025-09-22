@@ -66,7 +66,7 @@
             default: () => [
                 {
                     label: "Learn More",
-                    to: "/about",
+                    to: "/citynet-overview",
                     primary: true
                 }, {
                     label: "Discover All Events",

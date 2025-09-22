@@ -166,8 +166,8 @@ const menus = [
 	{
 		title: "About",
 		submenu: [
-			{ title: "Citynet Overview", link: "/about" },
-			{ title: "Denpasar as Host City", link: "/denpasar" },
+			{ title: "Citynet Overview", link: "/citynet-overview" },
+			{ title: "Denpasar as Host City", link: "/about-denpasar" },
 			{ title: "Leadership & Members", link: "/leadership-members" },
 			{ title: "News & Media", link: "/news-media" },
 		],
