@@ -1,6 +1,14 @@
 <template>
-  <section class="max-w-4xl mx-auto px-6 py-12">
-    <h1 class="text-3xl font-bold mb-6 text-cyan-700">CityNet Overview</h1>
+  <StaticPage 
+		:breadcrumbs="[
+				{ label: 'Home', link: '/' },
+				{ label: 'About' },
+				{ label: 'Citynet Overview' }
+		]"
+		title="Citynet Overview"
+		subtitle="A vibrant city embracing innovation, culture, and sustainability."
+		background="/images/bg4.png"
+	>
     <p class="mb-4 text-gray-700 leading-relaxed">
       CityNet is a regional network of cities and local governments committed to sustainable urban development. 
       This platform serves as a hub to connect participants, share insights, and promote collaborative innovation.
@@ -17,13 +25,9 @@
       Denpasar plays a central role in CityNet events, acting as the host city and an innovator in inclusive 
       urban solutions for Southeast Asia.
     </p>
-  </section>
+  </StaticPage>
 </template>
 
-<script>
+<script setup>
 import StaticPage from "@/layouts/StaticPage.vue";
-
-export default {
-  components: { StaticPage },
-};
 </script>
