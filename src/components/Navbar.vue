@@ -32,9 +32,18 @@
 					</form>
 
 					<!-- Translate -->
-					<button aria-label="Change language" @click="toggleLanguage">
+					<!-- <button aria-label="Change language" @click="toggleLanguage">
 						<img src="/icons/icon-global.png" class="w-6 md:w-7 object-contain" alt="Language" />
-					</button>
+					</button> -->
+
+					<div class="flex space-x-2">
+						<button @click="setLang('en')" :class="activeLang === 'en' ? activeClass : inactiveClass">
+						EN
+						</button>
+						<button @click="setLang('id')" :class="activeLang === 'id' ? activeClass : inactiveClass">
+						ID
+						</button>
+					</div>
 
 					<!-- Dark toggle -->
 					<button @click="toggleDark" class="px-2 py-1 rounded-lg bg-gray-200 dark:bg-gray-700 text-xs md:text-sm text-gray-800 dark:text-gray-100">
@@ -52,7 +61,7 @@
 					<span class="text-2xl md:text-[40px] text-blue-900 dark:text-sky-300 leading-none font-['Roboto_Slab']">CITYNET</span>
 					<img src="/images/logo.png" alt="Logo Citynet" class="h-10 md:h-12 w-auto" />
 					<span class="hidden 900:block text-sm md:text-lg font-bold text-blue-900 dark:text-sky-300 leading-tight break-words">
-						PEMERINTAH <br> KOTA DENPASAR
+						DENPASAR <br> CITY GOVERNMENT
 					</span>
 				</router-link>
 
@@ -192,7 +201,27 @@ const menus = [
 ]
 
 const startVoiceSearch = () => console.log("Voice search clicked")
-const toggleLanguage = () => console.log("Change language clicked")
+
+const activeLang = ref("en");
+
+const activeClass =
+  "px-3 py-1 bg-blue-600 text-white rounded-md font-semibold shadow";
+const inactiveClass =
+  "px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300";
+
+function setLang(lang) {
+  const select = document.querySelector(".goog-te-combo");
+  if (select) {
+    select.value = lang;
+    select.dispatchEvent(new Event("change"));
+    activeLang.value = lang;
+  }
+}
+
+onMounted(() => {
+  // default bahasa (misalnya English)
+  activeLang.value = "en";
+});
 </script>
 
 <style>
