@@ -65,7 +65,7 @@
 						</a>
 						<ul
 							v-if="menu.submenu"
-							class="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-lg 
+							class="absolute left-0 top-full w-48 bg-white dark:bg-gray-800 shadow-lg rounded-lg 
 									opacity-0 invisible pointer-events-none 
 									group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto 
 									group-hover:translate-y-0 transform -translate-y-2 transition-all duration-200">
@@ -180,7 +180,7 @@ const menus = [
 	},
 	{
 		title: "What We Do",
-		submenu: [{ title: "Events", link: "/list" }],
+		submenu: [{ title: "Events", link: "/events" }],
 	},
 ]
 
