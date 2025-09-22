@@ -2,7 +2,7 @@
  <section class="w-full py-12">
       <div class="max-w-5xl mx-auto px-4 text-center">
         <!-- Title -->
-        <h2 class="text-2xl font-bold mb-8">Archive</h2>
+        <h2 class="text-2xl font-bold mb-8">List Events & Programs</h2>
         <hr class="mt-8 border-gray-300" />
 
         <!-- Search Section -->

@@ -164,23 +164,30 @@ const socialIcons = [
 
 const menus = [
 	{
-		title: "Who We Are",
+		title: "About",
 		submenu: [
-			{ title: "About Us", link: "/about" },
-			{ title: "Leadership", link: "/leadership" },
-			{ title: "Partners", link: "/partners" },
+			{ title: "Citynet Overview", link: "/about" },
+			{ title: "Denpasar as Host City", link: "/denpasar" },
+			{ title: "Leadership & Members", link: "/leadership-members" },
+			{ title: "News & Media", link: "/news-media" },
 		],
 	},
 	{
-		title: "Resources",
+		title: "Explore",
 		submenu: [
-			{ title: "Members", link: "/members" },
-			{ title: "Projects", link: "/projects" },
+			{ title: "Events & Programs", link: "/events" },
+			{ title: "Tourism & Culture", link: "/tourism" },
+			{ title: "Travel & Venue Info", link: "/travel-venue" },
 		],
 	},
 	{
-		title: "What We Do",
-		submenu: [{ title: "Events", link: "/events" }],
+		title: "Connect",
+		submenu: [
+			{ title: "Blog & Updates", link: "/blog" },
+			{ title: "Publications", link: "/publications" },
+			{ title: "Community & Partners", link: "/community" },
+			{ title: "Contact & Supports", link: "/contact" },
+		],
 	},
 ]
 

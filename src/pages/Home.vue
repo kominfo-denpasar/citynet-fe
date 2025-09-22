@@ -13,13 +13,14 @@
 		/> -->
 
 		<AccessibilityButton />
-		<HeroSectionTwo />
+		<HeroSection />
+		<ProfilDenpasar />
 		<ExecutiveCommittee />
 		<ExploreDenpasar />
-		<ProfilDenpasar />
-		<Galeri />
+		
+		<!-- <Galeri />
 		<Berita />
-		<Video />
+		<Video /> -->
 	</div>
 </template>
 
@@ -30,9 +31,9 @@
 	import ExecutiveCommittee from "@/components/ExecutiveCommittee.vue";
 	import ExploreDenpasar from "@/components/ExploreDenpasar.vue";
 	import ProfilDenpasar from "@/components/ProfilDenpasar.vue";
-	import Galeri from "@/components/Galeri.vue";
-	import Berita from "@/components/Berita.vue";
-	import Video from "@/components/Video.vue";
+	// import Galeri from "@/components/Galeri.vue";
+	// import Berita from "@/components/Berita.vue";
+	// import Video from "@/components/Video.vue";
 
 	import { useRoute } from 'vue-router';
 </script>
