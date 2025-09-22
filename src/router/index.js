@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/pages/Home.vue";
 import Events from "@/pages/Events.vue";
 import Detail from "@/pages/Detail.vue";
-import DetailEvents from "@/pages/DetailEvents.vue"; 
+import EventDetail from "@/pages/DetailEvents.vue"; 
 import CityNetOverview from "@/pages/static/About/CityNetOverview.vue";
 import AboutDenpasar from "@/pages/static/About/AboutDenpasar.vue";
 import ExecutiveCommittee from "@/pages/static/About/ExecutiveCommittee.vue";
@@ -11,8 +11,13 @@ import ExecutiveCommittee from "@/pages/static/About/ExecutiveCommittee.vue";
 const routes = [
   { path: "/", name: "Home", component: Home },
   { path: "/events", name: "Events", component: Events },
-  { path: "/detail-events", name: "DetailEvents", component: DetailEvents },
-  { path: "/detail/:id", name: "Detail", component: Detail, props: true },
+  {
+    path: "/events/:id",
+    name: "EventDetail",
+    component: EventDetail,
+    props: true, // biar id otomatis masuk sebagai prop
+  },
+  // { path: "/detail/:id", name: "Detail", component: Detail, props: true },
 
   // Static Pages
   { path: "/citynet-overview", name: "CityNetOverview", component: CityNetOverview },

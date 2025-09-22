@@ -13,7 +13,6 @@
 		/>
 		<Archive />
 		<CardEvent />
-		<Pagination />
 
 	</div>
 </template>
