@@ -18,6 +18,18 @@ const routes = [
   { path: "/citynet-overview", name: "CityNetOverview", component: CityNetOverview },
   { path: "/about-denpasar", name: "AboutDenpasar", component: AboutDenpasar },
   { path: "/executive-committee", name: "ExecutiveCommittee", component: ExecutiveCommittee },
+
+  {
+    path: "/publications",
+    name: "PublicationList",
+    component: () => import("@/pages/static/Connect/PublicationList.vue")
+  },
+  {
+    path: "/publications/:id",
+    name: "PublicationDetail",
+    component: () => import("@/pages/static/Connect/PublicationDetail.vue"),
+    props: true
+  }
 ];
 
 const router = createRouter({
