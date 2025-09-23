@@ -1,42 +1,43 @@
 <script setup>
 import { ref, onMounted } from "vue"
 
-// State untuk menyimpan data dari API
 const records = ref([])
 
-// URL dasar untuk gambar
-const baseImageUrl = "https://dev-old.kreatifitas.site/prodps/"
+// base file server yang benar
+const baseImageUrl = "https://pengaduan.denpasarkota.go.id/files/image/"
 
-// 👉 Helper untuk generate URL gambar (versi yang sudah diperbaiki)
+// helper URL gambar – aman untuk spasi & full URL
 const getImageUrl = (imagePath) => {
-  // Jika path gambar tidak ada atau kosong, gunakan gambar placeholder
-  if (!imagePath) {
-    return "/images/no-image.png"
+  if (!imagePath) return "/images/no-image.png"
+
+  // Jika API sudah mengirim full URL (https://...)
+  if (/^https?:\/\//i.test(imagePath)) return imagePath
+
+  // Jika path sudah mengandung files/image, jangan dobel
+  if (imagePath.includes("files/image/")) {
+    return "https://pengaduan.denpasarkota.go.id/" + imagePath.replace(/^\/+/, "")
   }
-  
-  // Langsung gabungkan base URL dengan path gambar dari API
-  return baseImageUrl + imagePath
+
+  // Normal: hanya nama file -> gabungkan + encode
+  return baseImageUrl + encodeURIComponent(imagePath)
 }
 
-// Fungsi untuk mengambil data dari API
+// ambil data API
 const fetchData = async () => {
   try {
     const res = await fetch(
       "https://dev-old.kreatifitas.site/prodps/api/records/content?filter=other,eq,WV&filter=status,eq,1&include=title,description,image,url,alias"
     )
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
     const data = await res.json()
-    records.value = data.records
+    records.value = data.records ?? data.data ?? []
   } catch (err) {
     console.error("Gagal mengambil data dari API:", err)
   }
 }
 
-// Panggil fetchData() saat komponen pertama kali dimuat
-onMounted(() => {
-  fetchData()
-})
+onMounted(fetchData)
 </script>
-
 
 <template>
   <section
