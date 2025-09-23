@@ -126,93 +126,93 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue"
-import { inject } from "vue"
+	import { ref, onMounted, onBeforeUnmount } from "vue"
+	import { inject } from "vue"
 
-import menuLinks from "@/data/menuLinks.json" 
-const menus = menuLinks.sections.map(section => ({
-	title: section.title,
-	submenu: section.links.map(link => ({
-		title: link.label,
-		link: link.url
-	}))
-}));
+	import menuLinks from "@/data/menuLinks.json" 
+	const menus = menuLinks.sections.map(section => ({
+		title: section.title,
+		submenu: section.links.map(link => ({
+			title: link.label,
+			link: link.url
+		}))
+	}));
 
-const isDark = inject("isDark")
-const toggleDark = inject("toggleDark")
+	const isDark = inject("isDark", ref(false))
+	const toggleDark = inject("toggleDark", () => {})
 
-const searchQuery = ref("")
-const mobileOpen = ref(false)
-const isHidden = ref(false)
+	const searchQuery = ref("")
+	const mobileOpen = ref(false)
+	const isHidden = ref(false)
 
-// ------------------
+	// ------------------
 
-const toggleMenu = () => {
-  mobileOpen.value = !mobileOpen.value
-}
-
-const closeMenu = () => {
-  mobileOpen.value = false
-}
-
-// ------------------ Hide on scroll down, show on scroll up -----
-
-let lastScrollY = window.scrollY
-const handleScroll = () => {
-	const currentY = window.scrollY
-	if (currentY > lastScrollY && currentY > 80) {
-		isHidden.value = true
-	} else {
-		isHidden.value = false
+	const toggleMenu = () => {
+	mobileOpen.value = !mobileOpen.value
 	}
-	lastScrollY = currentY
-}
-onMounted(() => window.addEventListener("scroll", handleScroll))
-onBeforeUnmount(() => window.removeEventListener("scroll", handleScroll))
 
-// -------------------------------------------------------------
+	const closeMenu = () => {
+	mobileOpen.value = false
+	}
 
-const socialIcons = [
-	{ src: "/icons/instagram.svg", alt: "Instagram", href: "#" },
-	{ src: "/icons/youtube.svg", alt: "YouTube", href: "#" },
-	{ src: "/icons/facebook.svg", alt: "Facebook", href: "#" },
-	{ src: "/icons/twitter.svg", alt: "Twitter", href: "#" },
-	{ src: "/icons/tiktok.svg", alt: "TikTok", href: "#" },
-]
+	// ------------------ Hide on scroll down, show on scroll up -----
+
+	let lastScrollY = window.scrollY
+	const handleScroll = () => {
+		const currentY = window.scrollY
+		if (currentY > lastScrollY && currentY > 80) {
+			isHidden.value = true
+		} else {
+			isHidden.value = false
+		}
+		lastScrollY = currentY
+	}
+	onMounted(() => window.addEventListener("scroll", handleScroll))
+	onBeforeUnmount(() => window.removeEventListener("scroll", handleScroll))
+
+	// -------------------------------------------------------------
+
+	const socialIcons = [
+		{ src: "/icons/instagram.svg", alt: "Instagram", href: "#" },
+		{ src: "/icons/youtube.svg", alt: "YouTube", href: "#" },
+		{ src: "/icons/facebook.svg", alt: "Facebook", href: "#" },
+		{ src: "/icons/twitter.svg", alt: "Twitter", href: "#" },
+		{ src: "/icons/tiktok.svg", alt: "TikTok", href: "#" },
+	]
 
 
-const startVoiceSearch = () => console.log("Voice search clicked")
+	const startVoiceSearch = () => console.log("Voice search clicked")
 
-const activeLang = ref("en");
+	const activeLang = ref("en");
 
-const activeClass =
-  "px-3 py-1 bg-blue-600 text-white rounded-md font-semibold shadow";
-const inactiveClass =
-  "px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300";
+	const activeClass =
+	"px-3 py-1 bg-blue-600 text-white rounded-md font-semibold shadow";
+	const inactiveClass =
+	"px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300";
 
-function setLang(lang) {
-  const select = document.querySelector(".goog-te-combo");
-  if (select) {
-    select.value = lang;
-    select.dispatchEvent(new Event("change"));
-    activeLang.value = lang;
-  }
-}
+	function setLang(lang) {
+	const select = document.querySelector(".goog-te-combo");
+	if (select) {
+		select.value = lang;
+		select.dispatchEvent(new Event("change"));
+		activeLang.value = lang;
+	}
+	}
 
-onMounted(() => {
-  // default bahasa (misalnya English)
-  activeLang.value = "en";
-});
+	onMounted(() => {
+	// default bahasa
+	activeLang.value = "en";
+	});
 </script>
 
 <style>
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-	transition: all 0.3s ease;
-}
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-	opacity: 0;
-	transform: translateY(-10px);
-}
+	.slide-fade-enter-active,
+	.slide-fade-leave-active {
+		transition: all 0.3s ease;
+	}
+	.slide-fade-enter-from,
+	.slide-fade-leave-to {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
 </style>
