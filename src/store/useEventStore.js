@@ -6,9 +6,9 @@ export const useEventStore = defineStore("event", {
 	token: localStorage.getItem("token") || null,
 	events: [],
 	pagination: {
-	  page: 1,
-	  perPage: 4,
-	  total: 0,
+		page: 1,
+		perPage: 4,
+		total: 0,
 	},
 	eventDetail: null,
 	loading: false,
@@ -70,9 +70,9 @@ export const useEventStore = defineStore("event", {
 		this.pagination.page = page;
 	},
 	setStatus(status) {
-		this.status = status; // bisa dipakai kalau mau ubah filter
-		this.pagination.page = 1; // reset ke page pertama
-		this.fetchEvents();
+		this.status = status;
+		this.pagination.page = 1;
+		this.fetchEvents({ status });
     },
   },
 });

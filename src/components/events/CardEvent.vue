@@ -69,37 +69,37 @@
 </template>
 
 <script setup>
-import { onMounted, watch, computed } from "vue";
-import { storeToRefs } from "pinia";
-import { useEventStore } from "@/store/useEventStore";
+  import { onMounted, watch, computed } from "vue";
+  import { storeToRefs } from "pinia";
+  import { useEventStore } from "@/store/useEventStore";
 
-const store = useEventStore();
-const { events, pagination, loading } = storeToRefs(store);
+  const store = useEventStore();
+  const { events, pagination, loading } = storeToRefs(store);
 
-onMounted(() => {
-  store.fetchEvents({ status: "LIVE" });
-});
+  onMounted(() => {
+    store.fetchEvents({ status: "LIVE" });
+  });
 
-watch(
-  () => pagination.value.page,
-  () => {
-    store.fetchEvents();
-  }
-);
+  watch(
+    () => pagination.value.page,
+    () => {
+      store.fetchEvents();
+    }
+  );
 
-const totalPages = computed(() =>
-  Math.ceil(pagination.value.total / pagination.value.perPage)
-);
+  const totalPages = computed(() =>
+    Math.ceil(pagination.value.total / pagination.value.perPage)
+  );
 
-const prevPage = () => {
-  if (pagination.value.page > 1) {
-    store.setPage(pagination.value.page - 1);
-  }
-};
+  const prevPage = () => {
+    if (pagination.value.page > 1) {
+      store.setPage(pagination.value.page - 1);
+    }
+  };
 
-const nextPage = () => {
-  if (pagination.value.page * pagination.value.perPage < pagination.value.total) {
-    store.setPage(pagination.value.page + 1);
-  }
-};
+  const nextPage = () => {
+    if (pagination.value.page * pagination.value.perPage < pagination.value.total) {
+      store.setPage(pagination.value.page + 1);
+    }
+  };
 </script>
