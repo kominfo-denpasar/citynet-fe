@@ -5,8 +5,10 @@
 
 		<!-- Content -->
 		<main class="flex-1 flex-grow mt-[6.5rem]">
-			<slot />
-		</main>
+			<slot>
+				<div class="p-4">No content available</div>
+			</slot>
+		</main>	
 		<Footer />
 	</div>
 </template>

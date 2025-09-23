@@ -191,17 +191,17 @@
 	"px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300";
 
 	function setLang(lang) {
-	const select = document.querySelector(".goog-te-combo");
-	if (select) {
-		select.value = lang;
-		select.dispatchEvent(new Event("change"));
-		activeLang.value = lang;
-	}
+		const select = document.querySelector(".goog-te-combo");
+		if (select) {
+			select.value = lang;
+			select.dispatchEvent(new Event("change"));
+			activeLang.value = lang;
+		}
 	}
 
 	onMounted(() => {
-	// default bahasa
-	activeLang.value = "en";
+		// default bahasa
+		activeLang.value = "en";
 	});
 </script>
 

@@ -10,9 +10,6 @@ import "./assets/main.css";
 const head = createHead()
 const app = createApp(App)
 
-app.use(router)
-app.use(head)
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -23,5 +20,7 @@ library.add(faSearch, faMicrophone, faBars, faFacebook, faTwitter, faTimes, faMi
 
 app.use(pinia)
 app.use(router)
+app.use(head)
+
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.mount('#app')
