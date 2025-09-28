@@ -8,6 +8,8 @@ import CityNetOverview from "@/pages/static/About/CityNetOverview.vue";
 import AboutDenpasar from "@/pages/static/About/AboutDenpasar.vue";
 import ExecutiveCommittee from "@/pages/static/About/ExecutiveCommittee.vue";
 import Tourism from "@/pages/static/Explore/Tourism.vue";
+// import Test from "@/components/InterestingPoi.vue";
+import Test from "@/components/listTourism.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
@@ -39,7 +41,8 @@ const routes = [
     name: "PublicationDetail",
     component: () => import("@/pages/static/Connect/PublicationDetail.vue"),
     props: true
-  }
+  },
+  { path: "/test", name: "Test", component: Test },
 ];
 
 const router = createRouter({
