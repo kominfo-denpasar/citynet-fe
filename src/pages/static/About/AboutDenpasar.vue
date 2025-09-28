@@ -2,13 +2,13 @@
 	<StaticPage 
 		:breadcrumbs="[
 				{ label: 'Home', link: '/' },
-				{ label: 'About' },
-				{ label: 'Denpasar as Host City' }
+				{ label: 'About' }
 		]"
 		title="Denpasar as Host City"
 		subtitle="Denpasar, the capital city of Bali, is a vibrant hub of culture, innovation, and sustainability."
 		background="/images/bg4.png"
 	>
+		<h1 class="text-3xl font-bold mb-6 text-cyan-700">Denpasar as Host City</h1>
 		<p class="mb-4 text-gray-700 leading-relaxed">
 			Denpasar, the capital city of Bali, is a vibrant hub of culture, innovation, and sustainability.
       As the host city of the 45th CityNet Executive Committee Meeting and the 4th SDG City Awards,

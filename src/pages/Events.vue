@@ -4,8 +4,7 @@
 		<Breadcrumb 
 			:breadcrumbs="[
 				{ label: 'Home', link: '/' },
-				{ label: 'Explore' },
-				{ label: 'Events & Programs', link: '/events' }
+				{ label: 'Explore' }
 			]"
 			title="Events & Programs"
 			subtitle="Explore our latest events and programs."

@@ -1,6 +1,18 @@
 <template>
-  <section class="max-w-6xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold mb-8">Publications</h1>
+  <StaticPage 
+		:breadcrumbs="[
+				{ label: 'Home', link: '/' },
+				{ label: 'Explore' }
+		]"
+		title="Publications"
+		subtitle="List of Publications."
+		background="/images/bg4.png"
+	>
+    <div class="max-w-5xl mx-auto mb-8 text-center">
+      <!-- Title -->
+      <h2 class="text-2xl font-bold mb-8">List of Publications</h2>
+      <hr class="mt-8 border-gray-300" />
+    </div>
 
     <!-- List Publications -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -48,42 +60,69 @@
         Next
       </button>
     </div>
-  </section>
+  </StaticPage>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
-import pubData from "@/data/publications.json";
+  import { ref, computed, onMounted } from "vue";
+  import pubData from "@/data/publications.json";
 
-const publications = ref([]);
-const currentPage = ref(1);
-const perPage = 6; // tampilkan 6 item per halaman
+  const publications = ref([]);
+  const currentPage = ref(1);
+  const perPage = 6; // tampilkan 6 item per halaman
 
-onMounted(() => {
-  publications.value = pubData;
-});
-
-const totalPages = computed(() =>
-  Math.ceil(publications.value.length / perPage)
-);
-
-const paginatedData = computed(() => {
-  const start = (currentPage.value - 1) * perPage;
-  return publications.value.slice(start, start + perPage);
-});
-
-const nextPage = () => {
-  if (currentPage.value < totalPages.value) currentPage.value++;
-};
-
-const prevPage = () => {
-  if (currentPage.value > 1) currentPage.value--;
-};
-
-const formatDate = (dateStr) =>
-  new Date(dateStr).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+  onMounted(() => {
+    publications.value = pubData;
   });
+
+  const totalPages = computed(() =>
+    Math.ceil(publications.value.length / perPage)
+  );
+
+  const paginatedData = computed(() => {
+    const start = (currentPage.value - 1) * perPage;
+    return publications.value.slice(start, start + perPage);
+  });
+
+  const nextPage = () => {
+    if (currentPage.value < totalPages.value) currentPage.value++;
+  };
+
+  const prevPage = () => {
+    if (currentPage.value > 1) currentPage.value--;
+  };
+
+  const formatDate = (dateStr) =>
+    new Date(dateStr).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+  import StaticPage from "@/layouts/StaticPage.vue";
+	import { useHead } from '@vueuse/head'
+
+	useHead({
+		title: "About Denpasar | Denpasar - CityNet 2025",
+		meta: [
+			{
+				name: "description",
+				content: "Learn why Denpasar is the host city for CityNet 2025. Discover its culture, innovation, and sustainability vision."
+			},
+			{
+				property: "og:title",
+				content: "About Denpasar | CityNet 2025"
+			},
+			{
+				property: "og:description",
+				content: "Discover Denpasar as the vibrant host city for CityNet 2025 events."
+			},
+			{
+				property: "og:image",
+				content: "https://citynet-ap.org/data/event/1FDkRfb11VhvsceQ3KK0U6j84IUOvNezDrbc4zN8eUN9kKAfp.uvk6v5ycayih.png"
+			}
+		]
+	})
+
+
 </script>

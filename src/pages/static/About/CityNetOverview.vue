@@ -2,14 +2,13 @@
   <StaticPage 
 		:breadcrumbs="[
 				{ label: 'Home', link: '/' },
-				{ label: 'About' },
-				{ label: 'Citynet Overview' }
+				{ label: 'About' }
 		]"
 		title="Citynet Overview"
 		subtitle="A vibrant city embracing innovation, culture, and sustainability."
 		background="/images/bg4.png"
 	>
-
+	<h1 class="text-3xl font-bold mb-6 text-cyan-700">Citynet Overview</h1>
     <p class="mb-4 text-gray-700 leading-relaxed">
       CityNet is the largest network of cities and local governments in the Asia-Pacific region,
       committed to sustainable urban development. Established in 1987, CityNet empowers its members
