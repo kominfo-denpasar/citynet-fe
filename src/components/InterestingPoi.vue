@@ -118,7 +118,7 @@ onMounted(() => {
       </div>
 
       <!-- Right: Map -->
-      <div id="map" class="w-full h-[500px] rounded-xl shadow-md"></div>
+      <div id="map" class="w-full z-0 h-[500px] rounded-xl shadow-md"></div>
     </div>
   </section>
 </template>
