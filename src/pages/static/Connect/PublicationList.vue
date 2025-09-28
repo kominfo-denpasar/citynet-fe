@@ -103,7 +103,7 @@
 	import { useHead } from '@vueuse/head'
 
 	useHead({
-		title: "About Denpasar | Denpasar - CityNet 2025",
+		title: "List of Publications | Denpasar - CityNet 2025",
 		meta: [
 			{
 				name: "description",

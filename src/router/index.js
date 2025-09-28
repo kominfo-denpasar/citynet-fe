@@ -7,6 +7,7 @@ import EventDetail from "@/pages/DetailEvents.vue";
 import CityNetOverview from "@/pages/static/About/CityNetOverview.vue";
 import AboutDenpasar from "@/pages/static/About/AboutDenpasar.vue";
 import ExecutiveCommittee from "@/pages/static/About/ExecutiveCommittee.vue";
+import Tourism from "@/pages/static/Explore/Tourism.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
@@ -19,11 +20,15 @@ const routes = [
   },
   // { path: "/detail/:id", name: "Detail", component: Detail, props: true },
 
-  // Static Pages
+  // Static About Pages
   { path: "/citynet-overview", name: "CityNetOverview", component: CityNetOverview },
   { path: "/about-denpasar", name: "AboutDenpasar", component: AboutDenpasar },
   { path: "/executive-committee", name: "ExecutiveCommittee", component: ExecutiveCommittee },
 
+  // Explore Pages
+  { path: "/tourism", name: "Tourism", component: Tourism },
+
+  // list Connect Pages
   {
     path: "/publications",
     name: "PublicationList",

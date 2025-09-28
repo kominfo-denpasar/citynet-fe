@@ -14,6 +14,13 @@ export default defineConfig({
     	'localhost',            
     	'127.0.0.1',            
     	'citynet.kreatifitas.site'
-    ],                          
+    ],
+    proxy: {
+      "/api-tourism": {
+        target: "https://dev-8.denpasarkota.go.id",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-tourism/, ""),
+      },
+    },                          
   }
 })
