@@ -1,7 +1,7 @@
 <template>
   <section class="max-w-7xl mx-auto px-6 py-12">
     <header class="mb-8 text-center">
-      <h2 class="text-3xl font-semibold">Iconic &amp; Popular Places in Denpasar</h2>
+      <h2 class="text-3xl font-semibold">Iconic &amp; Interesting Places in Denpasar</h2>
       <p class="mt-2 text-sm text-gray-600">Explore handpicked landmarks, cultural hubs, beaches and local favourites across the city.</p>
     </header>
 
@@ -63,7 +63,7 @@ const places = ref([
     category: 'Beaches',
     location: 'Sanur',
     summary: 'Relaxed seaside promenade, sunrise views and water sport options.',
-    image: 'https://source.unsplash.com/featured/?sanur,beach',
+    image: 'https://theworldtravelguy.com/wp-content/uploads/2021/05/DSCF9924-3.jpg',
     link: '#',
     tags: ['Beaches', 'Nature'],
     popularity: 4.8,
@@ -75,7 +75,7 @@ const places = ref([
     category: 'Landmarks',
     location: 'Central Denpasar',
     summary: 'Iconic monument commemorating Balinese struggle, with a museum and rooftop views.',
-    image: 'https://source.unsplash.com/featured/?bajra,monument',
+    image: 'https://balistarisland.com/wp-content/uploads/2016/03/bajrasandhimonument2-800x600.jpg',
     link: '#',
     tags: ['Landmarks', 'Heritage'],
     popularity: 4.6,
@@ -87,7 +87,7 @@ const places = ref([
     category: 'Art & Museums',
     location: 'Central Denpasar',
     summary: 'Collections of Balinese art, archaeology, and cultural artifacts.',
-    image: 'https://source.unsplash.com/featured/?museum,bali',
+    image: 'https://balistarisland.com/wp-content/uploads/2016/04/balimuseum-800x600.jpg',
     link: '#',
     tags: ['Art & Museums', 'Culture'],
     popularity: 4.4,

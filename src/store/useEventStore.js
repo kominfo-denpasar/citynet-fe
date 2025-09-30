@@ -3,7 +3,7 @@ import api from "@/services/api";
 
 export const useEventStore = defineStore("event", {
   state: () => ({
-	token: localStorage.getItem("token") || null,
+	token: null,
 	events: [],
 	pagination: {
 		page: 1,
@@ -13,6 +13,7 @@ export const useEventStore = defineStore("event", {
 	eventDetail: null,
 	loading: false,
 	status: "LIVE",
+	error: null,
   }),
   actions: {
 	async login(email, password, accountId) {
@@ -31,7 +32,9 @@ export const useEventStore = defineStore("event", {
 
 			return this.token;
 		} catch (err) {
+			localStorage.removeItem("token");
 			console.error("Gagal login:", err.response?.data || err.message);
+			this.error = err.response?.data;
 			throw err;
 		}
 	},

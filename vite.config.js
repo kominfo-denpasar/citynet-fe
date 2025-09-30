@@ -22,5 +22,6 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api-tourism/, ""),
       },
     },                          
-  }
+  },
+  assetsInclude: ['**/*.geojson']
 })
