@@ -40,7 +40,8 @@
               @click="highlightPlace(index)"
             >
               <img
-                :src="place.image"
+                v-if="place.thumbnail && place.thumbnail.length > 0"
+                :src="place.thumbnail[0].thumbnails?.card_cover?.signedUrl || place.thumbnail[0].url"
                 :alt="place.name"
                 class="w-full h-56 object-cover"
               />
@@ -50,7 +51,15 @@
                 <p class="text-sm text-gray-700">{{ place.short_desc }}</p>
                 <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
                     <span class="inline-flex items-center gap-2">⭐ {{ place.rating }}</span>
-                    <span class="inline-flex items-center gap-2"> {{ place.category }}</span>
+                    <span class="inline-flex items-center gap-2">
+                      <span
+                        v-for="(catItem, idx) in place.poi_tags"
+                        :key="idx"
+                        class="bg-cyan-100 text-cyan-700 px-2 py-1 rounded text-xs"
+                      >
+                        {{ catItem }}
+                      </span>
+                    </span>
                 </div>
                 <hr class="mt-4 mb-2 border-gray-300"></hr>
                 <router-link :to="`/interesting-place/${place.name}`" class="no-underline text-blue-600 dark:text-sky-400 font-medium">
@@ -106,9 +115,9 @@
         }).addTo(map.value);
 
         markers.value = props.places.map((p) =>
-            L.marker([p.lat, p.lng])
+            L.marker([p.loc_lat, p.loc_lng])
             .addTo(map.value)
-            .bindPopup(`<b>${p.name}</b><br>${p.category} - ${p.location}`)
+            .bindPopup(`<b>${p.name}</b><br>${p.poi_category} - ${p.location}`)
         );
     }
 
@@ -122,7 +131,7 @@
 
             // Tambah marker baru
             markers.value = newPlaces.map((p) =>
-                L.marker([p.lat, p.lng])
+                L.marker([p.loc_lat, p.loc_lng])
                 .addTo(map.value)
                 .bindPopup(`<b>${p.name}</b><br>${p.short_desc}`)
             );
