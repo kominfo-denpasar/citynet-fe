@@ -1,9 +1,4 @@
 <template>
-  <section class="max-w-7xl mx-auto px-6 py-12">
-    <header class="mb-8 text-center">
-      <h2 class="text-3xl font-semibold">Iconic &amp; Interesting Places in Denpasar</h2>
-      <p class="mt-2 text-sm text-gray-600">Explore handpicked landmarks, cultural hubs, beaches and local favourites across the city.</p>
-    </header>
 
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
       <div class="flex items-center flex-wrap gap-2">
@@ -46,7 +41,6 @@
     </div>
 
     <footer class="mt-8 text-center text-sm text-gray-500">Data and images are illustrative; replace image URLs with your assets.</footer>
-  </section>
 </template>
 
 <script setup>

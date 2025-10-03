@@ -10,6 +10,7 @@ import ExecutiveCommittee from "@/pages/static/About/ExecutiveCommittee.vue";
 import Tourism from "@/pages/static/Explore/Tourism.vue";
 // import Test from "@/components/InterestingPoi.vue";
 import Test from "@/components/listTourism.vue";
+import ThingsToDo from "@/pages/static/Explore/ThingsToDo.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
@@ -29,6 +30,7 @@ const routes = [
 
   // Explore Pages
   { path: "/tourism", name: "Tourism", component: Tourism },
+  { path: "/things-to-do", name: "ThingsToDo", component: ThingsToDo },
 
   // list Connect Pages
   {

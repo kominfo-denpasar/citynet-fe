@@ -108,7 +108,7 @@
 			<!-- End Card -->
 
 			<!-- Card -->
-			<a class="group relative flex flex-col w-full min-h-60 bg-[url('https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80')] bg-center bg-cover rounded-xl hover:shadow-lg focus:outline-hidden focus:shadow-lg transition" href="#">
+			<router-link :to="`/things-to-do/`" class="group relative flex flex-col w-full min-h-60 bg-[url('https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80')] bg-center bg-cover rounded-xl hover:shadow-lg focus:outline-hidden focus:shadow-lg transition" href="#">
 				<div class="flex-auto p-4 md:p-6">
 					<h3 class="text-xl text-white/90 group-hover:text-white"><span class="font-bold">Check out</span> All the things you could do while staying here. From walking, jogging enjoying the scenery on <span class="font-bold">Sanur</span> to shopping and dining on <span class="font-bold">Gajah Mada Street</span>.</h3>
 				</div>
@@ -118,7 +118,7 @@
 						<svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
 					</div>
 				</div>
-			</a>
+			</router-link>
 			<!-- End Card -->
 		</div>
 		<!-- End Grid -->

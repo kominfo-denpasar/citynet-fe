@@ -62,71 +62,54 @@
 
   import axios from "axios";
 
-const recommended = ref([]);
-const categories = ref([]);
-const places = ref([]);
+  const recommended = ref([]);
+  const categories = ref([]);
+  const places = ref([]);
 
-const loading = ref(true);
-const error = ref(null);
+  const loading = ref(true);
+  const error = ref(null);
 
-const recommendedPoi = computed(() => recommended.value);
-const categoriesPoi = computed(() => categories.value);
-const interestingPoi = computed(() => places.value);
+  const recommendedPoi = computed(() => recommended.value);
+  const categoriesPoi = computed(() => categories.value);
+  const interestingPoi = computed(() => places.value);
 
-// Buat instance Axios dengan token dari .env
-const api = axios.create({
-  baseURL: "https://ndb.kreatifitas.site/api/v2",
-  headers: {
-    "xc-token": import.meta.env.VITE_API_TOKEN,
-  },
-});
+  // Buat instance Axios dengan token dari .env
+  const api = axios.create({
+    baseURL: "https://ndb.kreatifitas.site/api/v2",
+    headers: {
+      "xc-token": import.meta.env.VITE_API_TOKEN,
+    },
+  });
 
-onMounted(async () => {
-  try {
-    // Panggil beberapa API sekaligus
-    const [res1, res2, res3] = await Promise.all([
-      api.get("/tables/mij6tb6xn3lvymj/records", {
-        params: { offset: 0, limit: 2, viewId: "vwhcpnq57a1h8azm" },
-      }),
-      api.get("/tables/mij6tb6xn3lvymj/records", {
-        params: { offset: 0, limit: 10, where: "(poi_category,like,Things To Do)", viewId: "vwhcpnq57a1h8azm" },
-      }),
-      api.get("/tables/mij6tb6xn3lvymj/records", {
-        params: { offset: 0, limit: 25, where: "(poi_category,like,Featured Neighbourhood)", viewId: "vwhcpnq57a1h8azm" },
-      }),
-    ]);
+  onMounted(async () => {
+    try {
+      // Panggil beberapa API sekaligus
+      const [res1, res2, res3] = await Promise.all([
+        api.get("/tables/mij6tb6xn3lvymj/records", {
+          params: { offset: 0, limit: 2, viewId: "vwhcpnq57a1h8azm" },
+        }),
+        api.get("/tables/mij6tb6xn3lvymj/records", {
+          params: { offset: 0, limit: 10, where: "(poi_category,like,Things To Do)", viewId: "vwhcpnq57a1h8azm" },
+        }),
+        api.get("/tables/mij6tb6xn3lvymj/records", {
+          params: { offset: 0, limit: 25, where: "(poi_category,like,Featured Neighbourhood)", viewId: "vwhcpnq57a1h8azm" },
+        }),
+      ]);
 
-    // Masukkan hasilnya ke state
-    recommended.value = res1.data.list || [];
-    categories.value = res2.data.list || [];
-    places.value = res3.data.list || [];
+      // Masukkan hasilnya ke state
+      recommended.value = res1.data.list || [];
+      categories.value = res2.data.list || [];
+      places.value = res3.data.list || [];
 
-    console.log("Recommended:", res1.data.list);
-    console.log("Categories:", res2.data.list);
-    console.log("Places:", res3.data.list);
-  } catch (err) {
-    error.value = err.message;
-  } finally {
-    loading.value = false;
-  }
-});
-
-  // onMounted(async () => {
-  //   try {
-  //     const res = await fetch("/api-tourism/api-contoh/citynet/tourism-index.json");
-  //     if (!res.ok) throw new Error("Gagal memuat data API");
-  //     const data = await res.json();
-  //     recommended.value = data.recommended || [];
-  //     categories.value = data.categories || [];
-  //     places.value = data.interesting || [];
-
-  //     console.log(data);
-  //   } catch (err) {
-  //     error.value = err.message;
-  //   } finally {
-  //     loading.value = false;
-  //   }
-  // });
+      console.log("Recommended:", res1.data.list);
+      console.log("Categories:", res2.data.list);
+      console.log("Places:", res3.data.list);
+    } catch (err) {
+      error.value = err.message;
+    } finally {
+      loading.value = false;
+    }
+  });
 
   useHead({
     title: "Denpasar Tourism | CityNet 2025",
