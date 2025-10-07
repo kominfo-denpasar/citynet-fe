@@ -9,7 +9,7 @@
               Denpasar's Overview
             </h2>
             <p class="text-gray-600 dark:text-neutral-400">
-              We provide you with a test account that can be set up in seconds. Our main focus is getting responses to you as soon as we can.
+              Denpasar is the capital city of Bali and serves as the administrative, economic, and cultural hub of the island. The city is administratively divided into 4 districts (kecamatan) and 43 villages (comprising 16 urban kelurahan and 27 rural desa). Covering an area of 125.98 km², Denpasar had an estimated population of 726,808 in mid-2022, with a population density of about 5,769 people per km².
             </p>
           </div>
           <!-- End Title -->
@@ -22,7 +22,7 @@
 
             <div class="relative z-10">
               <p class="text-xl italic text-gray-800 dark:text-white">
-                Amazing people to work with. Very fast and professional partner.
+                Each district contributes uniquely to the city’s vibrancy
               </p>
             </div>
 
@@ -32,8 +32,8 @@
                   <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
                 </div>
                 <div class="grow">
-                  <div class="font-semibold text-gray-800 dark:text-neutral-200">Josh Grazioso</div>
-                  <div class="text-xs text-gray-500 dark:text-neutral-500">Director Payments & Risk | Airbnb</div>
+                  <div class="font-semibold text-gray-800 dark:text-neutral-200">Jaya Negara</div>
+                  <div class="text-xs text-gray-500 dark:text-neutral-500">Mayor of Denpasar</div>
                 </div>
               </div>
             </footer>
@@ -48,39 +48,37 @@
             <ul class="grid grid-cols-2 divide-y divide-y-2 divide-x divide-x-2 divide-gray-200 overflow-hidden dark:divide-neutral-700">
               <li class="flex flex-col -m-0.5 p-4 sm:p-8">
                 <div class="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold text-gray-800 mb-2 dark:text-neutral-200">
-                  45k+
+                  4
                 </div>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-neutral-400">
-                  users - from new startups to public companies
+                  <b>Districts</b> - South Denpasar, West Denpasar, East Denpasar, North Denpasar
                 </p>
               </li>
 
               <li class="flex flex-col -m-0.5 p-4 sm:p-8">
                 <div class="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold text-gray-800 mb-2 dark:text-neutral-200">
-                  <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
-                  23%
+                  43
                 </div>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-neutral-400">
-                  increase in traffic on webpages with Looms
+                  <b>Villages</b> - 16 urban <i>kelurahan</i> and 27 rural <i>desa</i>
                 </p>
               </li>
 
               <li class="flex flex-col -m-0.5 p-4 sm:p-8">
                 <div class="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold text-gray-800 mb-2 dark:text-neutral-200">
-                  <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
-                  9.3%
+                  125,98
                 </div>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-neutral-400">
-                  boost in reply rates across sales outreach
+                  <b>km² Area</b> - making it the second smallest city in Bali
                 </p>
               </li>
 
               <li class="flex flex-col -m-0.5 p-4 sm:p-8">
                 <div class="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold text-gray-800 mb-2 dark:text-neutral-200">
-                  2x
+                  726,808
                 </div>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-neutral-400">
-                  faster than previous Preline versions
+                  <b>Population (mid-2022 estimate)</b> - with a density of about 5,769 people per km²
                 </p>
               </li>
             </ul>

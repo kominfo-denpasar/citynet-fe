@@ -8,13 +8,6 @@
     subtitle="Tourism & Culture in Denpasar invites you to explore vibrant traditions, stunning beaches, and the authentic spirit of Bali in one captivating journey."
     background="/images/bg4.png"
   >
-    <!-- Hero Title -->
-    <h1 class="text-3xl font-bold mb-6 text-cyan-700">Discover the Charm of Denpasar</h1>
-    <p class="mb-4 text-gray-700 leading-relaxed">
-      Denpasar offers a variety of exciting destinations, from beautiful beaches and cultural sites to authentic Balinese cuisine and modern entertainment venues. 
-      Discover unforgettable experiences around every corner of the city when you're staying here. 
-    </p>
-
     <!-- Loading & Error -->
     <div v-if="loading" class="text-center py-10">Loading data...</div>
     <div v-if="error" class="text-center py-10 text-red-600">{{ error }}</div>

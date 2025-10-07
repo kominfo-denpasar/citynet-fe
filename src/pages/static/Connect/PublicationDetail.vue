@@ -12,22 +12,22 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import { useRoute } from "vue-router";
-import pubData from "@/data/publications.json";
+  import { ref, onMounted } from "vue";
+  import { useRoute } from "vue-router";
+  import pubData from "@/data/publications.json";
 
-const route = useRoute();
-const pubItem = ref(null);
+  const route = useRoute();
+  const pubItem = ref(null);
 
-onMounted(() => {
-  const id = parseInt(route.params.id);
-  pubItem.value = pubData.find((n) => n.id === id);
-});
-
-const formatDate = (dateStr) =>
-  new Date(dateStr).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+  onMounted(() => {
+    const id = parseInt(route.params.id);
+    pubItem.value = pubData.find((n) => n.id === id);
   });
+
+  const formatDate = (dateStr) =>
+    new Date(dateStr).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
 </script>
