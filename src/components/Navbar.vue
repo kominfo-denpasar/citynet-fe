@@ -32,9 +32,18 @@
 					</form>
 
 					<!-- Translate -->
-					<button aria-label="Change language" @click="toggleLanguage">
+					<!-- <button aria-label="Change language" @click="toggleLanguage">
 						<img src="/icons/icon-global.png" class="w-6 md:w-7 object-contain" alt="Language" />
-					</button>
+					</button> -->
+
+					<div class="flex space-x-2">
+						<button @click="setLang('en')" :class="activeLang === 'en' ? activeClass : inactiveClass">
+						EN
+						</button>
+						<button @click="setLang('id')" :class="activeLang === 'id' ? activeClass : inactiveClass">
+						ID
+						</button>
+					</div>
 
 					<!-- Dark toggle -->
 					<button @click="toggleDark" class="px-2 py-1 rounded-lg bg-gray-200 dark:bg-gray-700 text-xs md:text-sm text-gray-800 dark:text-gray-100">
@@ -52,7 +61,7 @@
 					<span class="text-2xl md:text-[40px] text-blue-900 dark:text-sky-300 leading-none font-['Roboto_Slab']">CITYNET</span>
 					<img src="/images/logo.png" alt="Logo Citynet" class="h-10 md:h-12 w-auto" />
 					<span class="hidden 900:block text-sm md:text-lg font-bold text-blue-900 dark:text-sky-300 leading-tight break-words">
-						PEMERINTAH <br> KOTA DENPASAR
+						DENPASAR <br> CITY GOVERNMENT
 					</span>
 				</router-link>
 
@@ -117,85 +126,93 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue"
-import { inject } from "vue"
+	import { ref, onMounted, onBeforeUnmount } from "vue"
+	import { inject } from "vue"
 
-const isDark = inject("isDark")
-const toggleDark = inject("toggleDark")
+	import menuLinks from "@/data/menuLinks.json" 
+	const menus = menuLinks.sections.map(section => ({
+		title: section.title,
+		submenu: section.links.map(link => ({
+			title: link.label,
+			link: link.url
+		}))
+	}));
 
-const searchQuery = ref("")
-const mobileOpen = ref(false)
-const isHidden = ref(false)
+	const isDark = inject("isDark", ref(false))
+	const toggleDark = inject("toggleDark", () => {})
 
-// ------------------
+	const searchQuery = ref("")
+	const mobileOpen = ref(false)
+	const isHidden = ref(false)
 
-const toggleMenu = () => {
-  mobileOpen.value = !mobileOpen.value
-}
+	// ------------------
 
-const closeMenu = () => {
-  mobileOpen.value = false
-}
-
-// ------------------ Hide on scroll down, show on scroll up -----
-
-let lastScrollY = window.scrollY
-const handleScroll = () => {
-	const currentY = window.scrollY
-	if (currentY > lastScrollY && currentY > 80) {
-		isHidden.value = true
-	} else {
-		isHidden.value = false
+	const toggleMenu = () => {
+	mobileOpen.value = !mobileOpen.value
 	}
-	lastScrollY = currentY
-}
-onMounted(() => window.addEventListener("scroll", handleScroll))
-onBeforeUnmount(() => window.removeEventListener("scroll", handleScroll))
 
-// -------------------------------------------------------------
+	const closeMenu = () => {
+	mobileOpen.value = false
+	}
 
-const socialIcons = [
-	{ src: "/icons/instagram.svg", alt: "Instagram", href: "#" },
-	{ src: "/icons/youtube.svg", alt: "YouTube", href: "#" },
-	{ src: "/icons/facebook.svg", alt: "Facebook", href: "#" },
-	{ src: "/icons/twitter.svg", alt: "Twitter", href: "#" },
-	{ src: "/icons/tiktok.svg", alt: "TikTok", href: "#" },
-]
+	// ------------------ Hide on scroll down, show on scroll up -----
 
-const menus = [
-	{
-		title: "Who We Are",
-		submenu: [
-			{ title: "About Us", link: "/about" },
-			{ title: "Leadership", link: "/leadership" },
-			{ title: "Partners", link: "/partners" },
-		],
-	},
-	{
-		title: "Resources",
-		submenu: [
-			{ title: "Members", link: "/members" },
-			{ title: "Projects", link: "/projects" },
-		],
-	},
-	{
-		title: "What We Do",
-		submenu: [{ title: "Events", link: "/events" }],
-	},
-]
+	let lastScrollY = window.scrollY
+	const handleScroll = () => {
+		const currentY = window.scrollY
+		if (currentY > lastScrollY && currentY > 80) {
+			isHidden.value = true
+		} else {
+			isHidden.value = false
+		}
+		lastScrollY = currentY
+	}
+	onMounted(() => window.addEventListener("scroll", handleScroll))
+	onBeforeUnmount(() => window.removeEventListener("scroll", handleScroll))
 
-const startVoiceSearch = () => console.log("Voice search clicked")
-const toggleLanguage = () => console.log("Change language clicked")
+	// -------------------------------------------------------------
+
+	const socialIcons = [
+		{ src: "/icons/instagram.svg", alt: "Instagram", href: "#" },
+		{ src: "/icons/youtube.svg", alt: "YouTube", href: "#" },
+		{ src: "/icons/facebook.svg", alt: "Facebook", href: "#" },
+		{ src: "/icons/twitter.svg", alt: "Twitter", href: "#" },
+		{ src: "/icons/tiktok.svg", alt: "TikTok", href: "#" },
+	]
+
+
+	const startVoiceSearch = () => console.log("Voice search clicked")
+
+	const activeLang = ref("en");
+
+	const activeClass =
+	"px-3 py-1 bg-blue-600 text-white rounded-md font-semibold shadow";
+	const inactiveClass =
+	"px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300";
+
+	function setLang(lang) {
+		const select = document.querySelector(".goog-te-combo");
+		if (select) {
+			select.value = lang;
+			select.dispatchEvent(new Event("change"));
+			activeLang.value = lang;
+		}
+	}
+
+	onMounted(() => {
+		// default bahasa
+		activeLang.value = "en";
+	});
 </script>
 
 <style>
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-	transition: all 0.3s ease;
-}
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-	opacity: 0;
-	transform: translateY(-10px);
-}
+	.slide-fade-enter-active,
+	.slide-fade-leave-active {
+		transition: all 0.3s ease;
+	}
+	.slide-fade-enter-from,
+	.slide-fade-leave-to {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
 </style>

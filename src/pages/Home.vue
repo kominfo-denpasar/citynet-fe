@@ -13,13 +13,14 @@
 		/> -->
 
 		<AccessibilityButton />
-		<HeroSectionTwo />
+		<HeroSection />
+		<ProfilDenpasar />
 		<ExecutiveCommittee />
 		<ExploreDenpasar />
-		<ProfilDenpasar />
-		<Galeri />
+		
+		<!-- <Galeri />
 		<Berita />
-		<Video />
+		<Video /> -->
 	</div>
 </template>
 
@@ -29,12 +30,36 @@
 	import AccessibilityButton from "@/components/AccessibilityButton.vue";
 	import ExecutiveCommittee from "@/components/ExecutiveCommittee.vue";
 	import ExploreDenpasar from "@/components/ExploreDenpasar.vue";
-	// import ProfilDenpasar from "@/components/ProfilDenpasar.vue";
+	import ProfilDenpasar from "@/components/ProfilDenpasar.vue";
 	// import Galeri from "@/components/Galeri.vue";
 	// import Berita from "@/components/Berita.vue";
-	import Video from "@/components/Video.vue";
+	// import Video from "@/components/Video.vue";
 
 	import { useRoute } from 'vue-router';
+
+	import { useHead } from '@vueuse/head'
+
+	useHead({
+		title: "Denpasar - CityNet 2025",
+		meta: [
+			{
+				name: "description",
+				content: "Learn why Denpasar is the host city for CityNet 2025. Discover its culture, innovation, and sustainability vision."
+			},
+			{
+				property: "og:title",
+				content: "Denpasar - CityNet 2025"
+			},
+			{
+				property: "og:description",
+				content: "Discover Denpasar as the vibrant host city for CityNet 2025 events."
+			},
+			{
+				property: "og:image",
+				content: "https://citynet-ap.org/images/denpasar-host.jpg"
+			}
+		]
+	})
 </script>
 
 

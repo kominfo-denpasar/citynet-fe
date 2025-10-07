@@ -10,8 +10,5 @@ export default {
         '900': '900px', // custom breakpoint
       },
     },
-  },
-  plugins: [
-     require('@tailwindcss/line-clamp'),
-  ],
+  }
 }

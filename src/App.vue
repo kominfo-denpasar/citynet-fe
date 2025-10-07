@@ -1,6 +1,9 @@
 <template>
 	<MainLayout>
-		<RouterView />
+		<RouterView v-slot="{ Component }">
+			<component v-if="Component" :is="Component" />
+			<div v-else class="p-10">Loading...</div>
+		</RouterView>
 	</MainLayout>
 </template>
 

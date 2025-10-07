@@ -15,7 +15,7 @@
 	  <article class="flex-1 ml-40 space-y-6 max-w-xl">
 		<header>
 		  <h2 id="profil-denpasar-heading" class="text-5xl font-bold leading-tight uppercase drop-shadow-lg">
-			Profil <br /> Kota Denpasar
+			Denpasar City <br />Profile 
 		  </h2>
 		</header>
 
