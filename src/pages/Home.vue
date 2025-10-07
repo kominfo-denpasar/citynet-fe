@@ -13,10 +13,11 @@
 		/> -->
 
 		<AccessibilityButton />
-		<HeroSection />
-		<ProfilDenpasar />
+		<!-- <HeroSection /> -->
 		<ExecutiveCommittee />
 		<ExploreDenpasar />
+		<ProfilDenpasar />
+		
 		
 		<!-- <Galeri />
 		<Berita />

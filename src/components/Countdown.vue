@@ -61,7 +61,7 @@ onUnmounted(() => {
 			>
 				{{ days }}
 			</time>
-			<span class="mt-2 font-bold text-lg">Hari</span>
+			<span class="mt-2 font-bold text-lg">Days</span>
 		</article>
 
 		<!-- Jam -->
@@ -80,7 +80,7 @@ onUnmounted(() => {
 			>
 				{{ hours }}
 			</time>
-			<span class="mt-2 font-bold text-lg">Jam</span>
+			<span class="mt-2 font-bold text-lg">Hours</span>
 		</article>
 
 		<!-- Menit -->
@@ -99,7 +99,7 @@ onUnmounted(() => {
 			>
 				{{ minutes }}
 			</time>
-			<span class="mt-2 font-bold text-lg">Menit</span>
+			<span class="mt-2 font-bold text-lg">Minutes</span>
 		</article>
 
 		<!-- Detik -->
@@ -118,7 +118,7 @@ onUnmounted(() => {
 			>
 				{{ seconds }}
 			</time>
-			<span class="mt-2 font-bold text-lg">Detik</span>
+			<span class="mt-2 font-bold text-lg">Seconds</span>
 		</article>
 	</section>
 </template>

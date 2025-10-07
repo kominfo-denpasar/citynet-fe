@@ -13,10 +13,6 @@
     <div v-if="error" class="text-center py-10 text-red-600">{{ error }}</div>
 
     <div v-else>
-      <!-- Overview -->
-      <OverviewSection />
-      <!-- End Overview -->
-
       <!-- Destinasi Populer -->
       <InterestingPoi :places="interestingPoi" />
 
@@ -50,7 +46,6 @@
   import StaticPage from "@/layouts/StaticPage.vue";
   import { useHead } from '@vueuse/head'
   import InterestingPoi from "@/components/InterestingPoi.vue";
-  import OverviewSection from "@/components/OverviewSection.vue";
   import RecommendedSection from "@/components/RecommendedSection.vue";
 
   import axios from "axios";

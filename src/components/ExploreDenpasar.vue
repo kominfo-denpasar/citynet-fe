@@ -58,7 +58,7 @@ onMounted(fetchData)
         class="text-3xl md:text-5xl font-extrabold uppercase tracking-wide text-gray-900"
         style="text-shadow: 2px 2px 2px rgba(0,0,0,0.5);"
       >
-        AYO JELAJAH KOTA DENPASAR
+        Denpasar City Services
       </h2>
 
       <!-- Progres Bar -->
