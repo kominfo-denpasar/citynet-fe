@@ -1,67 +1,137 @@
-<!-- Content Section -->
 <template>
-	<section class="relative w-full h-screen flex flex-col items-center justify-center text-center px-6">
-		<!-- Background -->
-		<img
-			src="/images/bg2.png"
-			alt="Background"
-			class="absolute inset-0 w-full h-full object-cover z-0"
-		/>
-		<div class="absolute inset-0 bg-black bg-opacity-5 z-0"></div>
+  <section
+    class="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 py-20 sm:py-24 md:py-32 overflow-hidden"
+  >
+    <!-- Background -->
+    <img
+      src="/images/bg2.png"
+      alt="CityNet Denpasar Background"
+      class="absolute inset-0 w-full h-full object-cover z-0 animate-fadeInSlow"
+    />
+    <div class="absolute inset-0 bg-black/50 z-0"></div>
 
-		<!-- Content -->
-		<div class="relative z-10 max-w-4xl text-white">
-			<div class="max-w-4xl mx-auto text-center">
-			<!-- Title -->
-			<h1
-				class="text-3xl md:text-5xl font-extrabold tracking-wide mb-4 uppercase"
-			>
-				Executive Committee Meeting
-			</h1>
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl text-white space-y-5 sm:space-y-6 animate-fadeUp">
+      <!-- Title -->
+      <h1
+        class="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-wide leading-tight uppercase"
+      >
+        CityNet × Denpasar 2025
+      </h1>
+      <p
+        class="text-lg sm:text-xl md:text-2xl font-medium text-cyan-200 px-2 sm:px-0 animate-fadeIn delay-200"
+      >
+        Empowering Sustainable Urban Futures
+      </p>
 
-			<!-- Progress Bar -->
-			<div class="flex items-center space-x-12 pb-8 ml-4">
-				<div
-				class="w-96 h-[4px] bg-gradient-to-r from-cyan-400 to-blue-600"
-				></div>
-				<div class="w-10 h-[4px] bg-white"></div>
-			</div>
+      <!-- Divider -->
+      <div
+        class="flex items-center justify-center space-x-3 sm:space-x-6 pt-3 sm:pt-4 animate-fadeIn delay-300"
+      >
+        <div
+          class="w-20 sm:w-32 h-[3px] bg-gradient-to-r from-cyan-400 to-blue-600"
+        ></div>
+        <div class="w-6 sm:w-8 h-[3px] bg-white"></div>
+        <div
+          class="w-20 sm:w-32 h-[3px] bg-gradient-to-r from-blue-600 to-cyan-400"
+        ></div>
+      </div>
 
-			<!-- Tabs -->
-			<div class="grid grid-cols-2 gap-6 w-full mb-8">
-				<button
-				class="px-5 py-2 rounded-lg font-bold text-lg text-white shadow-md bg-gradient-to-r from-cyan-400 to-blue-600 w-full"
-				>
-				Executive Committee Meeting
-				</button>
+      <!-- Description -->
+      <div
+        class="max-w-3xl mx-auto text-center pt-2 sm:pt-4 px-3 sm:px-0 animate-fadeUp delay-400"
+      >
+        <p
+          class="text-sm sm:text-base md:text-lg leading-relaxed font-medium text-gray-100"
+        >
+          Denpasar proudly welcomes CityNet members and urban innovators from
+          across Asia to collaborate, share, and build smarter, greener, and
+          more inclusive cities together.
+        </p>
+      </div>
 
-				<button
-				class="px-5 py-2 rounded-lg font-bold text-lg bg-white text-gray-900 shadow-md w-full"
-				>
-				Congress
-				</button>
-			</div>
-			</div>
+      <!-- Countdown -->
+      <div class="pt-5 sm:pt-6 animate-fadeIn delay-500">
+        <p
+          class="text-cyan-300 font-semibold uppercase tracking-wide mb-2 text-xs sm:text-sm md:text-base"
+        >
+          Countdown to the CityNet Executive Committee Meeting
+        </p>
+        <Countdown />
+      </div>
 
-			<!-- Description -->
-			<div class="max-w-4xl mx-auto text-center space-y-4">
-			<p class="text-base md:text-lg leading-relaxed font-bold">
-				The Executive Committee (ExCom) holds a meeting once a year to make
-				key decisions on CityNet’s programs and initiatives...
-			</p>
-			<p class="text-base md:text-lg leading-relaxed font-bold">
-				The ExCom consists of the President, President Emeritus, two
-				Vice-Presidents, and nine members.
-			</p>
-			</div>
-
-			<!-- Countdown -->
-			<Countdown />
-		</div>
-	</section>
+      <!-- Buttons -->
+      <div
+        class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-6 sm:pt-8 animate-fadeUp delay-600"
+      >
+        <a
+          href="https://citynet-ap.org"
+          target="_blank"
+          class="px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-lg text-white shadow-lg bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-300 hover:to-blue-500 transition-all"
+        >
+          Register Now
+        </a>
+        <NuxtLink
+          to="/citynet"
+          class="px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-lg bg-white text-gray-900 shadow-lg hover:bg-gray-200 transition-all"
+        >
+          CityNet × Denpasar
+        </NuxtLink>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>
 import Countdown from "@/components/Countdown.vue";
-
 </script>
+
+<style scoped>
+/* ✨ Animation Keyframes */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 🎬 Animation Utilities */
+.animate-fadeUp {
+  animation: fadeUp 1s ease-out forwards;
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+.animate-fadeInSlow {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+/* ⏱️ Delays (simple & reusable) */
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
+}
+.delay-600 {
+  animation-delay: 0.6s;
+}
+</style>

@@ -1,23 +1,10 @@
 <template>
 	<div class="bg-gray-50">
-		<!-- Hero Section -->
-		<!-- <HeroSection
-			title="APEKSI CityNet 2025"
-			subtitle="Kolaborasi menuju kota cerdas dan berkelanjutan"
-			:backgroundImages="['/images/bg1.png']"
-			:buttons="[
-				{ label: 'Daftar Sekarang', to: '/register', primary: true },
-				{ label: 'Lihat Agenda', to: '/list', primary: false }
-			]"
-			:slideInterval="4000"
-		/> -->
-
 		<AccessibilityButton />
 		<!-- <HeroSection /> -->
 		<ExecutiveCommittee />
 		<ExploreDenpasar />
 		<ProfilDenpasar />
-		
 		
 		<!-- <Galeri />
 		<Berita />
