@@ -40,7 +40,7 @@
       </article>
     </div>
 
-    <footer class="mt-8 text-center text-sm text-gray-500">Data and images are illustrative; replace image URLs with your assets.</footer>
+    
 </template>
 
 <script setup>

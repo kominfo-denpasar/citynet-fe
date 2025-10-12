@@ -17,7 +17,7 @@
       <InterestingPoi :places="interestingPoi" />
 
       <!-- Rekomendasi -->
-      <RecommendedSection :datas="recommendedPoi" />
+      <RecommendedSection :recommended-poi="recommendedPoi" :recommended2-poi="recommended2Poi" />
       <!-- End recommended -->
 
       <!-- Semua Kategori -->
@@ -30,7 +30,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div v-for="cat in categoriesPoi" :key="cat.Id"
           class="bg-cyan-50 hover:bg-cyan-100 transition rounded-lg p-6 text-center cursor-pointer">
-          <router-link :to="`/point-of-interest/${cat.Id}`" class="text-blue-600 no-underline dark:text-sky-400 font-medium">
+          <router-link :to="`/category/${cat.slug}`" class="text-blue-600 no-underline dark:text-sky-400 font-medium">
             <div class="text-3xl mb-2"></div>
             <h3 class="font-semibold text-cyan-700">{{ cat.name }}</h3>
           </router-link>
@@ -51,6 +51,7 @@
   import axios from "axios";
 
   const recommended = ref([]);
+  const recommended2 = ref([]);
   const categories = ref([]);
   const places = ref([]);
 
@@ -58,6 +59,7 @@
   const error = ref(null);
 
   const recommendedPoi = computed(() => recommended.value);
+  const recommended2Poi = computed(() => recommended2.value);
   const categoriesPoi = computed(() => categories.value);
   const interestingPoi = computed(() => places.value);
 
@@ -72,26 +74,30 @@
   onMounted(async () => {
     try {
       // Panggil beberapa API sekaligus
-      const [res1, res2, res3] = await Promise.all([
-        api.get("/tables/mij6tb6xn3lvymj/records", {
-          params: { offset: 0, limit: 2, viewId: "vwhcpnq57a1h8azm" },
-        }),
-        api.get("/tables/mij6tb6xn3lvymj/records", {
-          params: { offset: 0, limit: 10, where: "(poi_category,like,Things To Do)", viewId: "vwhcpnq57a1h8azm" },
-        }),
+      const [res1, res2, res3, res4] = await Promise.all([
         api.get("/tables/mij6tb6xn3lvymj/records", {
           params: { offset: 0, limit: 25, where: "(poi_category,like,Featured Neighbourhood)", viewId: "vwhcpnq57a1h8azm" },
+        }),
+        api.get("/tables/mij6tb6xn3lvymj/records", {
+          params: { offset: 0, limit: 4, where: "(poi_category,eq,Things To Do Items)", viewId: "vwhcpnq57a1h8azm" },
+        }),
+        api.get("/tables/mij6tb6xn3lvymj/records", {
+          params: { offset: 4, limit: 2, where: "(poi_category,eq,Things To Do Items)", viewId: "vwhcpnq57a1h8azm" },
+        }),
+        api.get("/tables/mij6tb6xn3lvymj/records", {
+          params: { offset: 0, limit: 10, where: "(poi_category,eq,Things To Do)", viewId: "vwhcpnq57a1h8azm" },
         }),
       ]);
 
       // Masukkan hasilnya ke state
-      recommended.value = res1.data.list || [];
-      categories.value = res2.data.list || [];
-      places.value = res3.data.list || [];
+      places.value = res1.data.list || [];
+      recommended.value = res2.data.list || [];
+      recommended2.value = res3.data.list || [];
+      categories.value = res4.data.list || [];
 
-      console.log("Recommended:", res1.data.list);
-      console.log("Categories:", res2.data.list);
-      console.log("Places:", res3.data.list);
+      console.log("Places:", res1.data.list);
+      console.log("Recommended:", res2.data.list);
+      console.log("Categories:", res4.data.list);
     } catch (err) {
       error.value = err.message;
     } finally {
