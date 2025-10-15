@@ -3,8 +3,10 @@
 		<AccessibilityButton />
 		<!-- <HeroSection /> -->
 		<ExecutiveCommittee />
-		<ExploreDenpasar />
-		<ProfilDenpasar />
+		<AboutCitynet />
+		<DiscoverDenpasar />
+		<!-- <ExploreDenpasar />
+		<ProfilDenpasar /> -->
 		
 		<!-- <Galeri />
 		<Berita />
@@ -13,10 +15,10 @@
 </template>
 
 <script setup>
-	import HeroSection from "@/components/HeroSection.vue";
-	import HeroSectionTwo from "@/components/HeroSectionTwo.vue";
 	import AccessibilityButton from "@/components/AccessibilityButton.vue";
 	import ExecutiveCommittee from "@/components/ExecutiveCommittee.vue";
+	import AboutCitynet from "@/components/AboutCitynet.vue";
+	import DiscoverDenpasar from "@/components/DiscoverDenpasar.vue";
 	import ExploreDenpasar from "@/components/ExploreDenpasar.vue";
 	import ProfilDenpasar from "@/components/ProfilDenpasar.vue";
 	// import Galeri from "@/components/Galeri.vue";

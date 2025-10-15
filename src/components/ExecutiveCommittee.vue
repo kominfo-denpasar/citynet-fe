@@ -71,12 +71,6 @@
         >
           Register Now
         </a>
-        <NuxtLink
-          to="/citynet"
-          class="px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-lg bg-white text-gray-900 shadow-lg hover:bg-gray-200 transition-all"
-        >
-          CityNet × Denpasar
-        </NuxtLink>
       </div>
     </div>
   </section>
