@@ -9,7 +9,6 @@ import AboutDenpasar from "@/pages/static/About/AboutDenpasar.vue";
 import ExecutiveCommittee from "@/pages/static/About/ExecutiveCommittee.vue";
 import Tourism from "@/pages/static/Explore/Tourism.vue";
 // import Test from "@/components/InterestingPoi.vue";
-import Test from "@/components/listTourism.vue";
 import ThingsToDo from "@/pages/static/Explore/ThingsToDo.vue";
 
 const routes = [
@@ -43,8 +42,7 @@ const routes = [
     name: "PublicationDetail",
     component: () => import("@/pages/static/Connect/PublicationDetail.vue"),
     props: true
-  },
-  { path: "/test", name: "Test", component: Test },
+  }
 ];
 
 const router = createRouter({
