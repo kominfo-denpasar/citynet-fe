@@ -48,7 +48,7 @@ const discoveries = [
   {
     title: "Cultural Heritage",
     desc: "Experience temples, art villages, and Balinese traditions that color the heart of Denpasar.",
-    image: "/images/bg2.png",
+    image: "./images/bg2.png",
     link: "/discover/culture",
   },
   {

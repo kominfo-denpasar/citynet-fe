@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
+  base: '/citynet/',
   resolve: {
     alias: {
       '@': '/src',
@@ -13,7 +14,8 @@ export default defineConfig({
     allowedHosts: [             
     	'localhost',            
     	'127.0.0.1',            
-    	'citynet.kreatifitas.site'
+    	'citynet.kreatifitas.site',
+      'event.denpasarkota.go.id'
     ],
     proxy: {
       "/api-tourism": {

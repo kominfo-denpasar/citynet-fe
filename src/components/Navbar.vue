@@ -173,11 +173,11 @@
 	// -------------------------------------------------------------
 
 	const socialIcons = [
-		{ src: "/icons/instagram.svg", alt: "Instagram", href: "#" },
-		{ src: "/icons/youtube.svg", alt: "YouTube", href: "#" },
-		{ src: "/icons/facebook.svg", alt: "Facebook", href: "#" },
-		{ src: "/icons/twitter.svg", alt: "Twitter", href: "#" },
-		{ src: "/icons/tiktok.svg", alt: "TikTok", href: "#" },
+		{ src: "./icons/instagram.svg", alt: "Instagram", href: "#" },
+		{ src: "./icons/youtube.svg", alt: "YouTube", href: "#" },
+		{ src: "./icons/facebook.svg", alt: "Facebook", href: "#" },
+		{ src: "./icons/twitter.svg", alt: "Twitter", href: "#" },
+		{ src: "./icons/tiktok.svg", alt: "TikTok", href: "#" },
 	]
 
 

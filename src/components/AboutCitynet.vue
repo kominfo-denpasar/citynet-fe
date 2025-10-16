@@ -79,7 +79,7 @@ let observer
 onMounted(() => {
   const options = {
     root: null,
-    threshold: 0.5 // main jika 50% video terlihat di layar
+    threshold: 0.5
   }
 
   observer = new IntersectionObserver((entries) => {
@@ -87,7 +87,7 @@ onMounted(() => {
       const video = videoRef.value
       if (video) {
         if (entry.isIntersecting) {
-          video.play().catch(() => {}) // play aman tanpa error
+          video.play().catch(() => {})
         } else {
           video.pause()
         }
