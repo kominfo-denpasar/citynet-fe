@@ -15,7 +15,7 @@
 		"title": "Explore",
 		"links": [
 			{ "label": "Tourism & Culture", "url": "/tourism" },
-			{ "label": "Events & Programs", "url": "/events", "badge": "— New" }
+			{ "label": "Things To Do", "url": "/things-to-do" }
 		]
 	},
 	{
@@ -24,18 +24,12 @@
 			{ "label": "Travel Tips & Essentials", "url": "/plan/travel-tips" },
 			{ "label": "Local Etiquette", "url": "/plan/local-etiquette" }
 		]
-	},
-	{
-		"title": "Others",
-		"links": [
-			{ "label": "Contact & Supports", "url": "/contact" },
-			{ "label": "FAQ", "url": "/faq" }
-		]
 	}
   ],
   "policies": [
     { "label": "Terms", "url": "/terms" },
-    { "label": "Privacy", "url": "/privacy" }
+    { "label": "Privacy", "url": "/privacy" },
+	{ "label": "F.A.Q", "url": "/faq" }
   ],
   "socials": [
     { "name": "Twitter", "url": "https://twitter.com" },

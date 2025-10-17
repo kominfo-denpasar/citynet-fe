@@ -7,6 +7,7 @@ import EventDetail from "@/pages/DetailEvents.vue";
 import CityNetOverview from "@/pages/static/About/CityNetOverview.vue";
 import AboutDenpasar from "@/pages/static/About/AboutDenpasar.vue";
 import ExecutiveCommittee from "@/pages/static/About/ExecutiveCommittee.vue";
+import InterestingPlaces from "@/pages/static/Explore/InterestingPlaces.vue";
 import Tourism from "@/pages/static/Explore/Tourism.vue";
 // import Test from "@/components/InterestingPoi.vue";
 import ThingsToDo from "@/pages/static/Explore/ThingsToDo.vue";
@@ -30,6 +31,12 @@ const routes = [
   // Explore Pages
   { path: "/tourism", name: "Tourism", component: Tourism },
   { path: "/things-to-do", name: "ThingsToDo", component: ThingsToDo },
+  { 
+    path: "/interesting-place/:slug", 
+    name: "InterestingPlaces", 
+    component: InterestingPlaces,
+    props: true 
+  },
 
   // list Connect Pages
   {
@@ -42,7 +49,7 @@ const routes = [
     name: "PublicationDetail",
     component: () => import("@/pages/static/Connect/PublicationDetail.vue"),
     props: true
-  }
+  },
 ];
 
 const router = createRouter({

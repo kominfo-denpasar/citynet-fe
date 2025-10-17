@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import Breadcrumb from "../components/Breadcrumb.vue";
+import Breadcrumb from "@/components/Breadcrumb.vue";
 
 defineProps({
   title: { type: String, required: true },

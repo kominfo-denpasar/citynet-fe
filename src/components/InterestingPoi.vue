@@ -62,7 +62,7 @@
                     </span>
                 </div>
                 <hr class="mt-4 mb-2 border-gray-300"></hr>
-                <router-link :to="`/interesting-place/${place.name}`" class="no-underline text-blue-600 dark:text-sky-400 font-medium">
+                <router-link :to="`/interesting-place/${place.slug}`" class="no-underline text-blue-600 dark:text-sky-400 font-medium">
                     More Detail
                 </router-link>
               </div>

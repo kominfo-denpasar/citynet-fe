@@ -51,7 +51,7 @@
       </div>
 
       <!-- Socials -->
-      <div class="space-x-4 mt-3 sm:mt-0">
+      <!-- <div class="space-x-4 mt-3 sm:mt-0">
         <a
           v-for="(social, i) in footerData.socials"
           :key="i"
@@ -62,7 +62,7 @@
         >
           {{ social.name }}
         </a>
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>
