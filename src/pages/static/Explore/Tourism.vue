@@ -79,20 +79,27 @@
           params: { offset: 0, limit: 25, where: "(poi_category,like,Featured Neighbourhood)", viewId: "vwhcpnq57a1h8azm" },
         }),
         api.get("/tables/mij6tb6xn3lvymj/records", {
-          params: { offset: 0, limit: 4, where: "(poi_category,eq,Things To Do Items)", viewId: "vwhcpnq57a1h8azm" },
+          params: { offset: 0, limit: 100, where: "(poi_category,eq,Things To Do Items)", viewId: "vwhcpnq57a1h8azm" },
         }),
         api.get("/tables/mij6tb6xn3lvymj/records", {
-          params: { offset: 4, limit: 2, where: "(poi_category,eq,Things To Do Items)", viewId: "vwhcpnq57a1h8azm" },
+          params: { offset: 4, limit: 100, where: "(poi_category,eq,Things To Do Items)", viewId: "vwhcpnq57a1h8azm" },
         }),
         api.get("/tables/mij6tb6xn3lvymj/records", {
           params: { offset: 0, limit: 10, where: "(poi_category,eq,Things To Do)", viewId: "vwhcpnq57a1h8azm" },
         }),
       ]);
 
+      const allItemsRecommended = res2.data.list || [];
+      const allItemsRecommended2 = res3.data.list || [];
+
+      // Fungsi untuk acak array
+      const shuffled = allItemsRecommended.sort(() => 0.5 - Math.random());
+      const shuffled2 = allItemsRecommended2.sort(() => 0.5 - Math.random());
+
       // Masukkan hasilnya ke state
       places.value = res1.data.list || [];
-      recommended.value = res2.data.list || [];
-      recommended2.value = res3.data.list || [];
+      recommended.value = shuffled.slice(0, 4) || [];
+      recommended2.value = shuffled2.slice(0, 2) || [];
       categories.value = res4.data.list || [];
 
       console.log("Places:", res1.data.list);

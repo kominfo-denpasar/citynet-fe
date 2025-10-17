@@ -17,7 +17,8 @@
 					v-for="item in recommendedPoi"
 					:key="item.id"
 					class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800"
-					:href="item.slug"
+					:href="item.url"
+					target="_blank"
 				>
 					<div class="aspect-w-16 aspect-h-9">
 						<img
@@ -29,7 +30,7 @@
 					</div>
 					<div class="p-4 md:p-5">
 						<p class="mt-2 text-xs uppercase text-gray-600 dark:text-neutral-400">
-						{{ item.category }}
+						{{ item.poi_tags.join(', ') || '' }}
 						</p>
 						<h3 class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-neutral-300 dark:group-hover:text-white">
 						{{ item.name }}
@@ -47,7 +48,7 @@
 		<!-- Grid -->
 		<div class="grid sm:grid-cols-2 pb-10 lg:grid-cols-3 gap-6">
 			<!-- Card -->
-			<a v-for="item in recommended2Poi" :key="item.id" class="group flex flex-col focus:outline-hidden" :href="item.slug">
+			<a v-for="item in recommended2Poi" :key="item.id" class="group flex flex-col focus:outline-hidden" :href="item.url" target="_blank">
 				<div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
 					<img 
 						class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl" 
@@ -56,7 +57,7 @@
 						@error="handleImageError($event)"
 						>
 					<span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-neutral-900">
-						{{ item.category }}
+						{{ item.poi_tags.join(', ') || '' }}
 					</span>
 				</div>
 
@@ -68,8 +69,7 @@
 						{{ item.short_desc }}
 					</p>
 					<p class="mt-5 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
-						Read more
-						<svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+						Check details
 					</p>
 				</div>
 			</a>
