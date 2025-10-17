@@ -14,7 +14,7 @@
 	{
 		"title": "Explore",
 		"links": [
-			{ "label": "Interesting Places", "url": "/tourism" },
+			{ "label": "Tourism & Culture", "url": "/tourism" },
 			{ "label": "Events & Programs", "url": "/events", "badge": "— New" }
 		]
 	},

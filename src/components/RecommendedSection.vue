@@ -13,9 +13,19 @@
 			<!-- Grid -->
 			<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 lg:mb-14">
 				<!-- Card -->
-				<a v-for="item in recommendedPoi" :key="item.id" class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800" :href="item.slug">
+				<a
+					v-for="item in recommendedPoi"
+					:key="item.id"
+					class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800"
+					:href="item.slug"
+				>
 					<div class="aspect-w-16 aspect-h-9">
-						<img class="w-full object-cover rounded-t-xl" :src="item.image" alt="Blog Image">
+						<img
+							class="w-full h-full object-cover rounded-t-xl"
+							:src="item.image || fallbackImage"
+							alt="Blog Image"
+							@error="handleImageError($event)"
+						>
 					</div>
 					<div class="p-4 md:p-5">
 						<p class="mt-2 text-xs uppercase text-gray-600 dark:text-neutral-400">
@@ -39,7 +49,12 @@
 			<!-- Card -->
 			<a v-for="item in recommended2Poi" :key="item.id" class="group flex flex-col focus:outline-hidden" :href="item.slug">
 				<div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
-					<img class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl" :src="item.thumbnail" alt="Blog Image">
+					<img 
+						class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl" 
+						:src="item.image || fallbackImage"
+						alt="Blog Image"
+						@error="handleImageError($event)"
+						>
 					<span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-neutral-900">
 						{{ item.category }}
 					</span>
@@ -83,6 +98,11 @@
 
 <script setup>
     import { ref, onMounted, watch } from "vue";
+
+	const fallbackImage = './images/bg2.png' // ganti dengan path fallback kamu
+	const handleImageError = (event) => {
+		event.target.src = fallbackImage
+	}
     
     const props = defineProps({
         recommendedPoi: {
