@@ -9,7 +9,7 @@
           @click="toggleTag(tag)"
           :class="[
             'px-3 py-1 rounded-full text-sm border transition',
-            selectedTags.includes(tag)
+            selectedTags === tag
               ? 'bg-gray-900 text-white border-gray-900'
               : 'bg-white text-gray-700 border-gray-200'
           ]">
@@ -45,12 +45,12 @@
           </div>
           <div class="p-4">
             <h3 class="text-lg font-semibold mb-1">{{ place.name }}</h3>
-            <p class="text-xs text-gray-500 mb-2">{{ place.category }} • {{ place.location }}</p>
-            <p class="text-sm text-gray-700">{{ place.summary }}</p>
-            <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+            <div class="mb-2 flex items-center justify-between text-xs text-gray-500">
               <span class="inline-flex items-center gap-2">⭐ {{ place.popularity }}</span>
-              <span class="inline-flex items-center gap-2">⏱ {{ place.time }} mins</span>
+              <!-- <span class="inline-flex items-center gap-2">⏱ {{ place.time }} mins</span> -->
             </div>
+            <p class="text-xs text-gray-500 mb-2">{{ place.tags.join(', ') }} • {{ place.location }}</p>
+            <p class="text-sm text-gray-700">{{ place.summary }}</p>
           </div>
         </a>
       </article>
@@ -65,7 +65,7 @@ import axios from "axios";
 // STATE
 const q = ref("");
 const sortBy = ref("popular");
-const selectedTags = ref([]);
+const selectedTags = ref(null);
 const places = ref([]);
 const loading = ref(true);
 const error = ref(null);
@@ -92,26 +92,28 @@ async function fetchPlaces() {
 
     const response = await api.get("/tables/mij6tb6xn3lvymj/records", { params });
 
+    console.log("Fetched places:", response.data.list);
+
     places.value = response.data.list.map((r) => ({
       id: r.Id || r.id,
       name: r.Name || r.name,
-      category: r.Category || r.category || r.poi_category,
       location: r.Location || r.location || "",
-      summary: r.Summary || r.summary || "",
-      image: r.Image || r.image || "https://placehold.co/400x300",
-      link: r.Link || r.link || "#",
+      summary: r.short_desc || "",
+      image: r.Image || r.image || "/images/bg2.png",
+      link: r.url || "https://denpasartourism.com",
       tags:
-        typeof r.Tags === "string"
-          ? JSON.parse(r.Tags)
-          : r.Tags || (r.tags ? r.tags.split(",") : []),
-      popularity: r.Popularity || r.popularity || 0,
+        typeof r.poi_tags === "string"
+          ? JSON.parse(r.poi_tags)
+          : r.poi_tags || (r.poi_tags ? r.poi_tags.split(",") : []),
+      popularity: r.rating || 0,
       time: r.Time || r.time || 0,
     }));
   } catch (err) {
     error.value = err.message;
-    console.error("Failed to fetch NocoDB data:", err);
+    console.error("Failed to fetch data:", err);
   } finally {
     loading.value = false;
+    
   }
 }
 
@@ -125,13 +127,15 @@ const allTags = computed(() => {
 });
 
 function toggleTag(tag) {
-  const idx = selectedTags.value.indexOf(tag);
-  if (idx === -1) selectedTags.value.push(tag);
-  else selectedTags.value.splice(idx, 1);
+  if (selectedTags.value === tag) {
+    selectedTags.value = null
+  } else {
+    selectedTags.value = tag
+  }
 }
 
 function clearFilters() {
-  selectedTags.value = [];
+  selectedTags.value = null;
   q.value = "";
   sortBy.value = "popular";
 }
@@ -139,22 +143,32 @@ function clearFilters() {
 const filteredPlaces = computed(() => {
   let list = places.value.slice();
 
-  if (selectedTags.value.length) {
-    list = list.filter((p) => selectedTags.value.every((t) => p.tags.includes(t)));
+  // Filter berdasarkan tag (single select)
+  if (selectedTags.value) {
+    list = list.filter((p) => p.tags.includes(selectedTags.value));
   }
 
+  // Filter berdasarkan pencarian teks
   if (q.value.trim()) {
     const ql = q.value.toLowerCase();
     list = list.filter((p) =>
-      [p.name, p.summary, p.category, p.location].join(" ").toLowerCase().includes(ql)
+      [p.name, p.summary, p.category, p.location]
+        .join(" ")
+        .toLowerCase()
+        .includes(ql)
     );
   }
 
-  if (sortBy.value === "name") list.sort((a, b) => a.name.localeCompare(b.name));
-  else list.sort((a, b) => b.popularity - a.popularity);
+  // Urutkan berdasarkan pilihan
+  if (sortBy.value === "name") {
+    list.sort((a, b) => a.name.localeCompare(b.name));
+  } else {
+    list.sort((a, b) => b.popularity - a.popularity);
+  }
 
   return list;
 });
+
 
 // optional: refetch saat ubah sort atau search
 watch([sortBy, q], fetchPlaces);
