@@ -2,8 +2,7 @@
   <StaticPage 
     :breadcrumbs="[
       { label: 'Home', link: '/' },
-      { label: 'Explore' },
-      { label: 'Tourism & Culture', link: '/tourism' },
+      { label: 'Explore' }
     ]"
     title="Things To Do"
     subtitle="Explore handpicked landmarks, cultural hubs, beaches and local favourites across the city."
@@ -88,19 +87,19 @@ onMounted(async () => {
   // });
 
   useHead({
-    title: "Things To Do | Denpasar - CityNet 2025",
+    title: "Things To Do | Denpasar x CityNet 2025",
     meta: [
       {
         name: "description",
-        content: "Temukan destinasi populer, rekomendasi, dan kategori wisata di Denpasar."
+        content: "Find popular destinations, recommendations, and tourism categories in Denpasar City."
       },
       {
         property: "og:title",
-        content: "Pariwisata Denpasar | CityNet 2025"
+        content: "Things To Do | Denpasar x CityNet 2025"
       },
       {
         property: "og:description",
-        content: "Destinasi populer, rekomendasi, dan kategori pariwisata di Kota Denpasar."
+        content: "Find popular destinations, recommendations, and tourism categories in Denpasar City."
       },
       {
         property: "og:image",

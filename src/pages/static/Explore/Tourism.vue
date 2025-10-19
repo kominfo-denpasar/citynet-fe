@@ -21,12 +21,11 @@
       <!-- End recommended -->
 
       <!-- Semua Kategori -->
-      <!-- Title -->
-			<div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+			<!-- <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
 				<h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Explore Denpasar by Category</h2>
 				<p class="mt-1 text-gray-600 dark:text-neutral-400">Check and find out all the things in Denpasar.</p>
 			</div>
-			<!-- End Title -->
+       
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div v-for="cat in categoriesPoi" :key="cat.Id"
           class="bg-cyan-50 hover:bg-cyan-100 transition rounded-lg p-6 text-center cursor-pointer">
@@ -36,8 +35,10 @@
           </router-link>
           
         </div>
-      </div>
-    </div>
+      </div>-->
+      <!-- End Categories -->
+    </div> 
+    
   </StaticPage>
 </template>
 
@@ -113,19 +114,19 @@
   });
 
   useHead({
-    title: "Denpasar Tourism | CityNet 2025",
+    title: "Denpasar Tourism | Denpasar x CityNet 2025",
     meta: [
       {
         name: "description",
-        content: "Temukan destinasi populer, rekomendasi, dan kategori wisata di Denpasar."
+        content: "Find popular destinations, recommendations, and tourism categories in Denpasar City."
       },
       {
         property: "og:title",
-        content: "Pariwisata Denpasar | CityNet 2025"
+        content: "Denpasar Tourism | Denpasar x CityNet 2025"
       },
       {
         property: "og:description",
-        content: "Destinasi populer, rekomendasi, dan kategori pariwisata di Kota Denpasar."
+        content: "Find popular destinations, recommendations, and tourism categories in Denpasar City."
       },
       {
         property: "og:image",

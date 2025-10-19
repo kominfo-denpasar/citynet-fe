@@ -29,7 +29,7 @@
             <footer class="mt-6">
               <div class="flex items-center gap-x-4">
                 <div class="shrink-0">
-                  <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
+                  <img class="size-8 rounded-full" src="https://www.denpasarkota.go.id/public/uploads/perangkat/perangkat_thumbnail_253007020756_i-gusti-ngurah-jaya-negara-se.png" alt="Avatar">
                 </div>
                 <div class="grow">
                   <div class="font-semibold text-gray-800 dark:text-neutral-200">Jaya Negara</div>

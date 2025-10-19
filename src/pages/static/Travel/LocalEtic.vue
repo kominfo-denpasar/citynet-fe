@@ -18,82 +18,81 @@
 
 
 		<main class="container content">
-		<article class="card">
-		<h2>Why Local Etiquette Matters</h2>
-		<p>
-		Understanding local customs helps you connect better with the people of Denpasar, avoid misunderstandings,
-		and show genuine respect for Balinese traditions and culture. Here are some simple reminders for your stay.
-		</p>
-		</article>
+			<article class="card">
+			<h2 class="text-2xl font-semibold mb-2">Why Local Etiquette Matters</h2>
+			<p>
+			Understanding local customs helps you connect better with the people of Denpasar, avoid misunderstandings,
+			and show genuine respect for Balinese traditions and culture. Here are some simple reminders for your stay.
+			</p>
+			</article>
 
 
-		<section class="grid">
-		<article class="card">
-		<h3>Greetings & Communication</h3>
-		<ul>
-		<li>Smile and use simple greetings such as “Om Swastiastu” or “Selamat Pagi” when meeting locals.</li>
-		<li>A gentle handshake is appropriate in formal settings — avoid overly firm grips.</li>
-		<li>Address older people or community leaders with respect; showing deference is appreciated.</li>
-		</ul>
-		</article>
+			<section class="grid">
+			<article class="card">
+			<h3 class="text-1xl font-bold mb-1">Greetings & Communication</h3>
+			<ul>
+			<li>Smile and use simple greetings such as “Om Swastiastu” or “Selamat Pagi” when meeting locals.</li>
+			<li>A gentle handshake is appropriate in formal settings — avoid overly firm grips.</li>
+			<li>Address older people or community leaders with respect; showing deference is appreciated.</li>
+			</ul>
+			</article>
 
 
-		<article class="card">
-		<h3>Dress Code</h3>
-		<ul>
-		<li>Wear modest clothing, especially when visiting temples or government buildings.</li>
-		<li>Beachwear is fine at the beach, but please cover up when entering shops, restaurants, or residential areas.</li>
-		</ul>
-		</article>
+			<article class="card">
+			<h3 class="text-1xl font-bold mb-1">Dress Code</h3>
+			<ul>
+			<li>Wear modest clothing, especially when visiting temples or government buildings.</li>
+			<li>Beachwear is fine at the beach, but please cover up when entering shops, restaurants, or residential areas.</li>
+			</ul>
+			</article>
 
 
-		<article class="card">
-		<h3>Dining & Invitations</h3>
-		<ul>
-		<li>Wait for the host to begin eating before you start, if invited to a meal.</li>
-		<li>Use your right hand for giving, receiving, or eating food when possible — it’s a sign of politeness.</li>
-		<li>Declining food repeatedly can seem impolite; a small taste is a kind gesture.</li>
-		</ul>
-		</article>
+			<article class="card">
+			<h3 class="text-1xl font-bold mb-1">Dining & Invitations</h3>
+			<ul>
+			<li>Wait for the host to begin eating before you start, if invited to a meal.</li>
+			<li>Use your right hand for giving, receiving, or eating food when possible — it’s a sign of politeness.</li>
+			<li>Declining food repeatedly can seem impolite; a small taste is a kind gesture.</li>
+			</ul>
+			</article>
 
 
-		<article class="card">
-		<h3>Public Behavior & Privacy</h3>
-		<ul>
-		<li>Keep your voice low in public spaces; avoid loud laughter or shouting.</li>
-		<li>Avoid public displays of affection and unnecessary physical contact with strangers.</li>
-		<li>Always ask permission before taking photos of people, ceremonies, or inside temples.</li>
-		</ul>
-		</article>
-		</section>
+			<article class="card">
+			<h3 class="text-1xl font-bold mb-1">Public Behavior & Privacy</h3>
+			<ul>
+			<li>Keep your voice low in public spaces; avoid loud laughter or shouting.</li>
+			<li>Avoid public displays of affection and unnecessary physical contact with strangers.</li>
+			<li>Always ask permission before taking photos of people, ceremonies, or inside temples.</li>
+			</ul>
+			</article>
+
+			<article class="card">
+			<h2 class="text-1xl font-bold mb-1">Temple Etiquette</h2>
+			<ul>
+			<li>Dress properly: wear a sarong and sash when entering temple grounds.</li>
+			<li>Remove shoes before entering sacred areas and speak softly.</li>
+			<li>Respect ongoing ceremonies — do not interrupt or walk in front of those praying.</li>
+			<li>Photography may be restricted; always look for signs or ask a local guide first.</li>
+			</ul>
+			</article>
 
 
-		<article class="card">
-		<h2>Temple Etiquette</h2>
-		<ul>
-		<li>Dress properly: wear a sarong and sash when entering temple grounds.</li>
-		<li>Remove shoes before entering sacred areas and speak softly.</li>
-		<li>Respect ongoing ceremonies — do not interrupt or walk in front of those praying.</li>
-		<li>Photography may be restricted; always look for signs or ask a local guide first.</li>
-		</ul>
-		</article>
+			<article class="card">
+			<h2 class="text-1xl font-bold mb-1"	>Practical Tips</h2>
+			<ol>
+			<li>Learn a few local words — even a simple “Thank you” or “Terima kasih” means a lot.</li>
+			<li>Avoid touching someone’s head — it’s considered sacred in Balinese culture.</li>
+			<li>Point with your whole hand, not your finger.</li>
+			<li>When in doubt, ask politely. Locals are usually happy to explain their customs.</li>
+			</ol>
+			</article>
+			</section>
 
 
-		<article class="card">
-		<h2>Practical Tips</h2>
-		<ol>
-		<li>Learn a few local words — even a simple “Thank you” or “Terima kasih” means a lot.</li>
-		<li>Avoid touching someone’s head — it’s considered sacred in Balinese culture.</li>
-		<li>Point with your whole hand, not your finger.</li>
-		<li>When in doubt, ask politely. Locals are usually happy to explain their customs.</li>
-		</ol>
-		</article>
-
-
-		<footer class="card small">
-		<p>Welcome to Denpasar — enjoy your visit, respect the culture, and make meaningful connections.</p>
-		</footer>
-		</main>
+			<footer class="card small">
+			<p class="text-1xl font-bold">Welcome to Denpasar - enjoy your visit, respect the culture, and make meaningful connections.</p>
+			</footer>
+			</main>
 		</section>
   </StaticPage>
 </template>
