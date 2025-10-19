@@ -65,11 +65,11 @@
         class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-6 sm:pt-8 animate-fadeUp delay-600"
       >
         <a
-          href="https://citynet-ap.org"
+          href="https://citynet-ap.org/front/design/event_detail?idx=63"
           target="_blank"
-          class="px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-lg text-white shadow-lg bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-300 hover:to-blue-500 transition-all"
+          class="inline-flex px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-lg text-white shadow-lg bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-300 hover:to-blue-500 transition-all"
         >
-          Register Now
+          Check Detail <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2 mt-1"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
         </a>
       </div>
     </div>

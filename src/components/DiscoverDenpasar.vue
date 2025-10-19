@@ -46,41 +46,23 @@
 <script setup>
 const discoveries = [
   {
-    title: "Cultural Heritage",
+    title: "Cultural & Tourism",
     desc: "Experience temples, art villages, and Balinese traditions that color the heart of Denpasar.",
     image: "./images/bg2.png",
-    link: "/discover/culture",
+    link: "/tourism",
   },
   {
-    title: "Creative Economy",
-    desc: "Meet local creators and innovators shaping Denpasar’s modern identity through design and technology.",
+    title: "Things To Do",
+    desc: "From traditional markets to modern attractions, find activities that suit every interest.",
     image: "/images/bg2.png",
-    link: "/discover/creative",
+    link: "/things-to-do",
   },
   {
-    title: "Sustainable Living",
-    desc: "Discover how Denpasar promotes green spaces, smart mobility, and eco-friendly lifestyles.",
+    title: "Travel Tips",
+    desc: "Get practical advice on transportation, accommodations, and local customs for a smooth visit.",
     image: "/images/bg2.png",
-    link: "/discover/sustainability",
-  },
-  {
-    title: "Urban Innovation",
-    desc: "Learn how the city adopts digital transformation to improve services and community life.",
-    image: "/images/bg2.png",
-    link: "/discover/innovation",
-  },
-  {
-    title: "Tourism & Experience",
-    desc: "Unwind with authentic culinary, artistic, and nature experiences within the city’s warm atmosphere.",
-    image: "/images/bg2.png",
-    link: "/discover/tourism",
-  },
-  {
-    title: "Community Collaboration",
-    desc: "Explore how the people of Denpasar build inclusive communities that support each other.",
-    image: "/images/bg2.png",
-    link: "/discover/community",
-  },
+    link: "/travel-tips",
+  }
 ];
 </script>
 

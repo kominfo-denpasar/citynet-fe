@@ -19,7 +19,7 @@
 		]
 	},
 	{
-		"title": "Travel Info",
+		"title": "Plan",
 		"links": [
 			{ "label": "Travel Tips & Essentials", "url": "/plan/travel-tips" },
 			{ "label": "Local Etiquette", "url": "/plan/local-etiquette" }

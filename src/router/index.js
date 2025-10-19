@@ -38,6 +38,10 @@ const routes = [
     props: true 
   },
 
+  // Plan
+  { path: "/plan/travel-tips", name: "TravelTips", component: () => import("@/pages/static/Travel/TravelTips.vue") },
+  { path: "/plan/local-etiquette", name: "LocalEtiquette", component: () => import("@/pages/static/Travel/LocalEtic.vue") },
+
   // list Connect Pages
   {
     path: "/publications",

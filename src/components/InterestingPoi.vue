@@ -46,24 +46,23 @@
                 class="w-full h-56 object-cover"
               />
               <div class="p-4">
-                <h3 class="font-semibold text-xl">{{ place.name }}</h3>
-                <p class="text-xs text-gray-500 mb-2">{{ place.location }}</p>
-                <p class="text-sm text-gray-700">{{ place.short_desc }}</p>
-                <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
-                    <span class="inline-flex items-center gap-2">⭐ {{ place.rating }}</span>
-                    <span class="inline-flex items-center gap-2">
-                      <span
-                        v-for="(catItem, idx) in place.poi_tags"
-                        :key="idx"
-                        class="bg-cyan-100 text-cyan-700 px-2 py-1 rounded text-xs"
-                      >
-                        {{ catItem }}
+                <router-link :to="`/interesting-place/${place.slug}`" class="group-hover:underline">
+                  <h3 class="font-semibold text-xl">{{ place.name }}</h3>
+                  <p class="text-xs text-gray-500 mb-2">{{ place.location }}</p>
+                  <p class="text-sm text-gray-700">{{ place.short_desc }}</p>
+                  <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-2">⭐ {{ place.rating }}</span>
+                      <span class="inline-flex items-center gap-2">
+                        <span
+                          v-for="(catItem, idx) in place.poi_tags"
+                          :key="idx"
+                          class="bg-cyan-100 text-cyan-700 px-2 py-1 rounded text-xs"
+                        >
+                          {{ catItem }}
+                        </span>
                       </span>
-                    </span>
-                </div>
-                <hr class="mt-4 mb-2 border-gray-300"></hr>
-                <router-link :to="`/interesting-place/${place.slug}`" class="no-underline text-blue-600 dark:text-sky-400 font-medium">
-                    More Detail
+                  </div>
+                  <hr class="mt-4 mb-2 border-gray-300"></hr>
                 </router-link>
               </div>
             </div>

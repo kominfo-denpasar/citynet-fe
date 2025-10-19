@@ -1,6 +1,6 @@
 <template>
 	<div class="bg-gray-50">
-		<AccessibilityButton />
+		<!-- <AccessibilityButton /> -->
 		<!-- <HeroSection /> -->
 		<ExecutiveCommittee />
 		<AboutCitynet />

@@ -1,5 +1,5 @@
 <template>
-  <section class="py-16 px-6 max-w-6xl mx-auto">
+  <section class="max-w-5xl mx-auto px-4 py-12">
     <h2 class="text-2xl font-semibold mb-6">Where to Explore</h2>
     <div id="map" class="h-[500px] w-full rounded-xl shadow"></div>
   </section>
