@@ -42,6 +42,11 @@ const routes = [
   { path: "/plan/travel-tips", name: "TravelTips", component: () => import("@/pages/static/Travel/TravelTips.vue") },
   { path: "/plan/local-etiquette", name: "LocalEtiquette", component: () => import("@/pages/static/Travel/LocalEtic.vue") },
 
+  // Other Pages
+  { path: "/faq", name: "FAQ", component: () => import("@/pages/static/Other/Faq.vue") },
+  { path: "/privacy", name: "Privacy", component: () => import("@/pages/static/Other/Privacy.vue") },
+  { path: "/terms", name: "Terms", component: () => import("@/pages/static/Other/Terms.vue") },
+
   // list Connect Pages
   {
     path: "/publications",

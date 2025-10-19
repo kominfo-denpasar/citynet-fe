@@ -1,0 +1,11 @@
+.page { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color: #111; }
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+.hero { background: linear-gradient(90deg, #f0f8ff, #ffffff); padding: 36px 0; border-bottom: 1px solid #eee; text-align: center; }
+.title { font-size: 28px; margin: 0 0 8px; }
+.subtitle { margin: 0; color: #555; }
+.content { padding: 28px 0; }
+.card { background: #fff; border: 1px solid #eee; padding: 18px; border-radius: 10px; margin-bottom: 18px; box-shadow: 0 6px 18px rgba(12,12,12,0.04); }
+.small { font-size: 14px; text-align: center; color: #444; }
+a { color: #0ea5e9; text-decoration: none; }
+a:hover { text-decoration: underline; }
+@media (max-width:600px){ .title{font-size:22px} .container{padding:14px} }

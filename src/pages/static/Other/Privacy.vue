@@ -1,31 +1,58 @@
 <template>
 	<StaticPage 
 		:breadcrumbs="[
-				{ label: 'Home', link: '/' },
-				{ label: 'About' }
+				{ label: 'Home', link: '/' }
 		]"
-		title="Executive Committee"
-		subtitle="The Executive Committee (ExeCom) is the governing body of CityNet"
+		title="Privacy Policy"
+		subtitle="Your privacy is important to us."
 		background="/images/bg4.png">
-		<p class="mb-4 text-gray-700 leading-relaxed">
-			The Executive Committee (ExeCom) is the governing body of CityNet, responsible for guiding the
-      network’s strategic direction and ensuring effective implementation of its programs. It plays
-      a vital role in decision-making and in fostering collaboration among members.
-		</p>
+		
+		<section class="page">
+			<header class="hero">
+			<div class="container">
+				<h1 class="title">Privacy Policy — Denpasar × CityNet</h1>
+				<p class="subtitle">Your privacy is important to us. Here's how we collect and use your information.</p>
+			</div>
+			</header>
 
-		<h2 class="text-2xl font-semibold mt-8 mb-4">The Role of the Executive Committee</h2>
-		<p class="text-gray-700 leading-relaxed">
-			ExeCom members meet regularly to discuss policies, approve new initiatives, and review the
-      progress of ongoing programs. These meetings provide a platform for dialogue, exchange, and
-      cooperation among city leaders across the Asia-Pacific.
-		</p>
+			<main class="container content">
+			<article class="card">
+				<h2 class="text-1xl font-semibold mb-4">1. Information We Collect</h2>
+				<ul>
+					<li>Basic contact information (such as name or email) when you register or contact us.</li>
+					<li>Website analytics and cookie data to improve user experience.</li>
+				</ul>
+			</article>
 
-		<h2 class="text-2xl font-semibold mt-8 mb-4">The 45th ExeCom Meeting in Denpasar</h2>
-		<p class="text-gray-700 leading-relaxed">
-			The 45th CityNet Executive Committee Meeting, hosted in Denpasar, focuses on advancing
-      sustainable urban solutions and strengthening partnerships. It also serves as a stage to
-      highlight Denpasar’s innovative approaches to inclusive and sustainable city development.
-		</p>
+			<article class="card">
+				<h2 class="text-1xl font-semibold mb-4">2. How We Use Information</h2>
+				<p>
+				We use your data to communicate updates, manage events, and improve CityNet × Denpasar services.
+				Your data is not shared with third parties without consent.
+				</p>
+			</article>
+
+			<article class="card">
+				<h2 class="text-1xl font-semibold mb-2">3. Cookies</h2>
+				<p>
+				This website may use cookies to track user interactions and preferences.
+				You may disable cookies in your browser, but some features may not function properly.
+				</p>
+			</article>
+
+			<article class="card">
+				<h2 class="text-1xl font-semibold mb-4">4. Data Protection</h2>
+				<p>
+				We implement appropriate security measures to safeguard your personal information
+				and prevent unauthorized access or disclosure.
+				</p>
+			</article>
+
+			<footer class="small">
+				<p>For privacy inquiries, contact: info@denpasarkota.go.id</p>
+			</footer>
+			</main>
+		</section>
 	</StaticPage>
 </template>
 
@@ -34,15 +61,15 @@
 	import { useHead } from '@vueuse/head'
 
 	useHead({
-		title: "Executive Committee | Denpasar - CityNet 2025",
+		title: "Privacy Policy | Denpasar x CityNet 2025",
 		meta: [
 			{
 				name: "description",
-				content: "Learn about the governing body of CityNet."
+				content: "Learn about the privacy practices."
 			},
 			{
 				property: "og:title",
-				content: "Executive Committee | CityNet 2025"
+				content: "Privacy Policy | Denpasar x CityNet 2025"
 			},
 			{
 				property: "og:description",
@@ -55,3 +82,7 @@
 		]
 	})
 </script>
+
+<style scoped>
+	@import '@/assets/StaticPageStyle.css';
+</style>

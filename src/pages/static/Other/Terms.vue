@@ -2,40 +2,58 @@
   <StaticPage 
 		:breadcrumbs="[
 				{ label: 'Home', link: '/' },
-				{ label: 'About' }
 		]"
-		title="Citynet Overview"
-		subtitle="A vibrant city embracing innovation, culture, and sustainability."
+		title="Terms of Use"
+		subtitle="Read the terms and conditions for using the Denpasar - CityNet 2025 website and services."
 		background="/images/bg4.png"
 	>
-	<h1 class="text-3xl font-bold mb-6 text-cyan-700">Citynet Overview</h1>
-    <p class="mb-4 text-gray-700 leading-relaxed">
-      CityNet is the largest network of cities and local governments in the Asia-Pacific region,
-      committed to sustainable urban development. Established in 1987, CityNet empowers its members
-      by fostering collaboration, sharing knowledge, and driving innovative solutions for the
-      challenges of urbanization.
-    </p>
+	<section class="page">
+		<header class="hero">
+		<div class="container">
+			<h1 class="title">Terms of Use — Denpasar × CityNet</h1>
+			<p class="subtitle">Please read these terms carefully before using our website and services.</p>
+		</div>
+		</header>
 
-    <h2 class="text-2xl font-semibold mt-8 mb-4">Our Mission & Vision</h2>
-    <p class="mb-4 text-gray-700 leading-relaxed">
-      CityNet’s mission is to strengthen the capacities of local governments, enabling them to
-      achieve inclusive, resilient, and sustainable cities. Its vision is to foster collaboration
-      across borders to address shared urban challenges.
-    </p>
+		<main class="container content">
+		<article class="card">
+			<h2 class="text-1xl font-semibold mb-2">1. Acceptance of Terms</h2>
+			<p>
+			By accessing or using the Denpasar × CityNet website, you agree to comply with and be bound by these Terms of Use.
+			If you do not agree, please refrain from using this site.
+			</p>
+		</article>
 
-    <h2 class="text-2xl font-semibold mt-8 mb-4">Our Members</h2>
-    <p class="mb-4 text-gray-700 leading-relaxed">
-      The network connects more than 150 cities, NGOs, and organizations across Asia-Pacific,
-      building a strong community dedicated to shaping sustainable futures together.
-    </p>
+		<article class="card">
+			<h2 class="text-1xl font-semibold mb-1">2. Use of Content</h2>
+			<p>
+			All information, text, images, and graphics are owned or licensed by the City of Denpasar and CityNet partners.
+			You may not reproduce or distribute any materials without prior permission.
+			</p>
+		</article>
 
-    <h2 class="text-2xl font-semibold mt-8 mb-4">What We Do</h2>
-    <ul class="mb-4 text-gray-700 leading-relaxed">
-      <li>Promote city-to-city cooperation</li>
-      <li>Share best practices and knowledge resources</li>
-      <li>Provide capacity-building programs and training</li>
-      <li>Support cities in implementing the UN Sustainable Development Goals (SDGs)</li>
-    </ul>
+		<article class="card">
+			<h2 class="text-1xl font-semibold mb-1">3. User Conduct</h2>
+			<ul>
+			<li>Do not misuse the website for unlawful purposes.</li>
+			<li>Do not attempt to hack, disrupt, or alter any content or service.</li>
+			<li>Respect the privacy and data of other users.</li>
+			</ul>
+		</article>
+
+		<article class="card">
+			<h2 class="text-1xl font-semibold mb-1">4. Disclaimer</h2>
+			<p>
+			The information provided is for public communication purposes and may change without prior notice.
+			The City of Denpasar and CityNet are not liable for any damages arising from website use.
+			</p>
+		</article>
+
+		<footer class="small">
+			<p>Last updated: October 2025</p>
+		</footer>
+		</main>
+	</section>
   </StaticPage>
 </template>
 
@@ -44,7 +62,7 @@
   import { useHead } from '@vueuse/head'
 
 	useHead({
-		title: "Citynet Overview | Denpasar - CityNet 2025",
+		title: "Terms of Use | Denpasar x CityNet 2025",
 		meta: [
 			{
 				name: "description",
@@ -52,7 +70,7 @@
 			},
 			{
 				property: "og:title",
-				content: "Citynet Overview | Denpasar - CityNet 2025"
+				content: "Terms of Use | Denpasar x CityNet 2025"
 			},
 			{
 				property: "og:description",
@@ -65,3 +83,7 @@
 		]
 	})
 </script>
+
+<style scoped>
+	@import '@/assets/StaticPageStyle.css';
+</style>

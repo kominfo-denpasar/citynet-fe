@@ -25,7 +25,7 @@
 
 		<h1 class="text-2xl font-semibold mt-8 mb-4">Getting Around Denpasar</h1>
 
-		<h2 class="text-2xl font-semibold mt-8 mb-4">Public Transport</h2>
+		<h2 class="text-1xl font-semibold mt-8 mb-4">Public Transport</h2>
 		<ul class="mb-4 text-gray-700 leading-relaxed">
 		<li>Promote city-to-city cooperation</li>
 		<li>Share best practices and knowledge resources</li>
@@ -33,7 +33,7 @@
 		<li>Support cities in implementing the UN Sustainable Development Goals (SDGs)</li>
 		</ul>
 
-		<h2 class="text-2xl font-semibold mt-8 mb-4">Taxi or Private Hire Car</h2>
+		<h2 class="text-1xl font-semibold mt-8 mb-4">Taxi or Private Hire Car</h2>
 		<ul class="mb-4 text-gray-700 leading-relaxed">
 		<li>Promote city-to-city cooperation</li>
 		<li>Share best practices and knowledge resources</li>
