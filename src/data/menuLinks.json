@@ -1,14 +1,14 @@
 {
   "brand": {
-    "name": "CityNet - Denpasar 2025",
-    "copyright": "© 2025 Pemerintah Kota Denpasar."
+    "name": "Denpasar x CityNet 2025",
+    "copyright": "© 2025 Denpasar City Government."
   },
   "sections": [
     {
 		"title": "About",
 		"links": [
 			{ "label": "About Denpasar", "url": "/about-denpasar" },
-			{ "label": "Citynet x Denpasar", "url": "/citynet-overview" }
+			{ "label": "Denpasar x Citynet", "url": "/citynet-overview" }
 		]
 	},
 	{

@@ -53,22 +53,22 @@
 				<!-- End Card -->
 
 				<!-- Card -->
-				<!-- <router-link class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800" to="/events">
+				<a class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800" href="https://denpasarkota.go.id" target="_blanks">
 				<div class="p-4 md:p-5">
 					<div class="flex gap-x-5">
 					<svg class="mt-1 shrink-0 size-5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
 
 					<div class="grow">
 						<h3 class="group-hover:text-blue-600 text-2xl font-bold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200">
-						Events & Agendas
+						Denpasar City Government Web
 						</h3>
 						<p class="text-sm text-gray-500 dark:text-neutral-500">
-						Stay updated with the latest events in Denpasar
+						Get the latest updates on events and news in Denpasar
 						</p>
 					</div>
 					</div>
 				</div>
-				</router-link> -->
+			</a>
 				<!-- End Card -->
 
 				<!-- Card -->

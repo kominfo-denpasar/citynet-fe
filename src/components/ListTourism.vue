@@ -87,7 +87,8 @@ async function fetchPlaces() {
     const params = {
       offset: 0,
       limit: 100,
-      viewId: "vwhcpnq57a1h8azm", // ganti sesuai view ID kamu
+      viewId: "vwhcpnq57a1h8azm",
+      where: "(poi_category,like,Things To Do Items)",
     };
 
     const response = await api.get("/tables/mij6tb6xn3lvymj/records", { params });

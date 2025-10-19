@@ -61,7 +61,7 @@ const discoveries = [
     title: "Travel Tips",
     desc: "Get practical advice on transportation, accommodations, and local customs for a smooth visit.",
     image: "/images/bg2.png",
-    link: "/travel-tips",
+    link: "/plan/travel-tips",
   }
 ];
 </script>

@@ -10,15 +10,15 @@
 			<div class="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-3 px-4 md:px-6">
 				<!-- Left: Social media -->
 				<nav aria-label="Social media" class="flex items-center gap-x-2">
-					<a v-for="icon in socialIcons" :key="icon.alt" :href="icon.href" :aria-label="icon.alt">
+					<!-- <a v-for="icon in socialIcons" :key="icon.alt" :href="icon.href" :aria-label="icon.alt">
 						<img :src="icon.src" class="w-6 md:w-7" :alt="icon.alt" />
-					</a>
+					</a> -->
 				</nav>
 
 				<!-- Right: tools -->
 				<div class="flex items-center gap-3">
 					<!-- Search (hidden on mobile) -->
-					<form role="search" class="relative hidden md:flex items-center w-60 bg-white dark:bg-gray-800 rounded-full shadow-sm">
+					<!-- <form role="search" class="relative hidden md:flex items-center w-60 bg-white dark:bg-gray-800 rounded-full shadow-sm">
 						<font-awesome-icon icon="search" class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300" />
 						<input
 							id="desktop-search"
@@ -29,7 +29,7 @@
 						<button type="button" aria-label="Voice search" @click="startVoiceSearch">
 							<font-awesome-icon icon="microphone" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300" />
 						</button>
-					</form>
+					</form> -->
 
 					<!-- Translate -->
 					<!-- <button aria-label="Change language" @click="toggleLanguage">
