@@ -8,14 +8,14 @@
 		"title": "About",
 		"links": [
 			{ "label": "About Denpasar", "url": "/about-denpasar" },
-			{ "label": "Denpasar x Citynet", "url": "/citynet-overview" }
+			{ "label": "Denpasar x Citynet", "url": "https://citynet-ap.org/front/design/event_detail?idx=63" }
 		]
 	},
 	{
 		"title": "Explore",
 		"links": [
-			{ "label": "Tourism & Culture", "url": "/tourism" },
-			{ "label": "Things To Do", "url": "/things-to-do" }
+			{ "label": "Tourism & Culture", "url": "https://denpasartourism.com" },
+			{ "label": "Things To Do", "url": "https://denpasartourism.com/en/activity" }
 		]
 	},
 	{

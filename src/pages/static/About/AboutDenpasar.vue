@@ -4,7 +4,7 @@
 				{ label: 'Home', link: '/' },
 				{ label: 'About' }
 		]"
-		title="Denpasar as Host City"
+		title="About Denpasar"
 		subtitle="Denpasar, the capital city of Bali, is a vibrant hub of culture, innovation, and sustainability."
 		background="/images/bg4.png"
 	>

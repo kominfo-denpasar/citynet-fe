@@ -40,12 +40,12 @@
 			<article class="card">
 				<h3 class="text-1xl font-semibold mb-1">Who can I contact for event inquiries?</h3>
 				<p>
-				You can email <a href="mailto:info@denpasarkota.go.id">info@denpasarkota.go.id</a> or visit the CityNet Secretariat booth during events.
+				You can go <a href="https://citynet-ap.org ">citynet-ap.org</a> or visit the CityNet Secretariat booth during events.
 				</p>
 			</article>
 
 			<footer class="small">
-				<p>Didn't find your question? <a href="mailto:support@denpasarkota.go.id">Contact support</a>.</p>
+				<p>Didn't find your question? <a href="mailto:info@citynet-ap.org ">Contact support</a>.</p>
 			</footer>
 			</main>
 		</section>
