@@ -66,19 +66,19 @@
 
               <li class="flex flex-col -m-0.5 p-4 sm:p-8">
                 <div class="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold text-gray-800 mb-2 dark:text-neutral-200">
-                  125,98
+                  12.598
                 </div>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-neutral-400">
-                  <b>km² Area</b> - making it the second smallest city in Bali
+                  <b>HA Area</b> - making it the second smallest city in Bali
                 </p>
               </li>
 
               <li class="flex flex-col -m-0.5 p-4 sm:p-8">
                 <div class="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold text-gray-800 mb-2 dark:text-neutral-200">
-                  726,808
+                  673.270
                 </div>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-neutral-400">
-                  <b>Population (mid-2022 estimate)</b> - with a density of about 5,769 people per km²
+                  <b>Population</b> - (mid-2024 estimate)
                 </p>
               </li>
             </ul>

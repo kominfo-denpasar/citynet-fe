@@ -61,9 +61,9 @@
 					:href="sub.link"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-cyan-100 dark:hover:bg-gray-700 hover:text-cyan-600 dark:hover:text-cyan-400"
+					class="inline-flex block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-cyan-100 dark:hover:bg-gray-700 hover:text-cyan-600 dark:hover:text-cyan-400"
 				>
-					{{ sub.title }}
+					{{ sub.title }} <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2 mt-1"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
 				</a>
 
 				<!-- Jika link internal -->

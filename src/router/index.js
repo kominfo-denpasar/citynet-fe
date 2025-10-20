@@ -66,9 +66,11 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition;
+      return savedPosition
+    } else {
+      // kalau pindah halaman biasa, scroll ke atas
+      return { top: 0, behavior: 'smooth' }
     }
-    return { top: 0 };
   },
 });
 

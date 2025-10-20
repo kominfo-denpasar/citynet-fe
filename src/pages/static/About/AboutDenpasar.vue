@@ -34,14 +34,14 @@
 			<!-- Grid -->
 			<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
 				<!-- Card -->
-				<router-link class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800" to="/tourism">
+				<a class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800" href="https://denpasartourism.com" target="_blanks">
 				<div class="p-4 md:p-5">
 					<div class="flex gap-x-5">
 					<svg class="mt-1 shrink-0 size-5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
 
 					<div class="grow">
 						<h3 class="group-hover:text-blue-600 text-2xl font-bold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200">
-						Explore Denpasar
+						Explore Tourism
 						</h3>
 						<p class="text-sm text-gray-500 dark:text-neutral-500">
 						Discover the city's rich culture, attractions, and services
@@ -49,7 +49,7 @@
 					</div>
 					</div>
 				</div>
-				</router-link>
+			</a>
 				<!-- End Card -->
 
 				<!-- Card -->
@@ -60,10 +60,10 @@
 
 					<div class="grow">
 						<h3 class="group-hover:text-blue-600 text-2xl font-bold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200">
-						Denpasar City Government Web
+						City Government
 						</h3>
 						<p class="text-sm text-gray-500 dark:text-neutral-500">
-						Get the latest updates on events and news in Denpasar
+						Get the latest updates on events and news in Denpasar Portal
 						</p>
 					</div>
 					</div>
