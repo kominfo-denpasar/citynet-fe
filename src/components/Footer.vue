@@ -22,6 +22,7 @@
         <div class="mt-3 grid space-y-3 text-sm">
           <p v-for="(link, j) in section.links" :key="j">
             <RouterLink
+              v-if="!link.url || !link.url.startsWith('http')"
               :to="link.url"
               class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
             >
@@ -30,6 +31,16 @@
                 {{ link.badge }}
               </span>
             </RouterLink>
+
+            <a
+              v-else
+              :href="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
+            >
+              {{ link.label }}
+            </a>
           </p>
         </div>
       </div>

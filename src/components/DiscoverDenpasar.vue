@@ -57,19 +57,19 @@ const discoveries = [
   {
     title: "Cultural & Tourism",
     desc: "Experience temples, art villages, and Balinese traditions that color the heart of Denpasar.",
-    image: "./images/bg2.png",
-    link: "https://denpasartourism.com",
+    image: "./images/gambar1.png",
+    link: "https://denpasartourism.com/en/destination",
   },
   {
     title: "Things To Do",
     desc: "From traditional markets to modern attractions, find activities that suit every interest.",
-    image: "/images/bg2.png",
+    image: "/images/gambar2.png",
     link: "https://denpasartourism.com/en/activity",
   },
   {
     title: "Travel Tips",
     desc: "Get practical advice on transportation, accommodations, and local customs for a smooth visit.",
-    image: "/images/bg2.png",
+    image: "/images/gambar3.png",
     link: "/plan/travel-tips",
   }
 ];

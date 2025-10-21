@@ -46,8 +46,8 @@
 				<article class="bg-white p-6 rounded-2xl shadow-sm border">
 					<h3 class="text-lg font-semibold text-gray-900 mb-2">🗣️ Language</h3>
 					<p>
-					The local language is Bahasa Indonesia, and Balinese is also widely spoken. 
-					English is commonly understood in hotels, restaurants, and tourist areas.
+					The local language is <b>Bahasa Indonesia</b>, and <b>Balinese</b> is also widely spoken. 
+					<b>English</b> is commonly understood in hotels, restaurants, and tourist areas.
 					</p>
 				</article>
 
@@ -82,23 +82,23 @@
 			<!-- Money and Payments -->
 			<section>
 				<h2 class="text-2xl font-semibold text-blue-700 mb-4">Money and Payments</h2>
-				<div class="grid md:grid-cols-3 gap-6">
+				<div class="grid md:grid-cols-2 gap-6">
 				<article class="bg-white p-6 rounded-2xl shadow-sm border">
 					<h3 class="text-lg font-semibold text-gray-900 mb-2">💳 Payment Methods</h3>
 					<p>
-					Cash (Indonesian Rupiah - IDR) is widely used. 
+					Cash (Indonesian Rupiah - IDR) and QRIS (Quick Response Code Indonesian Standard) is widely used. 
 					Credit cards are accepted in hotels, restaurants, and major shops, while e-wallets like GoPay, OVO, and Dana are increasingly popular.
 					</p>
 				</article>
 
-				<article class="bg-white p-6 rounded-2xl shadow-sm border">
+				<!-- <article class="bg-white p-6 rounded-2xl shadow-sm border">
 					<h3 class="text-lg font-semibold text-gray-900 mb-2">🤝 Tipping</h3>
 					<p>
 					Tipping is not mandatory but appreciated. 
 					Restaurants may include a 5–10% service charge. 
 					Small tips for drivers or hotel staff are a kind gesture of appreciation.
 					</p>
-				</article>
+				</article> -->
 
 				<!-- <article class="bg-white p-6 rounded-2xl shadow-sm border">
 					<h3 class="text-lg font-semibold text-gray-900 mb-2">🧾 Tax Refund</h3>
@@ -122,7 +122,7 @@
 					<article class="bg-white p-6 rounded-2xl shadow-sm border">
 						<h4 class="font-semibold text-gray-900 mb-2">💳 Ways to Pay</h4>
 						<p>
-						Most city buses and shuttle services accept cash and digital payments through e-wallets or prepaid transport cards.
+						Most city buses and shuttle services accept cash and digital payments through QRIS, e-wallets or prepaid transport cards.
 						Top up cards are available at bus terminals and convenience stores.
 						</p>
 					</article>
@@ -132,7 +132,7 @@
 						<p>
 						Denpasar’s main public transport system, Trans Metro Dewata, connects key routes including
 						Ubung Terminal, Renon, Sanur, and the airport. 
-						Maps are displayed at major stops and available via Google Maps.
+						Maps are displayed at major stops and available here (<a class="text-blue font-bold underline" target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/0/09/Bus_Map_of_Denpasar_Raya.pdf">Denpasar Transit Map</a>), for bus stops visual could be seen on <a class="text-blue font-bold underline" href="https://www.google.com/maps/d/u/0/viewer?mid=1BezJQMGNYPfAx17g5I4FrbRSHzZUywU&ll=-8.658365170690836%2C115.2204996&z=12" target="_blank">google map</a>.
 						</p>
 					</article>
 					</div>
@@ -147,15 +147,15 @@
 						<p>
 						Taxis use meters. 
 						For longer trips, you can negotiate a fixed rate. 
-						Always choose reputable companies like Blue Bird.
+						Always choose reputable companies like <b>Blue Bird</b>.
 						</p>
 					</article>
 
 					<article class="bg-white p-6 rounded-2xl shadow-sm border">
 						<h4 class="font-semibold text-gray-900 mb-2">Ride-Hailing Apps</h4>
 						<p>
-						Apps like Gojek and Grab are widely available for affordable transport, food delivery, and parcel services.
-						Payment can be made via cash, e-wallet, or linked bank cards.
+						Apps like <b>Gojek</b> and <b>Grab</b> are widely available for affordable transport, food delivery, and parcel services.
+						Payment can be made via cash, QRIS, e-wallet, or linked bank cards.
 						</p>
 					</article>
 					</div>

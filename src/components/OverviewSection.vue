@@ -5,6 +5,18 @@
         <div class="lg:col-span-5 lg:col-start-1">
           <!-- Title -->
           <div class="mb-8">
+            <footer class="mt-6">
+              <div class="flex items-center gap-x-4">
+                <div>
+                  <img class="size-24 rounded-full" src="https://denpasarkota.go.id/public/uploads/perangkat/perangkat_thumbnail_253007020756_i-gusti-ngurah-jaya-negara-se.png" alt="Avatar">
+                </div>
+                <div class="grow">
+                  <div class="font-semibold text-gray-800 dark:text-neutral-200">Jaya Negara</div>
+                  <div class="text-xs text-gray-500 dark:text-neutral-500">Mayor of Denpasar</div>
+                </div>
+              </div>
+            </footer>
+
             <h2 class="mb-2 text-3xl text-gray-800 font-bold lg:text-4xl dark:text-neutral-200">
               Denpasar's Overview
             </h2>
@@ -26,17 +38,7 @@
               </p>
             </div> -->
 
-            <footer class="mt-6">
-              <div class="flex items-center gap-x-4">
-                <div class="shrink-0">
-                  <img class="size-8 rounded-full" src="https://www.denpasarkota.go.id/public/uploads/perangkat/perangkat_thumbnail_253007020756_i-gusti-ngurah-jaya-negara-se.png" alt="Avatar">
-                </div>
-                <div class="grow">
-                  <div class="font-semibold text-gray-800 dark:text-neutral-200">Jaya Negara</div>
-                  <div class="text-xs text-gray-500 dark:text-neutral-500">Mayor of Denpasar</div>
-                </div>
-              </div>
-            </footer>
+            
           </blockquote>
           <!-- End Blockquote -->
         </div>
