@@ -5,6 +5,20 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-705S3T2RMB"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			// cookie_domain agar GA4 mengenali domain induk
+			gtag('config', 'G-705S3T2RMB', {
+				cookie_domain: '.denpasarkota.go.id'
+			});
+		</script>
+
+
 		<!-- Primary SEO -->
 		<title>CityNet x Denpasar 2025</title>
 		<meta name="description" content="Join the 45th CityNet Executive Committee Meeting and 4th SDG City Awards in Denpasar. Explore events, programs, and the vibrant city of Denpasar as host." />
