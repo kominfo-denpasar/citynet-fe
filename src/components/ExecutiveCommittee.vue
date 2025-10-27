@@ -67,10 +67,17 @@
         <a
           href="https://citynet-ap.org/front/design/event_detail?idx=63"
           target="_blank"
-          class="inline-flex px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-lg text-white shadow-lg bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-300 hover:to-blue-500 transition-all"
+          class="inline-flex px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-md text-white shadow-lg bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-300 hover:to-blue-500 transition-all"
         >
-          Check Detail <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2 mt-1"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          Check Web <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2 mt-1"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
         </a>
+        <a
+            href="https://drive.google.com/file/d/1QwiHIwca-VGRL4a59O0ImP0s5l56TPoJ/view?usp=sharing"
+            target="_blank"
+            class="inline-flex px-6 py-3 rounded-lg border border-gray-300 text-gray-800 font-semibold bg-white hover:bg-gray-100 transition-all text-center"
+          >
+            ExCom Program
+          </a>
       </div>
     </div>
   </section>
